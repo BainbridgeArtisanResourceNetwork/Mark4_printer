@@ -1,0 +1,85 @@
+2019-12-03 BARN MArk4 project meeting notes.
+
+
+PROPOSED DECISION REVIEW
+We reviewd proposed decisions from the previous week and ratified all of them. The list of newly ratified decisions is:
+
+	Printer Location  
+		Printer will be located near the table under the exhaust hood. Planning to build a rolling wood cart to place the printer on that will place it at a good height for watching first layer prints. Space under printer can be built with one or more drawers for storage of materials.
+
+	Printer Style
+		CoreXY wqith lots of leverage from an existing design.
+	
+	Design leverage
+		Make our design a close derivative of the printer Mark McComsey showed us on 11/24. An open issue is that the BOM cost we are currently rolling up is currently ~800 over budget. We are exploring ways to reduce costs and if we cannot find a way in the next week, we plan to recommend the SC change course and purchase a commercial printer before teh budget year expires.
+		
+	Project Name
+		We decided to name the project the Mark$, in honor of the design leverage from Mark's printer (it's his third printer design).
+		
+	Buiild plate size
+		Printable area of 350mm (X) and 350mm (Y)
+		
+	Part Max Z-height
+		Max part size we can build inside Mark's frame design ~400mm.
+		
+	Enclosure
+		Printer will be enclosed, and thermally controlled. Follow Mark's direction, using polycarbonate “greenhouse” panels for sides, front, and top enclosure.
+		
+	Document repository
+		We will use the BARN github (https://github.com/BainbridgeArtisanResourceNetwork) as a repository for the documentation of the project, the design, and the operating manuals for the project. This has been created: https://github.com/BainbridgeArtisanResourceNetwork/Mark4_printer
+	
+	
+DECISIONS PROPOSED AT THIS MEETING
+We discussed the following decision points and have recommendations for review by the team. Next action on these (ratification, change, etc) next week.
+	
+	Which Extruder/Hotend
+		Proposed Decision:
+			Extruder - Bondtech BMG-X2 or clone
+			Hotend - Mosquito 
+		Rationale: 
+			Following Mark's recommendation
+		Cocnerns:
+			After the meeting, pricing these parts helped push us over budget. The dual-material BMG-X2 is $135 from Bondtech and we have not found a clone yet. And the Mosquito hot ends are $144 each. 
+		Next Steps:
+			Need to review this decision in light of the budget.
+			What Material items does this decision allow us to purchase:
+				Extruder and hot ends.
+		
+	Include a tool Changer?
+		Proposed Decision:
+			Allocate volume in the frame design and build-plate location to allow an E3D/Jubilee style tool changer to be added at a later date.
+		Rationale:
+			A tool-changer is a great feature, but the budget may not allow it at present.
+		Cocnerns:
+			We might not allocate enough space. 
+		Next Steps:
+			Ratify decision.
+
+	Which control board?
+		Proposed Decision:
+			Duet2 + Paneldu touchscreen (or clone)
+		Rationale:
+			Mark has agreed to donate a Duet2 to the project, a big savings in the budget.  
+		Cocnerns:
+			The Duet2 may not have support for an eventual tool-changer, and the Duet3 (which does support a toolchanger) does not use the Paneldu touchscreen. A future upgrade will waste the $100 Paneldu. 
+		Next Steps:
+			Ratify decision. 
+			What Material items does this decision allow us to purchase:
+				Paneldu touchscreen.
+					
+
+OTHER MEETING BUSINESS
+	Budget
+		At the time of the meeting, we were trending to be over-budget with a partially completed BOM. We were concerned enough that we decided we needed to make completing the BOM and costing the materials a top priority, with the assumption that if we cannot find a way to get the budget under control, we should not risk the available funds and should recommend the SC revisit the decision to not buy a commercial printer.
+		
+		Post meeting update: We completed a BOM that contains 90+% of the material (we believe) and have initial costing on it. The total material cost is currently $2067. We are going to spend the rest of teh week looking for cost reductions and budget will be the sole agenda item at next week's meeting.
+		
+NEXT MEETING
+	Meeting date: 12/10 9am, ETZ studio
+	Agenda:
+		BOM cost review
+		Decision recommendation on revisiting the make/buy SC decision.
+		
+		
+	
+		
