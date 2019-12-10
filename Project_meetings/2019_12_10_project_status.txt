@@ -1,0 +1,76 @@
+2019-12-03 BARN MArk4 project meeting notes.
+
+Meeting date: 12/10 9am, ETA studio
+	Agenda Items:
+		BOM cost review - 
+			Doug reported that he's closed with the BARN financial folks on a request to push the spending for this printer into 2020. They have agreed to the request, and also increased the budget to $1800. This takes a ton of pressure off of the poroject for spending this year. As a result, we are slowing down and refocusing on a better project plan - we are building out the design and BOM (Bill of Materials)for the proposed before trying to spend all of the budget. This is going to giveus a better product in the end.  
+			
+		Decision recommendation on revisiting the make/buy SC decision-
+			With the budget increase we are back to having the curent BONM fit within the budget. We are over-target by about $200, but have several ideas for reducing costs. And the new process will allow us to spend more wisely.
+			
+	Non Agenda items
+		Fusion 360 model - 
+			We're going to change our process a bit from what we started just a week ago. In the future, the main Fusion_360_model directory will only contain the file for the full assembly and parts that have not yet been added to the assembly. Once parts are added to the assembly, their file will be moved to a sub-directory. We are doing this to allow easier design mods to those parts. 
+		
+		LARGE 3D Printer SIG - 
+			We are looking ionto formaing a 3D printer Special Interest Group within BARN, so that we can better communicate with the rest of the BARN community. 
+			
+			
+			 
+
+
+PROPOSED DECISION REVIEW
+	Based on the new, slowed down process, we are in less hurry on decisions. We're postposing finalizing the proposed decisions (below).
+
+
+
+	
+DECISIONS PROPOSED AT THIS MEETING (These are actually pending from the 12/03 meeting)
+We discussed the following decision points and have recommendations for review by the team. Next action on these (ratification, change, etc) in early January.
+	
+	Which Extruder/Hotend
+		Proposed Decision:
+			Extruder - Bondtech BMG-X2 or clone
+			Hotend - Mosquito 
+		Rationale: 
+			Following Mark's recommendation
+		Cocnerns:
+			After the meeting, pricing these parts helped push us over budget. The dual-material BMG-X2 is $135 from Bondtech and we have not found a clone yet. And the Mosquito hot ends are $144 each. 
+		Next Steps:
+			Need to review this decision in light of the budget.
+			What Material items does this decision allow us to purchase:
+				Extruder and hot ends.
+		
+	Include a tool Changer?
+		Proposed Decision:
+			Allocate volume in the frame design and build-plate location to allow an E3D/Jubilee style tool changer to be added at a later date.
+		Rationale:
+			A tool-changer is a great feature, but the budget may not allow it at present.
+		Cocnerns:
+			We might not allocate enough space. 
+		Next Steps:
+			Ratify decision.
+
+	Which control board?
+		Proposed Decision:
+			Duet2 + Paneldu touchscreen (or clone)
+		Rationale:
+			Mark has agreed to donate a Duet2 to the project, a big savings in the budget.  
+		Cocnerns:
+			The Duet2 may not have support for an eventual tool-changer, and the Duet3 (which does support a toolchanger) does not use the Paneldu touchscreen. A future upgrade will waste the $100 Paneldu. 
+		Next Steps:
+			Ratify decision. 
+			What Material items does this decision allow us to purchase:
+				Paneldu touchscreen.
+					
+
+
+		
+NEXT MEETING
+	Meeting date: 12/17 9am, ETA studio
+	Agenda:
+		Fusion Model review.
+				
+		
+	
+		
