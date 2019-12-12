@@ -2,7 +2,7 @@
 
 **2019-12-11 Current state of the mode**l
 
-![2019-12-11](/images/2019-12-11.jpg)
+![2019-12-11](/images/2019_12_11_assembly.jpg)
 
 - XY plate design updated from Mark 3 to fit our build volume.
 - X and Y rails in place. Current issue - The X-rail in the model and the BOM is 15mm wide. Mark designed the bridge for a narrower rail. we'll need to fix this model.
