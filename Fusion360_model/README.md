@@ -1,4 +1,4 @@
-### The Mark 4 Fusion 360 model
+### The Mark4 Fusion 360 model
 
 **2019-12-11 Current state of the model**
 
