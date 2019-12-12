@@ -2,7 +2,7 @@
 
 **2019-12-11 Current state of the mode**l
 
-![2019-12-11](E:\Mike\BARN\Mark4 printer repo\Fusion360_model\images\2019-12-11.jpg)
+![2019-12-11](/images/2019-12-11.jpg)
 
 - XY plate design updated from Mark 3 to fit our build volume.
 - X and Y rails in place. Current issue - The X-rail in the model and the BOM is 15mm wide. Mark designed the bridge for a narrower rail. we'll need to fix this model.
