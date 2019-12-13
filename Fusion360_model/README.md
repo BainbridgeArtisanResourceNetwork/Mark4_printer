@@ -2,7 +2,8 @@
 
 **2019-12-11 Current state of the model**
 
-![Assembly, Mark4 printer v23](https://github.com/BainbridgeArtisanResourceNetwork/Mark4_printer/blob/master/Fusion360_model/images/2019_12_11_assembly.jpg)
+Assembly V28:
+![Assembly, Mark4 printer v23](https://github.com/BainbridgeArtisanResourceNetwork/Mark4_printer/blob/master/Fusion360_model/images/assembly_v28.jpg)
 
 - XY plate design updated from Mark 3 to fit our build volume.
 - X and Y rails in place. Current issue - The X-rail in the model and the BOM is 15mm wide. Mark designed the bridge for a narrower rail. we'll need to fix this model.
@@ -12,7 +13,6 @@
 
 **Next steps with the model:**
 
-- Add most belt segments (I'll skip the ones that get longer and shorter as the bridge moves).
 - Add 4080 posts  and base plate.
 - I also plan to look at a different mounting scheme for the bridge that would shorten all of the standoffs in the design. Might not be worth the effort, but something I want to look at.
 
