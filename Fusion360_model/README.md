@@ -1,26 +1,34 @@
 ### The Mark4 Fusion 360 model
 
-**2019-12-11 Current state of the model**
+**2019-12-16 Current state of the model**
 
 Assembly V28:
 ![Assembly, Mark4 printer v23](https://github.com/BainbridgeArtisanResourceNetwork/Mark4_printer/blob/master/Fusion360_model/images/assembly_v28.jpg)
 
-- XY plate design updated from Mark 3 to fit our build volume.
-- X and Y rails in place. Current issue - The X-rail in the model and the BOM is 15mm wide. Mark designed the bridge for a narrower rail. we'll need to fix this model.
-- Dual bondtech clone extruder plus mosquito  hot ends modeled (roughly) along with the E3D tool changer (also roughly). This is for being sure we have space for the tool changer. More work will be needed in this area to get a more exact model of the tool changer and the extruder's mounting to it before we are sure we have the space correct.
-- The model moves in the X and Y directions, with limits currently set to our 350mm x 350mm part size (plus the nozzle separation in the dual extruder).  The main plate is "grounded" in the model, so you can play with it in Fusion by grabbing the extruder with your mouse and moving it around (what fun!).
-- Motors, pulleys, and belts are in roughly their correct positions. We need to verify belt thickness and look closely at the parts around the motors to be sure we like the belt paths there. I added parts to the BOM for building the standoffs under the pulleys and the motor. 
+- Frame made from 4080 vertical rails is now in place, along with the base plate. 
+- The X-rail in the model has been changed to a 12mm rail (from 15mm)
+- Holes in the top plate have been added to allow us to use either NEMA 17 or NEMA 23 X and Y motors.
+- A linear slide rail has been added for the the Z-axis. This is the rail Doug found on Ebay and contains the ball-screw, NEMA23 motor, slide rail, shaft coupling, and block, all built into a 2040 rail. I used this rather than the Mark3 design because I don;t have the details of the Mark3 and this is nearly the same. If we keep this, we'll need to change the mounting holes in the top and bottom plates.  
+
+
 
 **Next steps with the model:**
 
-- Add 4080 posts  and base plate.
-- I also plan to look at a different mounting scheme for the bridge that would shorten all of the standoffs in the design. Might not be worth the effort, but something I want to look at.
+- Add the build plate support and build plate. 
+
+This will complete the "basic" design, then there are several things for us to look at before locking things in:
+
+- A different mounting scheme for the bridge that would shorten all of the standoffs in the design. Might not be worth the effort, but something I want to look at.
+- Assessing a three-rail (and motor) Z-axis vs a single rail, cantilevered design. 
+- Alternate extruders, the Jubilee toolchanger, and alternate tools. We want to be sure we've got enough room to implement a toolchanger (maybe now, maybe later) in the design.
+- Checking out how much we can extend the X, Y, and Z part dimensions. With the rails we have, we have some room to grow. It seems a waste to cut our rails shorter rather than be able to make bigger parts. 
+- After these are done, we can  add both the main enclosure and the top enclosure.
 
 
 
 
 
-**About the stuff in this directory:**
+**About the stuff in this directory (unchanged since 2019-12-11):**
 
 This directory of the repo contains the "master" versions of the parts we are assembling into the BARN Mark4 printer. It also contains a Fusion 360 assembly of many (most, probably not all) of these parts.
 
