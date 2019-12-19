@@ -3,7 +3,7 @@
 **2019-12-16 Current state of the model**
 
 Assembly V28:
-![Assembly, Mark4 printer v23](https://github.com/BainbridgeArtisanResourceNetwork/Mark4_printer/blob/master/Fusion360_model/images/assembly_v28.jpg)
+![Assembly, Mark4 printer v23](https://github.com/BainbridgeArtisanResourceNetwork/Mark4_printer/blob/master/Fusion360_model/images/assembly_v45.jpg)
 
 - Frame made from 4080 vertical rails is now in place, along with the base plate. 
 - The X-rail in the model has been changed to a 12mm rail (from 15mm)
