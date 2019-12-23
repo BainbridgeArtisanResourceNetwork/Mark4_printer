@@ -1,28 +1,29 @@
 ### The Mark4 Fusion 360 model
 
-**2019-12-16 Current state of the model**
+**2019-12-23 Current state of the model**
 
-Assembly V28:
-![Assembly, Mark4 printer v23](https://github.com/BainbridgeArtisanResourceNetwork/Mark4_printer/blob/master/Fusion360_model/images/assembly_v45.jpg)
+New Assembly V10:
+![Assembly, Mark4 printer v23](https://github.com/BainbridgeArtisanResourceNetwork/Mark4_printer/blob/master/Fusion360_model/images/New_Assembly_V10.jpg)
 
-- Frame made from 4080 vertical rails is now in place, along with the base plate. 
-- The X-rail in the model has been changed to a 12mm rail (from 15mm)
-- Holes in the top plate have been added to allow us to use either NEMA 17 or NEMA 23 X and Y motors.
-- A linear slide rail has been added for the the Z-axis. This is the rail Doug found on Ebay and contains the ball-screw, NEMA23 motor, slide rail, shaft coupling, and block, all built into a 2040 rail. I used this rather than the Mark3 design because I don;t have the details of the Mark3 and this is nearly the same. If we keep this, we'll need to change the mounting holes in the top and bottom plates.  
+- Completely refactored the model
+  		* Assembly is now built from linked subassemblies, and parts in those are not subassemblies are NOT linked. This makes for a simpler project file in Fusion and much much easier manipulation of the design. The downside (but a good tradeoff in your Fusion assembler's opinion) is that the subassemblies have a <u>lot</u> of user parameters. 
+  		* Many more user parameters are now in place, and with the subassemblies, everything is not breaking when I change a design parameter. This will be important in our next big project step - locking in the dimensions.
+  		* I've tried to arrange the design flow to produce a more logical timeline. AND I've tried to name everything (I probably missed a few things) to make it easier to find what you may be looking for.
+- When I refactored the design, I also built around full-length X and Y rails. In the previous model, the purchased rails were longer than needed, so we would need to cut them down, or have length that was never traveled. In this model, I made the main XY plate and the bridge longer to fully utilize the purchased size of the rails.  With the working user parameters, we can make the printer bigger or smaller in real-time.
+- I eliminated the 10mm spacer I had between the bridge and the blocks on the Y-Rails. This moves the belts closer to the XY plate - shorter standoffs for the pulleys and the motors. 
+- I put in mounting holes for both NEMA 23 and 17 motors for X and Y. I also put moth motors in the design. You might want to turn one or the other off when you look at it to eliminate any confusion.  
 
 
 
 **Next steps with the model:**
 
-- Add the build plate support and build plate. 
+- Alternate extruders, the Jubilee tool changer, and alternate tools. We want to be sure we've got enough room to implement a tool changer (maybe now, maybe later) in the design. This is probably the biggest unknown right now and has the most impact on part size. The current design does not have the frame-side of the tool changer in place and we can't go much further on bog decision until there is something there that we feel is representative of an actual tool changer.
+- Add the build plate support and build plate.
 
 This will complete the "basic" design, then there are several things for us to look at before locking things in:
 
-- A different mounting scheme for the bridge that would shorten all of the standoffs in the design. Might not be worth the effort, but something I want to look at.
 - Assessing a three-rail (and motor) Z-axis vs a single rail, cantilevered design. 
-- Alternate extruders, the Jubilee toolchanger, and alternate tools. We want to be sure we've got enough room to implement a toolchanger (maybe now, maybe later) in the design.
-- Checking out how much we can extend the X, Y, and Z part dimensions. With the rails we have, we have some room to grow. It seems a waste to cut our rails shorter rather than be able to make bigger parts. 
-- After these are done, we can  add both the main enclosure and the top enclosure.
+- After these are done, we can  add both the main enclosure and the top enclosure, electronics, etc..
 
 
 
