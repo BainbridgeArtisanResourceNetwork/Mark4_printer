@@ -1,23 +1,24 @@
 ### The Mark4 Fusion 360 model
 
-**2019-12-23 Current state of the model**
+**2019-12-30 Current state of the model**
 
-New Assembly V10:
-![Assembly, Mark4 printer v23](https://github.com/BainbridgeArtisanResourceNetwork/Mark4_printer/blob/master/Fusion360_model/images/New_Assembly_V10.jpg)
+New Assembly V15:
+![Assembly, Mark4 printer v23](https://github.com/BainbridgeArtisanResourceNetwork/Mark4_printer/blob/master/Fusion360_model/images/New_Assembly_V15.jpg)
 
-- Completely refactored the model
-  		* Assembly is now built from linked subassemblies, and parts in those are not subassemblies are NOT linked. This makes for a simpler project file in Fusion and much much easier manipulation of the design. The downside (but a good tradeoff in your Fusion assembler's opinion) is that the subassemblies have a <u>lot</u> of user parameters. 
-  		* Many more user parameters are now in place, and with the subassemblies, everything is not breaking when I change a design parameter. This will be important in our next big project step - locking in the dimensions.
-  		* I've tried to arrange the design flow to produce a more logical timeline. AND I've tried to name everything (I probably missed a few things) to make it easier to find what you may be looking for.
-- When I refactored the design, I also built around full-length X and Y rails. In the previous model, the purchased rails were longer than needed, so we would need to cut them down, or have length that was never traveled. In this model, I made the main XY plate and the bridge longer to fully utilize the purchased size of the rails.  With the working user parameters, we can make the printer bigger or smaller in real-time.
-- I eliminated the 10mm spacer I had between the bridge and the blocks on the Y-Rails. This moves the belts closer to the XY plate - shorter standoffs for the pulleys and the motors. 
-- I put in mounting holes for both NEMA 23 and 17 motors for X and Y. I also put moth motors in the design. You might want to turn one or the other off when you look at it to eliminate any confusion.  
+- Added the Jubilee tool changer as a "volume placeholder" so that we can assess the impact/value of toolchangers with a better model than I could find for the E3D changer.  
+  		
+  * The Jubilee has a single nozzle extruder (not mosquito) and a Bondtech extruder. 
+  * Both the old extruder and the Jubilee are in the model. If you turn them both on, you'll be really confused!
+  * There is a part floating in the front of the frame. This houses the Jubilee's tool-changing motor, which uses a cable to latch and unlatch the tools during a tool-change.  
+  * I put in the Jubilee as-is, but we'd need to make changes if we want to pursue it. The jubilee X-rail is mounted to the bottom of the bridge, and the tool docks as-imported and placed interfere with the belts at the back of the frame. 
+  
+   
 
 
 
 **Next steps with the model:**
 
-- Alternate extruders, the Jubilee tool changer, and alternate tools. We want to be sure we've got enough room to implement a tool changer (maybe now, maybe later) in the design. This is probably the biggest unknown right now and has the most impact on part size. The current design does not have the frame-side of the tool changer in place and we can't go much further on bog decision until there is something there that we feel is representative of an actual tool changer.
+- Make some decisions about a tool changer - do we have one, and if so, which one? I'm personally leaning towards having one, even if we only change tools by hand. It's a handy way to easily swap tools. 
 - Add the build plate support and build plate.
 
 This will complete the "basic" design, then there are several things for us to look at before locking things in:
