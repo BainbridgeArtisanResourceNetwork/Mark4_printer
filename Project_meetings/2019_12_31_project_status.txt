@@ -1,0 +1,120 @@
+2019-12-31 BARN Mark4 project meeting notes.
+
+Meeting date: 12/29 9am, ETA studio
+	Attendees
+		Clayton baber
+		Mark McComsky
+		Mike Schrempp
+		
+	
+	Agenda Items:
+		Design review - 
+			Reviewed the newly redone assembly model. Currently  composed of 4 sub-assemblies: Frame, Toolchanger. XYplate (plus belts motors, etc), Z-axis assembly. Designs for parts used in those assemblies are within them. The XYplate has a lot of user settable parameters.  Clayton pointed out some challenges in the usability of the model for folks uplpoading it from the repo. As a result, Mike to teh following action items:
+				1. Break links to sub-assemblies so that they are all in the same design file.
+				2. Create a new folder for the design in the git repo and put the one assembly file in it. This will make the repo much cleaner. After a little while, delete the old stuff out of the repo. Clayton suggested rebuilding the whole repo, but I'm a bit reluctant to do that due to teh other material that is now in it.
+				3. Additional cleanup of the user parameters to have them in teh format <PART NAME IN CAPS>_<dimension_name>. Dimenstion name adn part names should not use abbreviations. Might take a few passes to get this all cleaned up. 
+			
+			Design Items reviewed - XY plate details:
+				1. X-rail length. Two choices looked at - 500mm and 400mm. Model currently has 500mm (also need to verify a 500mm rail has a 500mm long rail vs a longer rail with 500mm travel). Comparisons
+					500mm rail
+						- allows 450mm part X-size (barely) with dual Bondtech extruder. 
+						- requires 706mm (27.8inch) top and bottom plates (in X direction)
+					400mm rail
+						- allows 350mm part X-size (barely) with dual Bondtech extruder.
+						- requires 606mm (23.85inch) top and bottom plates (in X direction)
+					DECISION PROPOSED : Buy the 500mm X-rail and cut down later if necessary. Will lock decision on 1/7 meeting if no objections raised. 
+				
+				2. Belt and idler layout
+					- Current MarkIII uses 4 fixed idlers on the plate, to allow short belt lengths leading into the drive gear. An alternate layout would use eliminate 2 fixed idlers, but have the long belt runs into the drive gear. Is this OK?  The Mark 3 belt layout is designed to maximize wrap on the drive pulley. We adjusted the design in the meeting to increase the wrap from V10. Made a couple of other adjustmenst as a result.     
+						
+				2. Y-rail length. 
+					- Currently 500mm rail. This allows 425mm total travel. With a 350mm part, there is 75mm of space available for tool-changer pick-up and release. Did not look at this in detail in the meeting, but the printer assembly has the Jubilee in it now so we can see the impact. 
+					
+				3. Alternate belt layout. Remove one idler per belt , and maybe a second too. Change motor placement.
+					- Can narrow width of frame by ~40mm (~1.5").
+					- Moving posts reduces span of the plate, reducing deflection.
+					- More space avbailable for tool changer.
+					Did not look at thsi closely in the meeting, but it does not impact the rail lengths, so we should be clear to purchase. 
+					
+				4. Spacer between bridge and Y-rail block eliminated. Belt A standoofs are now 1.9mm and the B belt are 24.35. The motor standoffs for Belt A are 17.1mm tall, and tmotor standoffs for the B belt motor are 39.45mm. Mark pointed out that he used the spacer to allow the span of the bridge to be shorter. Current design has shorter standoffs, longer bridge span. Mike will look at whether both can be achieved for next week's meeting.
+				
+				5. Discussed the merits of NEMA 17 vs 23. Mark strongly suggests starting with the NEMA23 for it's higher holding torque. He says he's changed his printer to these and seems substantially less ringing artifacts. 
+					DECISION PROPOSED: Buy NEMA 23 motors for the X and Y. Keep mounting for both NEMA 23 and NEMA 17. Will lock decision on 1/7 meeting if no objections raised.
+					
+				6. Mark shared a generative design he grew in Fusion 360 for a printable cantilevered bed support. Very interesting.
+				
+					
+			
+			List of things we still need to look at. No decisions yet on any changes - we need to model the ideas so we can evaluate them. Here's the current list:
+
+				1. More discussion on changing the belt layout to eliminate one idler pulley on each belt. Mike is interested ino looking into this if it can reduce the overall plate dimensions.  Mike to provide a specific proposal if he wants a change. 
+				2. Should we build the main plate in 3 pieces, vs cutting out of one sheet of Al. This can reduce the raw material cost, but adds some risk of misalignment of the three pieces. 
+				3. Should we replace the 4080 extrusions with rectangular Al tubing for cost savings. Need to look at a detailed alternative design and a cost comparison.
+				4. Should we switch to larger diameter front pulleys and have the belt wrap around the other side of the Y-axis rails?
+				5. Should we use a three-rail (and stepper) Z axis setup vs the ball-screw?
+				7. Should we make the pulley axles at the front corners of the printer adjustable in the X direction? This would make it easy to adjust for different belt thicknesses in the future and retain the required parallelism with the Y-rails.
+				7. Should we make adjustments that would allow a motor to be fit where any of the idler pulleys are located? An idea for future resue of the design. 
+
+		
+
+			
+			
+			 
+
+
+PROPOSED DECISION REVIEW (collected from above)
+	DECISION PROPOSED : Buy the 500mm X-rail and cut down later if necessary. Will lock decision on 1/7 meeting if no objections raised..
+	DECISION PROPOSED: Buy NEMA 23 motors for the X and Y. Keep mounting for both NEMA 23 and NEMA 17. Will lock decision on 1/7 meeting if no objections raised.
+
+
+	
+DECISIONS PROPOSED AT THIS MEETING (These are actually pending from the 12/03 meeting, and we'll hold until the new year. )
+We discussed the following decision points and have recommendations for review by the team. Next action on these (ratification, change, etc) in early January.
+	
+	Which Extruder/Hotend
+		Proposed Decision:
+			Extruder - Bondtech BMG-X2 or clone
+			Hotend - Mosquito 
+		Rationale: 
+			Following Mark's recommendation
+		Cocnerns:
+			After the meeting, pricing these parts helped push us over budget. The dual-material BMG-X2 is $135 from Bondtech and we have not found a clone yet. And the Mosquito hot ends are $144 each. 
+		Next Steps:
+			Need to review this decision in light of the budget.
+			What Material items does this decision allow us to purchase:
+				Extruder and hot ends.
+		
+	Include a tool Changer?
+		Proposed Decision:
+			Allocate volume in the frame design and build-plate location to allow an E3D/Jubilee style tool changer to be added at a later date.
+		Rationale:
+			A tool-changer is a great feature, but the budget may not allow it at present.
+		Cocnerns:
+			We might not allocate enough space. 
+		Next Steps:
+			Ratify decision.
+
+	Which control board?
+		Proposed Decision:
+			Duet2 + Paneldu touchscreen (or clone)
+		Rationale:
+			Mark has agreed to donate a Duet2 to the project, a big savings in the budget.  
+		Cocnerns:
+			The Duet2 may not have support for an eventual tool-changer, and the Duet3 (which does support a toolchanger) does not use the Paneldu touchscreen. A future upgrade will waste the $100 Paneldu. 
+		Next Steps:
+			Ratify decision. 
+			What Material items does this decision allow us to purchase:
+				Paneldu touchscreen.
+					
+
+
+		
+NEXT MEETING
+	Meeting date: 1/7 9am, ETA studio.
+	Agenda:
+		Review pending decisions and try to lock some things down.
+		Fusion Model review.
+				
+		
+	
+		
