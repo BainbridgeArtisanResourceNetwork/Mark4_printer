@@ -1,0 +1,137 @@
+2020-01-07 BARN Mark4 project meeting Agenda, notes prep.
+
+Meeting date: 01/07 9am, ETA studio
+	Attendees	
+	
+	Agenda Items:
+		PENDING DECISION REVIEW
+		
+			DECISION PROPOSED : Buy the 500mm X-rail and cut down later if necessary. 
+				Proposed on: 12/31
+				Implications:
+					- Allows a bigger than 350mm part (close to 450mm) in the X-direction.
+					- If we were to buy a 400mm rail, we might come up short of our 350mm goal.
+
+			DECISION PROPOSED: Buy NEMA 23 motors for the X and Y. Keep mounting for both NEMA 23 and NEMA 17.
+				Proposed on 12/31
+				Implications: 
+					- We have already have ordered 2 NEMA 17 motors (cost ~$50 total). We may want to return them, hold them for another use, or plan a change from 17 to 23 at a later time.
+					
+			
+		
+		FUSION MODEL REVIEW
+			A look at the latest. As of this writing (1/3), the design has not changed from last week, but the model was revised to break links to the assemblies, so that all parts are now created within a single file.  There may be some additional changes before Tuesday, as I'm hoping to add a simple buildplate in the Z-Axis assembly.
+			
+		
+		DEDELOPMENT PROCESS DISCUSSION
+			Proposed Milestones:
+				1. Lock in enough design details to give us confidence to buy big ticket items above the TOP-PLATE (Rails, motors, idler pulley parts, drive pulleys, standoff raw material). Buy those parts.
+				2. Build one (or more) proof-of-concept TOP-PLATE assemblies.
+					- Use Wood for the plate and bridge (MDF, MDO, plywood?), mill in woodshop (if practical).
+					- Short corner posts (also wood) cut to 4080 approximate profile
+					- Base plate needed?
+					- Print PLA versions of standoffs, and use cheap 6mm belt (to save raw material)?
+					- Clean and lubricate all bearings
+					- Assemble - including motors
+					- Need a simple carriage design to fix the belts to. 
+				3. Power-up XY motion, and run some tests
+					- Hook up the Duet2 board
+					- Power-on
+					- Run Gcode (x and Y only)
+				4. Work out other "above the plate" details using proto parts to help us make decisions on them.
+					- Tool changer ideas, details
+					- End-stop switch locations
+					- Belt tensioning
+					- Top cover fastening and basic design
+				5. Z-Axis analysis
+					- Those interested in exploring non-canitlievered options need to do analysis and make their case. Make prototypes if necessary.
+					- Get to a place where we are ready to commit to the rail(s) and motor(s) for the Z-Axis, and buy them.
+					- Adding the Z-Axis to the wooden proof of concept - is it valuable?
+					- Build plate support design,modeling, prototyping.
+				6. Iterate on steps 2-4 until we are ready to commit to metal
+				7. Full electrical plan documented (do this in paralell to above steps)
+					- Wiring diagram for every switch, thermocouple, temp sensor, motor, fan, etc.
+					- Wiring layout for same.
+				6. Manufacture all the metal parts
+					- Order any additional raw materials (did we buy the 4080 yet?).
+					- Manufacture parts
+				7. Build the real things	
+					- Assemble
+					- Test
+				8. Put into production
+				
+					
+
+				
+					
+			
+			List of things we still need to look at. No decisions yet on any changes - we need to model the ideas so we can evaluate them. Here's the current list:
+
+				1. More discussion on changing the belt layout to eliminate one idler pulley on each belt. Mike is interested ino looking into this if it can reduce the overall plate dimensions.  Mike to provide a specific proposal if he wants a change. 
+				2. Should we build the main plate in 3 pieces, vs cutting out of one sheet of Al. This can reduce the raw material cost, but adds some risk of misalignment of the three pieces. 
+				3. Should we replace the 4080 extrusions with rectangular Al tubing for cost savings. Need to look at a detailed alternative design and a cost comparison.
+				4. Should we switch to larger diameter front pulleys and have the belt wrap around the other side of the Y-axis rails?
+				5. Should we use a three-rail (and stepper) Z axis setup vs the ball-screw?
+				7. Should we make the pulley axles at the front corners of the printer adjustable in the X direction? This would make it easy to adjust for different belt thicknesses in the future and retain the required parallelism with the Y-rails.
+				7. Should we make adjustments that would allow a motor to be fit where any of the idler pulleys are located? An idea for future resue of the design. 
+
+		
+
+			
+			
+			 
+
+
+PROPOSED DECISION REVIEW (collected from above)
+
+
+	
+DECISIONS PROPOSED AT THIS MEETING (These are actually pending from the 12/03 meeting, and we'll hold until the new year. )
+We discussed the following decision points and have recommendations for review by the team. Next action on these (ratification, change, etc) in early January.
+	
+	Which Extruder/Hotend
+		Proposed Decision:
+			Extruder - Bondtech BMG-X2 or clone
+			Hotend - Mosquito 
+		Rationale: 
+			Following Mark's recommendation
+		Cocnerns:
+			After the meeting, pricing these parts helped push us over budget. The dual-material BMG-X2 is $135 from Bondtech and we have not found a clone yet. And the Mosquito hot ends are $144 each. 
+		Next Steps:
+			Need to review this decision in light of the budget.
+			What Material items does this decision allow us to purchase:
+				Extruder and hot ends.
+		
+	Include a tool Changer?
+		Proposed Decision:
+			Allocate volume in the frame design and build-plate location to allow an E3D/Jubilee style tool changer to be added at a later date.
+		Rationale:
+			A tool-changer is a great feature, but the budget may not allow it at present.
+		Cocnerns:
+			We might not allocate enough space. 
+		Next Steps:
+			Ratify decision.
+
+	Which control board?
+		Proposed Decision:
+			Duet2 + Paneldu touchscreen (or clone)
+		Rationale:
+			Mark has agreed to donate a Duet2 to the project, a big savings in the budget.  
+		Cocnerns:
+			The Duet2 may not have support for an eventual tool-changer, and the Duet3 (which does support a toolchanger) does not use the Paneldu touchscreen. A future upgrade will waste the $100 Paneldu. 
+		Next Steps:
+			Ratify decision. 
+			What Material items does this decision allow us to purchase:
+				Paneldu touchscreen.
+					
+
+
+		
+NEXT MEETING
+	Meeting date: 1/14 9am, ETA studio.
+	Agenda:
+		
+				
+		
+	
+		
