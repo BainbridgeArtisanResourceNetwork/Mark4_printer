@@ -5,15 +5,20 @@
 New Assembly V24:
 ![Assembly, Mark4 printer v23](https://github.com/BainbridgeArtisanResourceNetwork/Mark4_printer/blob/master/Fusion360_model_NEW/images/New_Assembly_V24.jpg)
 
-Another major update of the model structure, without much change to the model itself. In this iteration of design improvement, there are no linked subassemblies, and time has been taken to clean up the timeline so the modeling process isn't "jumbled".  Thanks to Clayton for all his feedback on the lack of usability of the old model.  
+Changes from V24:
+
+* Changed X-RAIL,  Y-RAIL, and Z-RAIL sliding joint origins and limits so that the blocks move the full length of the rails. 
+* Added build volume. 
+* Added simple heated bed plate. 
 
 
 
 **Next steps with the model:**
 
-- Put the part volume back into the model. 
+- Need to move the Jubilee docked tools  ~ 25mm closer to the rear of the frame to maximize part Y-dimension. It is currently only 340mm.
+- Need to move the Z-Axis rail forward to be closer to the heated bed.
 - Make some decisions about a tool changer - do we have one, and if so, which one? I'm personally leaning towards having one, even if we only change tools by hand. It's a handy way to easily swap tools. 
-- Add the build plate support and build plate.
+- Add the build plate support and more detail to the build plate.
 
 This will complete the "basic" design, then there are several things for us to look at before locking things in:
 
