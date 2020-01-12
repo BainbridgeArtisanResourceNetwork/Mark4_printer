@@ -2,14 +2,15 @@
 
 **2020-01-07 Current state of the model**
 
-New Assembly V24:
-![Assembly, Mark4 printer v23](https://github.com/BainbridgeArtisanResourceNetwork/Mark4_printer/blob/master/Fusion360_model_NEW/images/New_Assembly_V24.jpg)
+New Assembly V38:
+![Assembly, Mark4 printer v23](https://github.com/BainbridgeArtisanResourceNetwork/Mark4_printer/blob/master/Fusion360_model_NEW/images/New_Assembly_V38.jpg)
 
 Changes from V24:
 
 * Changed X-RAIL,  Y-RAIL, and Z-RAIL sliding joint origins and limits so that the blocks move the full length of the rails. 
 * Added build volume. 
-* Added simple heated bed plate. 
+* Added simple heated bed plate. Made the plate the full X-width (435mm), but extended the Y dimension to 400mm (from 340) to allow full range printing if we don;t end up implementing the toolchanger.
+* Added a sheet metal bed frame with kinematic coupling to the bed. We'll need to evaluate the stiffness of this frame as part of the final Z axis analysis.
 
 
 
