@@ -1,0 +1,146 @@
+2020-01-21 BARN Mark4 project status.
+
+Meeting date: 01/21 9am, ETA studio
+	Attendees - Attendance us UP! 
+		Doug
+		Mike
+		Clayton
+		Ralph
+	
+		
+	Agenda Items:
+		JUBILEE DISCUSSION
+			We discussed the Jubilee design and decided (pending normal review period) to adopt several Jubilee concepts into our design:
+			
+				PROPOSED DECISION: We will design for the Jubilee toolchanger. This includes the carriage, tool holder and docks. 
+					Proposed on: 1 1/21, Will review and attempt to lock 1/28.	
+					Ratioanle: We like the Jubilee capability for multiple tools. 
+					Implications:
+						- More cost (for tool attachment actuation. We may opt to delay implementation of the automated actuator if budget becomes an issue, and just do manual rotation of the attachment - which would eliminate toolchanges on every layer.
+						- This requires that the Z-axis guide rail be attached to the bottom of the bridge (as in Jubilee), and the pulley locations on the bridge adjusted to aligh the belts with the belt fastener on the Jubilee carriage.. 
+						- The one change we will face is that the Jubilee carriage is designed for 6mm belts and we're using 9mm.
+				
+				PROPOSED DECISION: Use separate motors/lifting screws, and guide rails for each of the three supported points of the bed. This matches the Jubilee and is a departure from the cantilevered bed used in the Mark3 design. Use NEMA 17 motors, and acme threaded lead screws with tight threads. 
+					Proposed on: 1 1/21, Will review and attempt to lock 1/28.	
+					Ratioanle: We like the added stability of the three motor design, and it's ability to auto-adjust the three motors separately on each print.  
+					Implications:
+						- More motors and guide rails.
+						- No ball-screw at the rear of the frame.
+						- No cantilevered bed frame. 
+
+
+		FUSION MODEL REVIEW
+			Lots of changes from last week. The current mnodel impements the three leg design, and most of the other changes we made. The current model has a 500mm long X-Rail.	
+	
+			PROPOSED DECISION: Use a three-post frame. One leg at the center-rear, and one on each side towards the front. The posts align with the Z-support rails (so the rails can be fastened to them. 
+				Proposed on:  1/21, will lock after wood prototype is built and evaluated.
+				Rationale: We want to minimize the forces that will try to deflect the top plate. A 4-point support can flex the top plate if teh legs are not all the same length.
+				Implications:
+					- Less parts!
+					- We may need to have diagonal bracing between the three posts and the top plate to keep the assembled frame from racking.
+					- Other things (like the lower eclosure) should not be fastened to the top in a rigid way.
+					- As a contingency, keep the holes in the base and top plate for the rear corner posts. 
+										
+			PROPOSED DECISION: Implement the belt arrangement as implemented in the current model. This is the Mark3 arrangement with the Y-rails moved closer together. 
+				Proposed on:  1/21, will lock after wood prototype is built and evaluated.
+				Rationale: We want to minimize the length of the bridge.
+				Implications:
+					- Taller idler pulley standoffs than the Mark3 design. We have protottypes of these idler pulley assemblies and they seem fine. 
+		
+			PROPOSED DECISION: As much as possible (hopefully 100%), use through bolts to fasten things to the plates,and not have threaded holes in the plates. 
+				Proposed on:  1/21, will lock after wood prototype is built and evaluated.
+				Rationale: Threads in aluminum can be stripped, through bolts can be tighter, and through bolts can use locking nuts.
+				Implications:
+					- Longer bolts. 
+
+
+
+		REVSISITED DECISIONS
+			DECISION LOCKED : Buy the 500mm X-rail and cut down later if necessary. 
+				Proposed on: 12/31, locked 1/7, unlocked 1/21, Will relock 1/28.
+				unlocked on: 1/21 - The latest fusion model shows a 400mm rail can deliver 350mm parts. SInce 350mm is the design objective, we decided to use a 400mm rail. 
+				Implications:
+					- Meets design goal for the printer.
+					- Reduces overall size of the printer. 				
+				
+		
+		PENDING DECISIONS FROM PREVIOUS MEETINGS - we did not review these today.
+			Development process - review all feedback (including in-meeting dicsussion) of the developmetn process proosed last week:
+				1. Lock in enough design details to give us confidence to buy big ticket items above the TOP-PLATE (Rails, motors, idler pulley parts, drive pulleys, standoff raw material). Buy those parts.
+				2. Build one (or more) proof-of-concept TOP-PLATE assemblies.
+					- Use Wood for the plate and bridge (MDF, MDO, plywood?), mill in woodshop (if practical).
+					- Short corner posts (also wood) cut to 4080 approximate profile
+					- Base plate needed?
+					- Print PLA versions of standoffs, and use cheap 6mm belt (to save raw material)?
+					- Clean and lubricate all bearings
+					- Assemble - including motors
+					- Need a simple carriage design to fix the belts to. 
+				3. Power-up XY motion, and run some tests
+					- Hook up the Duet2 board
+					- Power-on
+					- Run Gcode (x and Y only)
+				4. Work out other "above the plate" details using proto parts to help us make decisions on them.
+					- Tool changer ideas, details
+					- End-stop switch locations
+					- Belt tensioning
+					- Top cover fastening and basic design
+				5. Z-Axis analysis
+					- Those interested in exploring non-canitlievered options need to do analysis and make their case. Make prototypes if necessary.
+					- Get to a place where we are ready to commit to the rail(s) and motor(s) for the Z-Axis, and buy them.
+					- Adding the Z-Axis to the wooden proof of concept - is it valuable?
+					- Build plate support design,modeling, prototyping.
+				6. Iterate on steps 2-4 until we are ready to commit to metal
+				7. Full electrical plan documented (do this in paralell to above steps)
+					- Wiring diagram for every switch, thermocouple, temp sensor, motor, fan, etc.
+					- Wiring layout for same.
+				6. Manufacture all the metal parts
+					- Order any additional raw materials (did we buy the 4080 yet?).
+					- Manufacture parts
+				7. Build the real things	
+					- Assemble
+					- Test
+					8. Put into production
+			
+			
+			PROPOSED DECISION:  Extruder - Bondtech BMG-X2 or clone, Hotend - Mosquito or clone
+				Proposed on:  12/3, will lock after wood prototype is built and evaluated.
+				Rationale: Mark's recommendation
+				Implications:
+					- After the meeting, pricing these parts helped push us over budget. The dual-material BMG-X2 is $135 from Bondtech and we have not found a clone yet. And the Mosquito hot ends are $144 each.
+					
+					
+			PROPOSED DECISION: Use the  Duet2 (or clone) as the controlelr and the Paneldu touchscreen (or clone) as the main user interface
+				Proposed on:  12/3, will lock after wood prototype is built and evaluated.
+				Rationale: Mark has agreed to donate a Duet2 to the project, a big savings in the budget.
+				Implications:
+					- 	The Duet2 may not have support for an eventual tool-changer, and the Duet3 (which does support a toolchanger) does not use the Paneldu touchscreen. A future upgrade will waste the $100 Paneldu. 				
+					
+				
+
+					
+
+		PENDING INVESTIGATION
+			List of things we still need to look at. No decisions yet on any changes - we need to model the ideas so we can evaluate them. Here's the current list:
+
+				1. Should we build the main plate in 3 pieces, vs cutting out of one sheet of Al. This can reduce the raw material cost, but adds some risk of misalignment of the three pieces. (1/21 - investigation tabled because the one advocate (Mike) gave up on pushing it.)
+				2. Should we replace the 4080 extrusions with rectangular Al tubing for cost savings. Need to look at a detailed alternative design and a cost comparison.(1/21 - investigation tabled because the one advocate (Mike) gave up on pushing it.)
+				3. Need to finalize the design for the Z-axis supports between the slide rail blocks and the Ball-half of the kinematic connection at each of the three heated bed mount points. 
+				4. Need to detail the design of the lower enclosure and the upper enclosure.
+				5. Need to investigate  "closing the ring" and having the top plate span the front of the printer. Also allows locating the tool docks on this front edge and spinning the carraige by 180. This all would provide easier access to the tools and better visibility to the extruder when a part is printing. 
+				6. Power analysis - look at the power (current/voltage) needs of all the bits and pieces in the design and assess how they all fit into the Duet2 design.
+
+					
+
+
+		
+NEXT MEETING
+	Meeting date: 1/28 9am, ETA studio.
+	Agenda: 
+		- Review proposed decision that are pending lock and lock what we can.
+		- Power update from Ralph (if he's ready)
+		- Review prototype #1 (wood plates and frame) candidate design and identify final tweaks. Give go-ahead for fab of the parts.
+		
+				
+		
+	
+		
