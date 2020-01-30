@@ -1,33 +1,45 @@
 ### The Mark4 Fusion 360 model
 
-**2020-01-17 Current state of the model**
+**2020-01-30 Current state of the model**
 
-New Assembly  (file : 2020_01_16_Mark4 Assembly- three legs v26.f3d)
-![Assembly, Mark4 printer v23](https://github.com/BainbridgeArtisanResourceNetwork/Mark4_printer/blob/master/Fusion360_model_NEW/images/New_assembly_2020_01_16.jpg)
+New Assembly  (file: Mark4 Assembly v90.f3d)
+![Assembly, Mark4 printer v23](https://github.com/BainbridgeArtisanResourceNetwork/Mark4_printer/blob/master/Fusion360_model_NEW/images/New_assembly_2020_01_30.jpg)
 
- Lots of Changes from Last version (Mark4 Assembly v38.f3d):
+ Lots of Changes from last version (Mark4 Assembly v38.f3d):
 
-* COLORS! I made a lot of parts different colors so that they will stand out more clearly, as you'll see in the image above.
-* Deleted the two rear corner posts in the frame and instead have a single post in the center -rear. This gives the top plate a 3-point support which will make it much more difficult for the frame to flex the top plate. 
-* Made adjustments to many parts to support the Jubilee tool carriage design. The major ones are:
-  * The X guide rail is now mounted to the bottom of the bridge, not the top. This is where the Jubilee folks put theirs and we need to match is we don't want to redesign the tool-carriage.
-  * The red belt (called BeltA in the fusion file) has been moved above the bridge. This matches the Jubilee position, but also has a benefit of allowing the two Y-Rails to be moved closer together, making the span of the bridge shorter - good for minimizing flex. The span is now ~571mm.
-  * The pulleys on the bridge were moved so the belts are on top of each other, to match the Jubilee design. It also eliminates twisting toques when the motors pull the carriage.
-* We'll likely approach the Jubilee tool changer isn two steps. Step 1 is to use the carriage on the bridge, then manually attach or remove tools using the E3D/Jubilee kinematic coupling. At this stage, multiple prints would need to be made with a dual-extruder tool, which eats up some X-axis part capacity.  The advantage is that without the need for parking space for tools, the Y-axis part capacity grows. Step 2 would be adding the automation for changing tools. Then we could to go with multiple single extruder tools. We'll make the maximum size heated bed so we will have options.
-* I've added a design for motors, guide rails, and lead screws for the two front corners of the build-plate. The single rear ball screw and cantilevered bed support is still in the model but not shown. You can easily turn it on.  The build plate kinematic mount points are not changed from the cantilevered version. This is not a committed change, but something may of us want to understand better.  Switching from the ball-screw assembly for the Z axis also gives us 50mm more z-size for our parts. 
-* Added a sample thermal enclosure. I made it out of cherry wood in the model, but we'll use something more sensible when we build it. This enclosure would be fastened to the baseplate and the insides of the vertical frame posts, and come up to "just below" the top plate.  We'll avoid fastening to the bottom of the top-plate so that we don't accidentally add bending stresses to it. The z-motors all stay outside the heated enclosure, with some nifty vertical blades runninng through slots in the enclosure walls.  I didn't put doors on the front yet, but they should be easy to do in a future model.  A top enclosure is also not yet in the model, but I've left space for a 2020 extrusion outboard of the belts, and at the front. In the rear, we should be able to make the back of the top enclosure so that the X and Y motors are outside. 
+- Changed parameter (length) for X rail to 400mm (from 500), to reflect team decision to drive to 350mm part (the 500mm rail was delivering a 450mm max part X dimension.). This change rippled small changes thought lots of parts.
+- Changed X-Rail from MGN12H to MGN12C (changes block size from large to small) to match the Jubilee tool carriage hole pattern. 
+- Rebuilt the Z-axis components to integrate them into the Frame (when these will be assembled), rather than where they were (hanging on the end of the timeline).
+  -   Completely redesigned the brackets that span from the side Z-axis guide rail blocks, to the bottom of the heated bed kinematic supports. Minimized the "blade length" where the brackets that cut through the enclosure sides. Now only 15mm has no flange for rigidity.
+  - Angled the bottom edge of the blades to eliminate a pinch point between the bottom of the blade and the enclosure bottom. 
+  - Designed a better kinematic ball support at the rear post with a shorter cantilevered reach. 
+- Top plate
+  -   Added an enclosing bar across the front of the top plate. This is now a "ring" instead of a "U". The idea is to make the top plate stiffer overall.
+  - Moved pulley "B" closer to front of plate to give more wrap around drive pulley (Pulley "C") and give more space for a belt tensioner. Moved pulley D slightly closer to rear of plate.
+  - Added a belt tensioning feature between Pulley B and C. This is an additional idler pulley mounted on a pivoting bar and a fixed block mounted to the top plate. A screw through the fixed block pushes on the pivoting bar, driving it into the belt to increase tension. We may want to tweak the way the arm pivots, but this is good for now.   This is shown in the insert at the top of this readme, the parts are a mustard yellow.
+  - Added optional gusset plates in both X and Y directions on all three posts. Some of these currently interfere with the top edge of the bottom enclosure. If we decide to add these gussets, we'll need to add slots to the bottom enclosure for them.
+  - Added holes at rear corners for additional corner posts in case we decide we need them.
+- Bottom enclosure
+  - Still a placeholder component, but moved the slots to line up with the Z-axis sliders that pass through them.
+- Built a first-pass top enclosure using 2020 aluminum. This part hinges at the rear in the current model, but no hinge mechanism has been designed yet. I expect this is something we'll prototype by hand once the wood model is built.
 
-With these changes, our build volume is UP - to 450mm X (400mm if we use a dual-extruder),  360mm Y (~435mm if we don't park tools) , and 440mm Z (~390mm with the ball-screw currently in the design).  And the overall size of this beast is  676mm (30.2") wide,  688mm (27") deep, and 644mm (25.35) tall. 
+
+
+With these changes, our build volume is
+
+-  X - 365mm  
+- Y  - 365mm (with tool changer), 440mm without the tool changer.
+- Z  - 440mm  
 
 
 
 **Next steps with the model:**
 
-- Do a costing analysis of these new ideas, to see where we stand relative to the budget.
-- Need to add a rear  Z-Axis NEMA motor and mount. 
-- Make some decisions about the tool changer - do we have one, and if so, which one? I'm personally leaning towards having one, even if we only change tools by hand. It's a handy way to easily swap tools.
-
-
+- Design review and change list for the wood model.
+- Detail the bottom and top enclosures.
+- Add details driven by the electronics (locations for the Power supply, boards, user interface, limit switch mounting, etc.)
+- Tweak the Jubilee tool changer dock so it mounts to our printer.
+- Play with the cable/filament  bundles to see how they should impact the design of the top cover.
 
 
 
