@@ -2,40 +2,32 @@
 
 **2020-01-30 Current state of the model**
 
-New Assembly  (file: Mark4 Assembly v90.f3d)
-![Assembly, Mark4 printer v23](https://github.com/BainbridgeArtisanResourceNetwork/Mark4_printer/blob/master/Fusion360_model_NEW/images/New_assembly_2020_01_30.jpg)
+New Assembly  (file: Mark4 Assembly v121.f3d)
+![Assembly, Mark4 printer v23](https://github.com/BainbridgeArtisanResourceNetwork/Mark4_printer/blob/master/Fusion360_model_NEW/images/New_Assembly_2020_02_07.jpg)
 
- Lots of Changes from last version (Mark4 Assembly v38.f3d):
+ Changes from last version (Mark4 Assembly v90.f3d):
 
-- Changed parameter (length) for X rail to 400mm (from 500), to reflect team decision to drive to 350mm part (the 500mm rail was delivering a 450mm max part X dimension.). This change rippled small changes thought lots of parts.
-- Changed X-Rail from MGN12H to MGN12C (changes block size from large to small) to match the Jubilee tool carriage hole pattern. 
-- Rebuilt the Z-axis components to integrate them into the Frame (when these will be assembled), rather than where they were (hanging on the end of the timeline).
-  -   Completely redesigned the brackets that span from the side Z-axis guide rail blocks, to the bottom of the heated bed kinematic supports. Minimized the "blade length" where the brackets that cut through the enclosure sides. Now only 15mm has no flange for rigidity.
-  - Angled the bottom edge of the blades to eliminate a pinch point between the bottom of the blade and the enclosure bottom. 
-  - Designed a better kinematic ball support at the rear post with a shorter cantilevered reach. 
-- Top plate
-  -   Added an enclosing bar across the front of the top plate. This is now a "ring" instead of a "U". The idea is to make the top plate stiffer overall.
-  - Moved pulley "B" closer to front of plate to give more wrap around drive pulley (Pulley "C") and give more space for a belt tensioner. Moved pulley D slightly closer to rear of plate.
-  - Added a belt tensioning feature between Pulley B and C. This is an additional idler pulley mounted on a pivoting bar and a fixed block mounted to the top plate. A screw through the fixed block pushes on the pivoting bar, driving it into the belt to increase tension. We may want to tweak the way the arm pivots, but this is good for now.   This is shown in the insert at the top of this readme, the parts are a mustard yellow.
-  - Added optional gusset plates in both X and Y directions on all three posts. Some of these currently interfere with the top edge of the bottom enclosure. If we decide to add these gussets, we'll need to add slots to the bottom enclosure for them.
-  - Added holes at rear corners for additional corner posts in case we decide we need them.
-- Bottom enclosure
-  - Still a placeholder component, but moved the slots to line up with the Z-axis sliders that pass through them.
-- Built a first-pass top enclosure using 2020 aluminum. This part hinges at the rear in the current model, but no hinge mechanism has been designed yet. I expect this is something we'll prototype by hand once the wood model is built.
+- Added materials to all of the fabricated parts, and used proper coloring. Exception is that the bottom enclosure is still shown as wood.
+- Switched the X-Axis block back to MGN12C from 12H. Last model moved to be compatible with Jubilee tool changer parts, but on further exam of them, we can easily change to accommodate the 12H block. This also means an easier sourcing process for the rail (I was not able to find a rail with a 12C block in my quick amazon search.)
+- Shortened bottom plate at front to be close to the vertical posts.
+- Top plate:
+  - Radiused corners
+  - Switched post holes from M12 to M8 to accommodate heli-coil inserts in the leg extrusions
+  - Switched leg fasteners from flathead screws to cap screws. Eliminates need to countersink the holes, and will reduce friction during fastening. Also allows some small amount of adjustment during assembly.
+- Heated bed
+  - Switched to 3/8" thick material (from 1/4) to reflect our plan to cut this from the "donut hole" left when we cut the top plate. We are giving up 3mm of Z part size and will need slightly longer to heat the bed.
+  - Added pocket holes in the bottom to accommodate magnets.
+
+- Added CNC tools for both the wood CNC and the metal CNC. Also started a manufacturing tool path for the top plate.  There is also a new component called "Manufacturing" where component that need to be recreated for manufacturing are being kept. Currently, there is a top plate in there which I created to make it easier to do the milling setup due to the need for a two-step milling process. Our plate is bigger than the metal studio CNC mill can complete in one operation.
 
 
 
-With these changes, our build volume is
-
--  X - 365mm  
-- Y  - 365mm (with tool changer), 440mm without the tool changer.
-- Z  - 440mm  
 
 
 
 **Next steps with the model:**
 
-- Design review and change list for the wood model.
+- Complete tool paths for the wood-CNC version of the top plate and heated bed.
 - Detail the bottom and top enclosures.
 - Add details driven by the electronics (locations for the Power supply, boards, user interface, limit switch mounting, etc.)
 - Tweak the Jubilee tool changer dock so it mounts to our printer.
