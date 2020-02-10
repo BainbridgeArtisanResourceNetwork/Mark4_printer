@@ -1,0 +1,104 @@
+2020-02-04 BARN Mark4 project status. 
+
+Meeting date: 02/04 9am, ETA studio
+	Attendees - Attendance us UP! 
+		Doug
+		Mike
+		Ralph
+		Clayton
+	
+		
+	Agenda Items:
+		
+		POWER REVIEW
+			- Great power analysis by Ralph, looking at all the powered components and the Duet2 controller. The overall power of the machine should be under 1000W. We discussed the differnt parts used and Ralph will make some changes to his spreadsheet. We'll also get that sheet added to github.
+		
+		NEW PROPOSED DECISIONS
+			DECISION: Enclose the front of the top plate, rather than leaving it open.
+				Proposed on: 2/4
+				Ratified and Lockked on: TARGET LOCK ON 2/11	
+				Ratioanle: Closing the front of the top plate will make it stiffer. 
+				Implications:
+					- More difficult to access finished parts when the front doors and top cover are opened. Probably add g-code to parts to lower build plate after a part prints.
+		
+
+		BOM REVIEW
+			We reviewed the new BOM and approved the prucase of a set of parts needed for building out the wooden prototype.
+			
+		DESIGN REVIEW
+			We reviewed the current model and identified the following changes/observations:
+				- CHANGE TO BE MADE: Round the front corners of the top plate.
+				- CHANGE TO BE MADE: Speficy materials for all parts we are fabbing.
+				- CHANGE TO BE MADE: Cut the front of the bottom plate back to align with the front corner posts.
+				- OBSERVATION: Belt tensioner seems complicated compared to doing something where the belts terminate at the carriage. Clayton to look into some design options.
+				- OBSERVATION: The top enclosure looks very bulky. We'll look at it more carefully once we get the wood proto in hand.
+				- OBSERVATION: The bottom enclosure material needs to be selected so a more detailed design can be made. Doug suggested looking at the Jubilee insulation material. Mike suggested a sheet metal enclosure with fiberglass insulation might be good. Lots of work to do once the wood proto is in hand.
+				- OBSERVATION: We need to start thinking about where the electric/electronic components will go.
+				
+
+		PROPOSED DECISIONS WAITING FOR LOCK UNTIL AFTER THE WOODEN PROTO IS BUILT
+
+			PROPOSED DECISION:  Extruder - Bondtech BMG-X2 or clone, Hotend - Mosquito or clone
+				Proposed on:  12/3, will lock after wood prototype is built and evaluated.
+				Rationale: Mark's recommendation
+				Implications:
+					- After the meeting, pricing these parts helped push us over budget. The dual-material BMG-X2 is $135 from Bondtech and we have not found a clone yet. And the Mosquito hot ends are $144 each.	
+					
+			PROPOSED DECISION: Use the  Duet2 (or clone) as the controlelr and the Paneldu touchscreen (or clone) as the main user interface
+				Proposed on:  12/3, will lock after wood prototype is built and evaluated.
+				Rationale: Mark has agreed to donate a Duet2 to the project, a big savings in the budget.
+				Implications:
+					- 	The Duet2 may not have support for an eventual tool-changer, and the Duet3 (which does support a toolchanger) does not use the Paneldu touchscreen. A future upgrade will waste the $100 Paneldu. 
+
+			PROPOSED DECISION: Use a three-post frame. One leg at the center-rear, and one on each side towards the front. The posts align with the Z-support rails (so the rails can be fastened to them. 
+				Proposed on:  1/21, will lock after wood prototype is built and evaluated.
+				Rationale: We want to minimize the forces that will try to deflect the top plate. A 4-point support can flex the top plate if teh legs are not all the same length.
+				Implications:
+					- Less parts!
+					- We may need to have diagonal bracing between the three posts and the top plate to keep the assembled frame from racking.
+					- Other things (like the lower eclosure) should not be fastened to the top in a rigid way.
+					- As a contingency, keep the holes in the base and top plate for the rear corner posts. 
+										
+			PROPOSED DECISION: Use the belt arrangement as implemented in the current model. This is the Mark3 arrangement with the Y-rails moved closer together. 
+				Proposed on:  1/21, will lock after wood prototype is built and evaluated.
+				Rationale: We want to minimize the length of the bridge.
+				Implications:
+					- Taller idler pulley standoffs than the Mark3 design. We have protottypes of these idler pulley assemblies and they seem fine. 
+		
+			PROPOSED DECISION: As much as possible (hopefully 100%), use through bolts to fasten things to the plates,and not have threaded holes in the plates. 
+				Proposed on:  1/21, will lock after wood prototype is built and evaluated.
+				Rationale: Threads in aluminum can be stripped, through bolts can be tighter, and through bolts can use locking nuts.
+				Implications:
+					- Longer bolts. 
+				
+
+					
+
+		PENDING INVESTIGATION
+			List of things we still need to look at. No decisions yet on any changes - we need to model the ideas so we can evaluate them. Here's the current list:
+
+				1. Need to detail the design of the lower enclosure and the upper enclosure.
+				2. Need to investigate  "closing the ring" and having the top plate span the front of the printer. Also allows locating the tool docks on this front edge and spinning the carraige by 180. This all would provide easier access to the tools and better visibility to the extruder when a part is printing. 
+				3. Power analysis - look at the power (current/voltage) needs of all the bits and pieces in the design and assess how they all fit into the Duet2 design.
+
+					
+
+
+		
+NEXT MEETING
+	Meeting date: 2/11 9am, ETA studio.
+	Agenda: 
+		- Wood proto readiness review
+			- parts to be CNC machined
+			- Plans for posts
+			- parts to be purchased
+			- parts to be fabricated (pulley and motor standoffs, Z-Axis brackets
+		
+		- Purchasing - The purchas plan from last week has been scrubbed, resulting in a whole lot less purchasing of minimum quantities beyond what we need. We'll review in the meeting.
+		
+				
+		
+				
+		
+	
+		
