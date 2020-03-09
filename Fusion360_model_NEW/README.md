@@ -2,8 +2,8 @@
 
 **2020-01-30 Current state of the model**
 
-New Assembly  (file: Mark4 Assembly v134.f3d)
-![Assembly, Mark4 printer v23](https://github.com/BainbridgeArtisanResourceNetwork/Mark4_printer/blob/master/Fusion360_model_NEW/images/New_Assembly_2020_02_29.jpg)
+New Assembly  (file: Mark4 Assembly v183.f3d)
+![Assembly, Mark4 printer v23](https://github.com/BainbridgeArtisanResourceNetwork/Mark4_printer/blob/master/Fusion360_model_NEW/images/New_Assembly_2020_03_08.jpg)
 
  Changes from last version (Mark4 Assembly v134.f3d):
 
@@ -12,18 +12,11 @@ New Assembly  (file: Mark4 Assembly v134.f3d)
 	- Bottom plate to legs
 	
 - Adjusted the plate on the jubilee to move the belt fasteners upwards to align with the Z-position of the belts. Both the A and B fasteners needed to be moved and lengthened. The A belt fastener(lower one) moved up 1.627mm, and the B belt fastener moved up an additional 1.25mm. The method was to cut the body below the belt mounting hole, move the top portion up as needed, then extrude the cut face to re-seal the part. 
+
+- Creared some parts to attach to the Jubilee carriage to allow easier clamping of the belts. Not expecting these parts to make it to the final design, but just be used while we are in the proto stage.  These parts are purple in the model. Each of the four belt ends is fastened to a central piece by a wedge, and this assembly is fastened to teh jubilee carriage.
+
 - Added model for new limit switch in the parts repository and the Jubilee assembly. Also adjusted the bridge so the limit switch will have somethign to hit. 
-- Creared some parts to 
-
-
-
-
-
-- Increased length of X-rail to 450mm, but did not increase the size of the build volume. Just moved the ends of the rail further out along the bridge. Adjusted limits on the sliding joint to keep travel the same. 
-- Removes holes in the heated bed that should not have been there in the first place (in the center of the hole patterns for the kinematic supports).
-- Changed length of Z-Axis lead-screw nuts to reflect length of nuts purchased.
-- Moved pulleys in the X-direction to fix a situation where one pulley on teh bridge hid access to one of the bridge mounting screws. All pulleys got juggled a bit in the X direction (some + and some -). The motor mounts also moved.
-- Added counter sinks to the bridge and also radiused remaining sharp corners.
+-Fixed a bug (unreported in github) where the bottom enclosure was mispositioned.  
 
 
 
