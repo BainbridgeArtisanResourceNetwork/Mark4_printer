@@ -5,7 +5,19 @@
 New Assembly  (file: Mark4 Assembly v134.f3d)
 ![Assembly, Mark4 printer v23](https://github.com/BainbridgeArtisanResourceNetwork/Mark4_printer/blob/master/Fusion360_model_NEW/images/New_Assembly_2020_02_29.jpg)
 
- Changes from last version (Mark4 Assembly v121.f3d):
+ Changes from last version (Mark4 Assembly v134.f3d):
+
+- Added lots of screws and washers	
+	- Top plate to legs
+	- Bottom plate to legs
+	
+- Adjusted the plate on the jubilee to move the belt fasteners upwards to align with the Z-position of the belts. Both the A and B fasteners needed to be moved and lengthened. The A belt fastener(lower one) moved up 1.627mm, and the B belt fastener moved up an additional 1.25mm. The method was to cut the body below the belt mounting hole, move the top portion up as needed, then extrude the cut face to re-seal the part. 
+- Added model for new limit switch in the parts repository and the Jubilee assembly. Also adjusted the bridge so the limit switch will have somethign to hit. 
+- Creared some parts to 
+
+
+
+
 
 - Increased length of X-rail to 450mm, but did not increase the size of the build volume. Just moved the ends of the rail further out along the bridge. Adjusted limits on the sliding joint to keep travel the same. 
 - Removes holes in the heated bed that should not have been there in the first place (in the center of the hole patterns for the kinematic supports).
