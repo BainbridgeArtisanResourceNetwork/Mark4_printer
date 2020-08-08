@@ -2,30 +2,26 @@
 
 **2020-01-30 Current state of the model**
 
-New Assembly  (file: Mark4 Assembly v183.f3d)
-![Assembly, Mark4 printer v23](https://github.com/BainbridgeArtisanResourceNetwork/Mark4_printer/blob/master/Fusion360_model_NEW/images/New_Assembly_2020_03_08.jpg)
+New Assembly  (file: Mark4 Assembly v231.f3d)
+![Assembly, Mark4 printer v231](https://github.com/BainbridgeArtisanResourceNetwork/Mark4_printer/blob/master/Fusion360_model_NEW/images/New_Assembly_2020_08_08.jpg)
 
  Changes from last version (Mark4 Assembly v134.f3d):
 
-- Added lots of screws and washers	
-	- Top plate to legs
-	- Bottom plate to legs
-	
-- Adjusted the plate on the jubilee to move the belt fasteners upwards to align with the Z-position of the belts. Both the A and B fasteners needed to be moved and lengthened. The A belt fastener(lower one) moved up 1.627mm, and the B belt fastener moved up an additional 1.25mm. The method was to cut the body below the belt mounting hole, move the top portion up as needed, then extrude the cut face to re-seal the part. 
-
-- Creared some parts to attach to the Jubilee carriage to allow easier clamping of the belts. Not expecting these parts to make it to the final design, but just be used while we are in the proto stage.  These parts are purple in the model. Each of the four belt ends is fastened to a central piece by a wedge, and this assembly is fastened to teh jubilee carriage.
-
-- Added model for new limit switch in the parts repository and the Jubilee assembly. Also adjusted the bridge so the limit switch will have somethign to hit. 
--Fixed a bug (unreported in github) where the bottom enclosure was mispositioned.  
-
-
+- Moved pulleys on bridge by 0.2mm to align with Jubilee carriage backplate V 05. Part of github issue #24.
+- Changed X-Rail block to MGN12C from MGN 12H. 
+- Replaced older versions of Jubilee carriage parts with latest versions.
+- Implemented changes to some bugs reported in github
+  - #21 - changed heated bed dimensions to match 350mm x350mm goal of project.
+  - #20 - X-axis motor mount screw holes too big.
+  - #18 - Mounting holes for kinematic bed attach do not line up with posts on the supports
+- Removed prototype belt tensioners that didn't work in the wood proto.
+- Added electronics and proto board for supporting same.
 
 
 
 
 **Next steps with the model:**
 
-- Complete tool paths for the wood-CNC version of the top plate and heated bed.
 - Detail the bottom and top enclosures.
 - Add details driven by the electronics (locations for the Power supply, boards, user interface, limit switch mounting, etc.)
 - Tweak the Jubilee tool changer dock so it mounts to our printer.
