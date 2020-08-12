@@ -1,0 +1,113 @@
+2020-08-11 BARN Mark4 project status. 
+
+Meeting date: 03/10 9am, ETA studio
+	Attendees - 
+		Doug
+		Mike
+		Scott
+	
+		
+	Status on Agenda Items:
+	
+		Well, I decided I better start documenting our meetings agian. It's been over a month that we've been having meeting on Zoom.  These note try to catch us up on the missed meetings. If there are things of importance that I missed, let me know and I'll include them. 
+	
+		
+		ELECTRICAL REPORT
+			- From a few weeks back - Ralph reported that he's been working with the Duet expander board and things seem to be working.
+			- We all discussed an idea to collect the signal wires  for a typical extruder tool (everything but the high current heater wires) into a single connector. The goal is to simplify the connections and swapping of tools. We talksed about bulkhead connectors and also using a PCboard to hold a conenctor. A secondary benefit is to move repeated plugging and unplugging off the Duet board and into a connecter that can easilt be replaced if damaged or wear breaks it. 
+		
+		
+		WOOD PROTO
+			- It's till sitting in the studio 5 months since we last met in person, waiting for more to be done to it.
+			
+			- Mike made the aluminum braskets needed to hold the Z-axis steppers, constrain the top of the Z-axis lead screws from wobbling, and connect teh z-axis lead screw nuts to the heated bed kinemaric supports. These have not been assembled to the wood proto yet. If we don;t find bugs in these parts, they may become part of the finished printer.
+			
+			- Mike made a plywood piece to fit to the rear post that we can use to mount the electronics. 
+			
+		PARTS received
+			- The cast aluminum plates for the top and bottom plates are in.
+			- The mosquito hot end clone is on order from aliexpress is in.
+			- The Duet expander board is on order from aliexpress is in.
+			- The extruder motor is in.
+			- The extruder is in.
+			- The last two sliding rails for the z-axis are in.
+			
+		PARTS ON ORDER
+			- The bed heater is on order from China via ebay. Due in September
+			- The 350 x350 spring steel, PEI coated bed is on oprder from aliexpress. Due in September.
+
+		FUSION 360 MODEL Status
+			- A new version of the model was posted to github on 8/8. It has the electronics added, the latest Jubilee tool changer parts, and a few bugs fixed.
+			- The latest Fusion model is always available in a BARN "team space" on Fusion. If you want read access, send Mike your email address and he'll send an invite to you.
+			- We workied through a few alignment issues between the latest Jubilee tool changer parts and our design.
+				- Jubilee uses 6.35mm belts and we are using 9mm belts. This results in our belts not hitting the "belt attachment zone" on the Jubilee in proper alignment. On 8/11 we talked about ways to achieve alignment. We decided that we would modify the Jubilee belt landing zone to make it match our belts. Options we rejected were modifing a different part of the jubilee carriage, or recessign part of the bridge to move our belts "down".
+			- A couple weeks back, we agreed that we should lock on the 350mm x 350mm build size. The model did have space to accomodate a larger X dimension, and a heated bed larger in this dimension. We decided to stay focused on the target. The heated bed in the model was updated to reflect this decision. After the new Jubilee carriage parts were added, we saw that the heated bed needs to be moved forward to avoid tools crashing into parked tools when printing close to Y=0.  (https://github.com/BainbridgeArtisanResourceNetwork/Mark4_printer/issues/23) A change was not in the model posted last weekend.
+			- We are still trying to track all issues with teh model vis github: https://github.com/BainbridgeArtisanResourceNetwork/Mark4_printer/issues
+			- Mike has started work on a non-Jubilee carriage. The idea is to make somethign of aluminum to avoid issues with plastic parts and high temperatures.
+
+
+NEXT MEETING
+	Meeting date: 8/18 10am, ZOOM.
+	Agenda: 
+		- Wood proto -  
+			- Review change to fix issue #23 (https://github.com/BainbridgeArtisanResourceNetwork/Mark4_printer/issues/23).
+
+
+
+
+
+OLD STUFF
+
+			
+		DESIGN REVIEW (from previous meetings)
+			We reviewed the current model and identified the following changes/observations:
+				- OBSERVATION 2/4: Belt tensioner seems complicated compared to doing something where the belts terminate at the carriage. Clayton to look into some design options.
+				- OBSERVATION 2/4: The top enclosure looks very bulky. We'll look at it more carefully once we get the wood proto in hand.
+				- OBSERVATION 2/4: The bottom enclosure material needs to be selected so a more detailed design can be made. Doug suggested looking at the Jubilee insulation material. Mike suggested a sheet metal enclosure with fiberglass insulation might be good. Lots of work to do once the wood proto is in hand.
+				- OBSERVATION 2/4: We need to start thinking about where the electric/electronic components will go.
+
+
+		PROPOSED DECISIONS WAITING FOR LOCK UNTIL AFTER THE WOODEN PROTO IS BUILT
+
+			PROPOSED DECISION:  Extruder - Bondtech BMG-X2 or clone, Hotend - Mosquito or clone
+				Proposed on:  12/3, will lock after wood prototype is built and evaluated.
+				Rationale: Mark's recommendation
+				Implications:
+					- After the meeting, pricing these parts helped push us over budget. The dual-material BMG-X2 is $135 from Bondtech and we have not found a clone yet. And the Mosquito hot ends are $144 each.	
+					
+			PROPOSED DECISION: Use the  Duet2 (or clone) as the controlelr and the Paneldu touchscreen (or clone) as the main user interface
+				Proposed on:  12/3, will lock after wood prototype is built and evaluated.
+				Rationale: Mark has agreed to donate a Duet2 to the project, a big savings in the budget.
+				Implications:
+					- 	The Duet2 may not have support for an eventual tool-changer, and the Duet3 (which does support a toolchanger) does not use the Paneldu touchscreen. A future upgrade will waste the $100 Paneldu. 
+
+			PROPOSED DECISION: Use a three-post frame. One leg at the center-rear, and one on each side towards the front. The posts align with the Z-support rails (so the rails can be fastened to them. 
+				Proposed on:  1/21, will lock after wood prototype is built and evaluated.
+				Rationale: We want to minimize the forces that will try to deflect the top plate. A 4-point support can flex the top plate if teh legs are not all the same length.
+				Implications:
+					- Less parts!
+					- We may need to have diagonal bracing between the three posts and the top plate to keep the assembled frame from racking.
+					- Other things (like the lower eclosure) should not be fastened to the top in a rigid way.
+					- As a contingency, keep the holes in the base and top plate for the rear corner posts. 
+										
+			PROPOSED DECISION: Use the belt arrangement as implemented in the current model. This is the Mark3 arrangement with the Y-rails moved closer together. 
+				Proposed on:  1/21, will lock after wood prototype is built and evaluated.
+				Rationale: We want to minimize the length of the bridge.
+				Implications:
+					- Taller idler pulley standoffs than the Mark3 design. We have protottypes of these idler pulley assemblies and they seem fine. 
+		
+			PROPOSED DECISION: As much as possible (hopefully 100%), use through bolts to fasten things to the plates,and not have threaded holes in the plates. 
+				Proposed on:  1/21, will lock after wood prototype is built and evaluated.
+				Rationale: Threads in aluminum can be stripped, through bolts can be tighter, and through bolts can use locking nuts.
+				Implications:
+					- Longer bolts. 
+				
+
+					
+
+		PENDING INVESTIGATION
+			List of things we still need to look at. No decisions yet on any changes - we need to model the ideas so we can evaluate them. Here's the current list:
+
+				1. Need to detail the design of the lower enclosure and the upper enclosure.
+				2. Need to investigate  "closing the ring" and having the top plate span the front of the printer. Also allows locating the tool docks on this front edge and spinning the carraige by 180. This all would provide easier access to the tools and better visibility to the extruder when a part is printing. 
+				3. Power analysis - look at the power (current/voltage) needs of all the bits and pieces in the design and assess how they all fit into the Duet2 design.
