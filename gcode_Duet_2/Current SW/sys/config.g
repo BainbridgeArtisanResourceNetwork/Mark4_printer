@@ -82,7 +82,7 @@ M92 E420:420				 ; Extruder: This works for our L3D Dual Drive Extruder with 17H
 ; Set axis software limits and min/max switch-triggering positions.
 ; Adjusted such that (0,0) lies at the lower left corner of a 350x350mm square on the 370mmx470mm build plate.
 M208 X0 Y0 Z0 S1
-M208 X350 Y400 Z415.1 S0
+M208 X350 Y435 Z415.1 S0                   ; MIKE 6/16/21 changed Y from 400 to 435
 M208 U0:200                                 ; Set Elastic Lock (U axis) max rotation angle
 
 ; Thermistors
