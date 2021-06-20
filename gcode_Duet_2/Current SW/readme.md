@@ -24,10 +24,6 @@ The following directories are part of the  software. Their use is briefly descri
 
 
 
-### BARN_gcode_macros
-
-This is a folder we created for storing gcode macros that we write at BARN. We don't have much here yet, but it should grow over time. There is also a python script we use for creating md files from the gcode files. 
-
 ### filaments
 
 This file has folders for different filament types and those directories have gcode that is executed when a filament load or unload command is given. They have stuff like heating the nozzle before extracting the filament, running the extruder in reverse to pull the filament out of the nozzle, etc. 
