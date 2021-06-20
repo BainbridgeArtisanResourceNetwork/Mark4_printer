@@ -1,4 +1,4 @@
-; Example Homing file for RepRapFirmware on delta printer
+;!<summary> Example Homing file for RepRapFirmware on delta printer. We should delete this file since we are not a delta printer.</summary>
 
 ;M117 Use https://configurator.reprapfirmware.org/ to set up your printer config
 

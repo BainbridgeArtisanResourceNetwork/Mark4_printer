@@ -1,0 +1,2 @@
+*this is an auto-generated md file for the **sys\sleep.g**  *gcode file. All comments in the original file with a '!' immediately following the ';' are collected here.*
+<summary> called when M1 (Sleep) is being processed. Currently there are no commands in this file and we need to learm why M1 would be called and then add any commands we think are appropriate. Maybe shut off all heaters and fans, disable steppers?</summary>
