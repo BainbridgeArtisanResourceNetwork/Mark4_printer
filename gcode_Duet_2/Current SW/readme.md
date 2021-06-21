@@ -14,27 +14,26 @@ This directory organization and the file names within are mostly as provided by 
 
 ## Use of this sw
 
-To put this software on the BARN printer, the whole contents of the directory and all it's sub-directories are copied onto a microSD card and the card inserted into the SD slot on the Duet2 controller board on the printer. At power up, the controller looks on teh SD, finds the files it needs, and gets going.
+To put this software on the BARN printer, the whole contents of the directory and all it's sub-directories are copied onto a microSD card and the card inserted into the SD slot on the Duet2 controller board on the printer. At power up, the controller looks on the SD, finds the files it needs, and gets going.
 
 
 
 ## Directories
 
-The following directories are part of the  software. Their use is briefly described here. Each of these directories should contain a readme.md that describes it's files and their use.
-
+The following directories are part of the  software. Their use is briefly described here. Additional info can be found on the Duet2 wiki [HERE](https://duet3d.dozuki.com/Wiki/Firmware_Overview).  Each of these directories should contain a readme.md that describes it's files and their use.
 
 
 ### filaments
 
-This file has folders for different filament types and those directories have gcode that is executed when a filament load or unload command is given. They have stuff like heating the nozzle before extracting the filament, running the extruder in reverse to pull the filament out of the nozzle, etc. 
+This file has folders for different filament types and those directories have gcode that is executed when a filament load or unload command is given. They have stuff like heating the nozzle before extracting the filament, running the extruder in reverse to pull the filament out of the nozzle, etc.  This folder does not appear to have been created by Duet2, but is inherited from Jubilee (a theory). We'll need to dig into it's use.
 
 ### gcodes
 
-This is a location where the gcode files for creating parts are stored. We are not sure if this is a place where the Duet2 controller fw puts files downloaded to it, or if it was created by the Jubilee team (where we got the corde we started with)
+Folder **/gcodes** is used to hold g-code files for  printing. You can use subfolders of /gcodes to organize these files.  G-code files can also be located on an external SD card if one is  connected.  Files in this directory can be executed from the Duet2 web interface or touchscreen,
 
 ### macros
 
-This is the default location for macros. "Macros" are really just gcode files that are called by another gcode file.  When a gcode files calls a macro (using the M98 command), this is a place the Duet2 controller will look for it if an exact path is not provided. 
+Folder **/macros** is used to hold used-defined macro  files. "Macros" are really just gcode files that are usually called macros if they are used by another gcode file.  The names of these files appear as menu entries in DuetWebControl and on PanelDue.  You can use subfolders of /macros to organize these  files.  Macros created by BARN members are named starting with "BARN_". Files in this directory can be executed from the Duet2 web interface or touchscreen.
 
 ### sys
 

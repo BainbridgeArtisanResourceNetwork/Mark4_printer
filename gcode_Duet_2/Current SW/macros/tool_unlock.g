@@ -1,4 +1,4 @@
-; Disengage the toolchanger lock
+;!<summary> Disengage the toolchanger lock.  This macro performs the steps needed to twist the tool changer latch to the unlocked position.</summary>
 
 G91                 ; Set relative movements
 G1 U-4 F9000 S2     ; Back off the limit switch with a small move
