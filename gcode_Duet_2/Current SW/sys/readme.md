@@ -6,7 +6,7 @@ This is the Big Kahuna directory. It is where gcode files provided with the Duet
  
 
 ### config-override.g
-No summary found in the gcode comments in this file.
+config-override.g holds the configuration parameters that were saved when you last ran M500. Your config.g file should normally include command M501 near the end, to load these saved values at startup and override any similar commands earlier in config.g.
 ### config.g
 connfig.g is the file that the Duet2 fw calls after power up to learn the HW configuration of the printer and get things started. This file has loads of stuff in it. It is where we defines motors, fans, heaters, etc with a numbers and map each one to the output connector on the board where we will plug in it's cable. It defines which motors are X, Y, Z, Extruder, or Utility and defines how a single step of the motor translates into the specific motion of the nozzle, filament, or whatever the motor is hooked to.  We use it to tell teh Duet2FW that we are a core-XY style printer, the size of the bed, where our homing switches are located, how many different tools we will have, etc. Just about everything that the controller fw needs to know so it can make parts is in this file.  Loads of good stuff that we need to get right. 
 
@@ -34,7 +34,7 @@ Called to home the Z axis. Currently lowers the heated bed looking for an endsto
 ### stop.g
  called when M0 (Stop) is run (e.g. when a print from SD card is cancelled) Currently no commands are in this file. We need to decide what the steps we want performed on this trigger and add them to this file.
 ### tfree0.g
- called when tool 0 is freed. I assume this means the steps to take when the tool is no longer needed. I think those steps are:
+ tfreeN.g is called when tool N has already been "selected" (is in use) and another tool is requested. Executing this command "frees" up the tool holder frm tool N. Further reading [HERE](https://duet3d.dozuki.com/Wiki/ConfiguringRepRapFirmwareCartesianPrinter#Section_Tool_change_files)]  I assume this means the steps to take when the tool is no longer needed. I think those steps are:
 
 0. Remember the tool location. 
 1. Lower the bed a bit.
@@ -42,14 +42,14 @@ Called to home the Z axis. Currently lowers the heated bed looking for an endsto
 3. Call the nozzle wiping macro (if we make one).
 4. Set the nozzle temperature to a standby value.
 5. Move the tool in front of the tool dock.
-6. move teh tool into the dock.
+6. move the tool into the dock.
 7. Call the macro that turns the tool latch to the unlatched position.
 8. Move the tool carrier back from the tool dock.
-9. perform some task that confirms the tool was really left on the dock and is not still attached to the carrier, or fell out of the dock.No idea hoe to do this yet.
+9. Perform some task that confirms the tool was really left on the dock and is not still attached to the carrier, or fell out of the dock. No idea how to do this yet.
 10. Return to the remembered location.  
 
 ### tfree1.g
- called when tool 1 is freed. I assume this means the steps to take when the tool is no longer needed. I think those steps are:
+ tfreeN.g is called when tool N has already been "selected" (is in use) and another tool is requested. Executing this command "frees" up the tool holder frm tool N. Further reading [HERE](https://duet3d.dozuki.com/Wiki/ConfiguringRepRapFirmwareCartesianPrinter#Section_Tool_change_files)]  I assume this means the steps to take when the tool is no longer needed. I think those steps are:
 
 0. Remember the tool location. 
 1. Lower the bed a bit.
@@ -57,45 +57,43 @@ Called to home the Z axis. Currently lowers the heated bed looking for an endsto
 3. Call the nozzle wiping macro (if we make one).
 4. Set the nozzle temperature to a standby value.
 5. Move the tool in front of the tool dock.
-6. move teh tool into the dock.
+6. move the tool into the dock.
 7. Call the macro that turns the tool latch to the unlatched position.
 8. Move the tool carrier back from the tool dock.
-9. perform some task that confirms the tool was really left on the dock and is not still attached to the carrier, or fell out of the dock.No idea hoe to do this yet.
+9. Perform some task that confirms the tool was really left on the dock and is not still attached to the carrier, or fell out of the dock. No idea how to do this yet.
 10. Return to the remembered location.  
 
 ### tpost0.g
- called after tool 0 has been selected Based on the fact that there is a "warm up heaters command" already in this file, I assume this is called after the new tool has been attached to the tool carrier. The next steps would be:
-
-1. Heat the nozzle (maybe do this earlier?)
-2. Swith to the coordinate system for this tool (this adjusts the X, and Y offsets for this tool and also loads its new Z-offset)
-3. When the nozzle is heated, execute the wiping macro (if we make one).
+tPostN. is the third macro called in transitions fm one tool to another. tpreM.g is used to dock the previous tool (M). The tpreN is used to preheat the new tool (N). Finally tpost.N (this macro) is used to get engage the tool and return to the starting position. 
+Further reading [HERE](https://duet3d.dozuki.com/Wiki/ConfiguringRepRapFirmwareCartesianPrinter#Section_Tool_change_files)]  I think the things to go in are:
+1. Lower the bed a bit so we don;t hit anything. 
+2. Switch to the master coordinate system so we can find the tool dock.
+3. Move to a position just in front of the tool dock.
+4. Move the tool carrier into the docked tool position (advance Y).
+5. Call the macro to lock the tool to the carriage.
+6. Move backout of the dock. Hopefully we have something that verifies the tool is porperly docked. 
+7. Switch to this tools coordinate system (means engage it's offsets in X, Y, and Z).
+3. Execute the wiping macro (if we make one).
 4. Move back to the remembered location 
 
 ### tpost1.g
- called after tool 1 has been selected Based on the fact that there is a "warm up heaters command" already in this file, I assume this is called after the new tool has been attached to the tool carrier. The next steps would be:
-
-1. Heat the nozzle (maybe do this earlier?)
-2. Swith to the coordinate system for this tool (this adjusts the X, and Y offsets for this tool and also loads its new Z-offset)
-3. When the nozzle is heated, execute the wiping macro (if we make one).
+tPostN. is the third macro called in transitions fm one tool to another. tpreM.g is used to dock the previous tool (M). The tpreN is used to preheat the new tool (N). Finally tpost.N (this macro) is used to get engage the tool and return to the starting position. 
+Further reading [HERE](https://duet3d.dozuki.com/Wiki/ConfiguringRepRapFirmwareCartesianPrinter#Section_Tool_change_files)]  I think the things to go in are:
+1. Lower the bed a bit so we don;t hit anything. 
+2. Switch to the master coordinate system so we can find the tool dock.
+3. Move to a position just in front of the tool dock.
+4. Move the tool carrier into the docked tool position (advance Y).
+5. Call the macro to lock the tool to the carriage.
+6. Move backout of the dock. Hopefully we have something that verifies the tool is porperly docked. 
+7. Switch to this tools coordinate system (means engage it's offsets in X, Y, and Z).
+3. Execute the wiping macro (if we make one).
 4. Move back to the remembered location 
 
 ### tpre0.g
-called before tool 0 is selected. I think this means "when tool 0 is selected". No commands are in this file. I think the things to go in are:
-0. remember the current location of the nozzle.
-1. If another tool has been previously selected, execute the commands to park it (tpostN.g and tfreeN.g, I think).
-2. Move the unloaded tool carrier in frmnt of tool dock0.
-3. Move forward (Y direction) to engage tool0 in it's dock.
-4. Call a macro that rotates the tool locking mechanism to the lock position.
-5. Back out of the dool dock.
- I think that's it. If it is a tool change, whatever called this will call tpostN.g next
+preN.g starts the preheat for tool N. This macro is called when tool N is selected, and after tfreeM.g is run for any toolM that was already selected. Further reading [HERE](https://duet3d.dozuki.com/Wiki/ConfiguringRepRapFirmwareCartesianPrinter#Section_Tool_change_files)]  I think the things to go in are:
+0. Heat the nozzle to it's target temperature.
 
 ### tpre1.g
-called before tool 1 is selected. I think this means "when tool 1 is selected". No commands are in this file. I think the things to go in are:
-0. remember the current location of the nozzle.
-1. If another tool has been previously selected, execute the commands to park it (tpostN.g and tfreeN.g, I think).
-2. Move the unloaded tool carrier in frmnt of tool dock1.
-3. Move forward (Y direction) to engage tool1 in it's dock.
-4. Call a macro that rotates the tool locking mechanism to the lock position.
-5. Back out of the dool dock.
- I think that's it. If it is a tool change, whatever called this will call tpostN.g next
+preN.g starts the preheat for tool N. This macro is called when tool N is selected, and after tfreeM.g is run for any toolM that was already selected. Further reading [HERE](https://duet3d.dozuki.com/Wiki/ConfiguringRepRapFirmwareCartesianPrinter#Section_Tool_change_files)]  I think the things to go in are:
+0. Heat the nozzle to it's target temperature.
 

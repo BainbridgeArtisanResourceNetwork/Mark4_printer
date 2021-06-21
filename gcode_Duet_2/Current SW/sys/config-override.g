@@ -1,3 +1,4 @@
+;!<summary>config-override.g holds the configuration parameters that were saved when you last ran M500. Your config.g file should normally include command M501 near the end, to load these saved values at startup and override any similar commands earlier in config.g.</summary>
 ; config-override.g file generated in response to M500
 ; This is a system-generated file - do not edit
 ; Heater model parameters
