@@ -12,17 +12,82 @@ connfig.g is the file that the Duet2 fw calls after power up to learn the HW con
 
 
 ### homeall.g
-Called to home all axes. Currently duplicates the commands in the homex.g homey.g and homez.g. We should probably call those macros frmo this file rather than duplicating the steps here.
+Called to home all axes. Updated 7/4/2021. This file calls homex.g, homey.g and homez.g macros in succession. 
 ### homedelta.g
  Example Homing file for RepRapFirmware on delta printer. We should delete this file since we are not a delta printer.
 ### homeu.g
 Home the U axis. In our implementation, the U axis is the motor that locks tools onto the moving tool-plate. 
 ### homex.g
-Called to home the X axis. Lowers the print bed, move to the end stop quickly to get rought positioning, then again slowly to be more precise. After finding the end move off a bit. If we mark a 0,0 on the aluminum bed and measure the offset fmo the endstop trigger, we can change that step to "move to x=0.  
+Called to home the X axis. Lowers the print bed (to clear anything on it), move to the end stop quickly to get rought positioning, then again slowly to be more precise. After finding the end move off a bit. If we mark a 0,0 on the aluminum bed and measure the offset fmo the endstop trigger, we can change that step to "move to x=0.  
 ### homey.g
-Called to home the Y axis. Lowers the print bed, move to the end stop quickly to get rought positioning, then again slowly to be more precise. After finding the end move off a bit. If we mark a 0,0 on the aluminum bed and measure the offset fmo the endstop trigger, we can change that step to "move to Y=0.  
+Called to home the Y axis. Lowers the print bed (to avoid hitting anything on it), move to the end stop quickly to get rought positioning, then again slowly to be more precise. After finding the end move off a bit. If we mark a 0,0 on the aluminum bed and measure the offset fmo the endstop trigger, we can change that step to "move to Y=0.  
 ### homez.g
-Called to home the Z axis. Currently lowers the heated bed looking for an endstop switch at the bottom of the Z travel (max Z). Then z=0 is defined by the Z travel limit set in config.g. We should look at switching to using the Z-probe as the homing point (and keep the lower z-endstop as asafety switch). The new process would be to check if X and Y were homes, and if not, home them first. Then move to a position where the Z-probe os over the center of the printable area of the bed and find the probe trigger like we did with the X and Y. This can avoid dropping the bed all the way down adn running it back up.  
+Called to home the Z axis.  This file is a macro to set z via the z-probe sensing the metal plate or aluminum bed 
+### homez_original.g
+Called to home the Z axis. Currently lowers the heated bed looking for an endstop switch at the bottom of the Z travel (max Z). Then the z value at that loction is set based on the M574 command in the gonfig.g file. We should look at switching to using the Z-probe as the homing point (and keep the lower z-endstop as a safety switch). The new process would be to check if X and Y were homed, and if not, home them first. Then move to a position where the Z-probe os over the center of the printable area of the bed and find the probe trigger like we did with the X and Y. This can avoid dropping the bed all the way down adn running it back up.  
+ called when a print from SD card is paused. We should decide if this is what we want to do. If we add a wiping brush, maybe we travel over that. Also maybe move the tool to Xmin and Ymax.
+ called before a print from SD card is resumed. Need to review this and decide if it's what we want on a resume. 
+ called after config.g. When it has been executed, it is automatically deleted! Not really sure what the point of the steps in this file are.
+ called when M1 (Sleep) is being processed. Currently there are no commands in this file and we need to learm why M1 would be called and then add any commands we think are appropriate. Maybe shut off all heaters and fans, disable steppers?
+ called when M0 (Stop) is run (e.g. when a print from SD card is cancelled) Currently no commands are in this file. We need to decide what the steps we want performed on this trigger and add them to this file.
+ tfreeN.g is called when tool N has already been "selected" (is in use) and another tool is requested. Executing this command "frees" up the tool holder frm tool N. Further reading [HERE](https://duet3d.dozuki.com/Wiki/ConfiguringRepRapFirmwareCartesianPrinter#Section_Tool_change_files)]  I assume this means the steps to take when the tool is no longer needed. I think those steps are:
+
+0. Remember the tool location. 
+1. Lower the bed a bit.
+2. Retract the filament a bit.
+3. Call the nozzle wiping macro (if we make one).
+4. Set the nozzle temperature to a standby value.
+5. Move the tool in front of the tool dock.
+6. move the tool into the dock.
+7. Call the macro that turns the tool latch to the unlatched position.
+8. Move the tool carrier back from the tool dock.
+9. Perform some task that confirms the tool was really left on the dock and is not still attached to the carrier, or fell out of the dock. No idea how to do this yet.
+10. Return to the remembered location.  
+
+ tfreeN.g is called when tool N has already been "selected" (is in use) and another tool is requested. Executing this command "frees" up the tool holder frm tool N. Further reading [HERE](https://duet3d.dozuki.com/Wiki/ConfiguringRepRapFirmwareCartesianPrinter#Section_Tool_change_files)]  I assume this means the steps to take when the tool is no longer needed. I think those steps are:
+
+0. Remember the tool location. 
+1. Lower the bed a bit.
+2. Retract the filament a bit.
+3. Call the nozzle wiping macro (if we make one).
+4. Set the nozzle temperature to a standby value.
+5. Move the tool in front of the tool dock.
+6. move the tool into the dock.
+7. Call the macro that turns the tool latch to the unlatched position.
+8. Move the tool carrier back from the tool dock.
+9. Perform some task that confirms the tool was really left on the dock and is not still attached to the carrier, or fell out of the dock. No idea how to do this yet.
+10. Return to the remembered location.  
+
+tPostN. is the third macro called in transitions fm one tool to another. tpreM.g is used to dock the previous tool (M). The tpreN is used to preheat the new tool (N). Finally tpost.N (this macro) is used to get engage the tool and return to the starting position. 
+Further reading [HERE](https://duet3d.dozuki.com/Wiki/ConfiguringRepRapFirmwareCartesianPrinter#Section_Tool_change_files)]  I think the things to go in are:
+1. Lower the bed a bit so we don;t hit anything. 
+2. Switch to the master coordinate system so we can find the tool dock.
+3. Move to a position just in front of the tool dock.
+4. Move the tool carrier into the docked tool position (advance Y).
+5. Call the macro to lock the tool to the carriage.
+6. Move backout of the dock. Hopefully we have something that verifies the tool is porperly docked. 
+7. Switch to this tools coordinate system (means engage it's offsets in X, Y, and Z).
+3. Execute the wiping macro (if we make one).
+4. Move back to the remembered location 
+
+tPostN. is the third macro called in transitions fm one tool to another. tpreM.g is used to dock the previous tool (M). The tpreN is used to preheat the new tool (N). Finally tpost.N (this macro) is used to get engage the tool and return to the starting position. 
+Further reading [HERE](https://duet3d.dozuki.com/Wiki/ConfiguringRepRapFirmwareCartesianPrinter#Section_Tool_change_files)]  I think the things to go in are:
+1. Lower the bed a bit so we don;t hit anything. 
+2. Switch to the master coordinate system so we can find the tool dock.
+3. Move to a position just in front of the tool dock.
+4. Move the tool carrier into the docked tool position (advance Y).
+5. Call the macro to lock the tool to the carriage.
+6. Move backout of the dock. Hopefully we have something that verifies the tool is porperly docked. 
+7. Switch to this tools coordinate system (means engage it's offsets in X, Y, and Z).
+3. Execute the wiping macro (if we make one).
+4. Move back to the remembered location 
+
+preN.g starts the preheat for tool N. This macro is called when tool N is selected, and after tfreeM.g is run for any toolM that was already selected. Further reading [HERE](https://duet3d.dozuki.com/Wiki/ConfiguringRepRapFirmwareCartesianPrinter#Section_Tool_change_files)]  I think the things to go in are:
+0. Heat the nozzle to it's target temperature.
+
+preN.g starts the preheat for tool N. This macro is called when tool N is selected, and after tfreeM.g is run for any toolM that was already selected. Further reading [HERE](https://duet3d.dozuki.com/Wiki/ConfiguringRepRapFirmwareCartesianPrinter#Section_Tool_change_files)]  I think the things to go in are:
+0. Heat the nozzle to it's target temperature.
+
 ### pause.g
  called when a print from SD card is paused. We should decide if this is what we want to do. If we add a wiping brush, maybe we travel over that. Also maybe move the tool to Xmin and Ymax.
 ### resume.g

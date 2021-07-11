@@ -4,29 +4,17 @@
 ;!
 </summary>
 
-
 ;###############################################
-;START OF CONTROLLER ID, NETWORKING, AND OTHER BASIC SETUP
+;START OF CONTROLLER ID, DEBUG SETUP, GENERAL PREFERENCES
 
 		;!## Set printer name
 		;!Name the printer so it can identify itself. 
 M550 P"ETA Large 3D Printer"                         ;! Machine name and Netbios name
 
 
-
-		;!## Networking
-		;! Set up networking parameters.
-M552 S1        ;! Enable Network
-M586 P0 S1     ;! Enable HTTP
-M586 P1 S0	   ;! Netmask
-M586 P2 S0     ;! Disable Telnet
-
-
-
 		;!## Set up  Debugging and define a log file location
 M111 S0        ;! Debug off
-;M929 P"eventlog.txt" S1                ; Start logging to file eventlog.txt
-
+M929 P"eventlog.txt" S1                ; Start logging to file eventlog.txt
 
 		;!## Set General Preferences
 		;!Dimensions in mm, which fw to emulate, etc.
@@ -35,7 +23,38 @@ G21       ;! Set dimensions to millimeters
 G90       ;! Use absolute coordinates...
 M83       ;! ...but relative extruder moves
 
-;START OF CONTROLLER ID, NETWORKING, AND OTHER BASIC SETUP
+;END OF CONTROLLER ID, DEBUG SETUP, GENERALPREFERENCES
+;###############################################
+
+
+
+;###############################################
+;START OF NETWORKING SETUP
+		;!## Networking
+		;! Set up networking parameters.
+M552 S1        ;! Enable Network
+M586 P0 S1     ;! Enable HTTP
+M586 P1 S0	   ;! Netmask
+M586 P2 S0     ;! Disable Telnet
+
+;END OF NETWORKING SETUP
+;###############################################
+
+
+
+;###############################################
+;START OF GLOBAL VARIABLE DEFINITION
+		;!## Define global variables
+global all_loaded = "No"    ; set a global variable that we can use to verify the whole config.g file was loaded. Use M117 {global.all_loaded} to check
+
+		;!### Z PROBE X,Y offsets. 
+			;!Create two variables, global.Z_probe_Xoffset and global.ZZ_probe_Yoffset. These values can be ADDED to any the X and Y coordinates to move the probe to that position. the expression must be inside curly brackets {}.  This is useful because is lets us set the offset one time and use it lots of places.  Example: G0 x{100 + global.Z-probe-Xoffset}  Y{200 + global.Z-probe-Yoffset} moves the printhead so that the probe is over the machine point 100,200.
+global Z_probe_Xoffset =  -49;!- Create variable  global.Z_probe_Xoffset and set it's value.
+global Z_probe_Yoffset =  -26;!- Create variable  global.Z_probe_Yoffset and set it's value.
+
+
+
+;END  GLOBAL VARIABLE DEFINITION
 ;###############################################
 
 
@@ -69,7 +88,7 @@ M203 Y13000			;!Set max Y speed (mm/min) conservative. 18000+ possible on XY. De
 M201 Y1000      	;!Set max Y acceleration (in mm/sec^2) for print moves.
 M566 Y10000         ;!Set Maximum instantaneous speed change in (mm/minute). Too low and curves are super slow, too fast and there may be ringing
 M574 Y1 P"ystop" S1 ;!Define an active high (S1) limit switch at the minY end (Y1) connected to the ystop pin on the Duet2 board
-M208 Y-2:400		;!Set the Min:Max Y axis soft limits. Min position is value set when Y endstop is triggered.
+M208 Y-42:400		;!Set the Min:Max Y axis soft limits. Min position is value set when Y endstop is triggered.
 
 
 				;!### Z-axis
@@ -81,13 +100,12 @@ M92 Z3200           ;! Set Steps/mm for Z for a T8x2 leadscrew and 0.9mm stepper
 M203 Z800			;! Set max Z speed (mm/min) conservative. 
 M201 X100       	;! Set max Z acceleration (in mm/sec^2) for print moves.
 M566 Z500           ;! SetMaximum instantaneous speed change in (mm/minute). Too low and movement may be jerky if mesh bed compensation is used (we do use it).
-M574 Z1 P"zstop" S1 ;! Define an active high (S1) limit switch at the minZ end (Z1) connected to the zstop pin on the Duet2 board
-M208 Z-2:410		;!Set the Min:Max Z axis soft limits. Max position is value set when Y endstop is triggered.
+M574 Z1 P"zstop" S1 ;! Define an active high (S1) limit switch at the MaxZ end (Z1) connected to the zstop pin on the Duet2 board
+M208 Z-4:410		;!Set the Min:Max Z axis soft limits. Max position is value set when Y endstop is triggered if using the endstop at the bottom of the travel.
 
 
 ;END OF X-Y-Z MOTION CONFIGURATION SECTION
 ;###############################################
-
 
 
 
@@ -99,12 +117,6 @@ M208 Z-2:410		;!Set the Min:Max Z axis soft limits. Max position is value set wh
 M669 K1         ; CoreXY mode
 
 
-				;!#### X/Y positions of kinematic balls
-				;!Define positions of the Z leadscrews or bed-leveling screws. Since we are using kinematic ball joints, these are the correct positions for us to use. Need to change the X and Y values after we settle on a physical position for machine X=0 and Y=0. We probably need to create a 0,0 target mark on the heated bed. 
-				; Kinematic bed ball locations. Locations are extracted from CAD model assuming:
-				;   350x350mm build region offset from the 370x450mm plate.
-				;   front left corner of build region is (0, 0).
-M671 X-18:376:175 Y64:64:415 S10 ; Front Left: (-18, 64) | Front Right: (376, 64) | Back: (175, 415)
 
 ;END OF X-Y KINEMATICS SECTION
 ;###############################################
@@ -119,15 +131,15 @@ M671 X-18:376:175 Y64:64:415 S10 ; Front Left: (-18, 64) | Front Right: (376, 64
 
 		;!## Set up the Tool lock/unlock Actuator
 		;!Need to investifate if the U axis should be defined as rotational
-M584 U2					;! Assign the Tool lock actuator motor to use driver2 (marked as "Zmotor" on the Duet 2 board)		
-M569 P2 S1      		;! Set the direction of the  driver2 (tool lock/unlock actuator) stepper
-M92 U30.578             ;! Set Steps/deg for U. Caclulation: (200 * 4 * 13.76)/360
-M203 U9000 				;! Set Maximum speed (mm/min) of the stepper locking and unlocking the tool lock.
-M201 U800       		;! Set LDO Max Acceleration (mm/s^2) of the stepper controlling the lock/unlock 
-M566 U50          		;! Set Maximum instantaneous speed change in (mm/minute).
+;M584 U2				;! Assign the Tool lock actuator motor to use driver2 (marked as "Zmotor" on the Duet 2 board)		
+;M569 P2 S1      		;! Set the direction of the  driver2 (tool lock/unlock actuator) stepper
+;M92 U30.578            ;! Set Steps/deg for U. Caclulation: (200 * 4 * 13.76)/360
+;M203 U9000 			;! Set Maximum speed (mm/min) of the stepper locking and unlocking the tool lock.
+;M201 U800       		;! Set LDO Max Acceleration (mm/s^2) of the stepper controlling the lock/unlock 
+;M566 U50          		;! Set Maximum instantaneous speed change in (mm/minute).
 ;M574 U1 P"######" S1   ;! Define an active high (S1) limit switch at the min end (U1) connected to the ######### pin on the Duet2 board.
                         ;! *Need to select a pin for this use and uncomment this line line*
-M208 U0:200             ;! Set Elastic Lock (U axis) Min:max soft limits on rotation angle.	Min position is set when switch is triggered.	
+;M208 U0:200            ;! Set Elastic Lock (U axis) Min:max soft limits on rotation angle.	Min position is set when switch is triggered.	
 
 ;END OF TOOL LOCK/UNLOCK ACTUATOR SECTION
 ;###############################################
@@ -140,10 +152,16 @@ M208 U0:200             ;! Set Elastic Lock (U axis) Min:max soft limits on rota
 ;###############################################
 ;START OF TOOL SETUP SECTION
 		;!## Tool Definition and setup
-			;!### Heater  and Fan Definitions
+			;!### Heater, sensor and Fan Definitions
 			;!The components used to build tools are sequentially numbered, so their mapping is in the comments  below in this sections so that they don't get mixed up.
+				;!#### Sensors
+				;!S0 is the temperature sensor on the heated bed and is defined in the "Heated Bed" section of this file.
+				;!S1 is the temperature sensor on the extruder on Tool 0, and connected to pin "e0temp".
+				;!S2 is the temperature sensor on the extruder on Tool 0, but not defined yet.
+				
+				
 				;!#### Heaters
-				;!Heater H0 is the bed heater and in defined in the "Heated Bed" section of this file
+				;!Heater H0 is the bed heater and is defined in the "Heated Bed" section of this file.
 				;!H1 is the heater for Extruder 1 and connected to the Duet 2 conenctor "E0 heater" and refered by pin name "e0heat". Heater defined in the tool 0 Filament Heater section.
 				;!H2 is the heater reserved for Extruder 2 and connected to the Duet 2 conenctor "E1 heater" and refered by pin name "e1heat". Heater defined in the tool 0 Filament Heater section.
 				;!H3 is the heater reserved for Extruder 3 and connected to the Duex 5 conenctor "E2 heater" and refered by pin name "!duex.e2heat". Heater defined in the tool 0 Filament Heater section.
@@ -160,31 +178,38 @@ M208 U0:200             ;! Set Elastic Lock (U axis) Min:max soft limits on rota
 				;!F7 is the fan reserved for Tool 3's  Hot end fan and connected to the DueX 5 board's "Fan 7" connector and referred to by pin name "duex.fan7". It is defined in the Tool 3 Fan section.
 				;!F8 is the fan reserved for Tool 3's Part cooling fan and connected to the DueX 5 board's "Fan 8" connector and referred to by pin name "duex.fan8". It is defined in the Tool 3 Fan section.
 
+;COMMON COMMANDS  **********************************
+			;!### Common commands
+			;!This section ahead of the individual tool definitions contains gcode commnds where one line must apply to all tools.
+				;!####Extruder driver assignments
+M584 E3:4    			;!Assign Duet connector "E0 motor" (driver #3) to Extruder 0, and connector "E1 Motor" (driver 4) to Extruder 1. 
+						;!Add more exrtuders here as new tools are defined.
+M92  E420:420			;! Set steps per mm Extruder: This works for our L3D Dual Drive Extruder with 17HS4023 Usongshine Stepper Motor. 
+M203 E8000:8000:8000  	;!Set Maximum speed of the extruders (mm/min). Depends on hot end and material.			
+M201 E1300:1300:1300	;!Set Max Acceleration (in mm/sec^2) of the extruder motors. The value for each extruder is separated by a colon.
+M566 E3000:3000:3000	;!Set Max instantaneous soeep change on extruders. Not sure this matters much for extruders. 
 
-;TOOL 0
+;TOOL 0 ********************************************
 			;!### Tool 0 - Printhead 0
 				;!This secion defines the parts of the tool (Extruders, fans, heaters, temperature sensors, etc) before declaring their collection a tool.
-				
-				;!#### Define the tool
-M563 P0 S"Extruder 0" D0 H1 F0   ;! Define tool #0 (P0) with name "Extruder 0", using extruder drive 0 (D0) (first drive defined after the axes), and Fan 0
 					
-				;!#### Extruder
-M584 E3			;!Define driver3 (marked as "E0 motor" on the Duet 2 board)	as an extruder motor
+				;!#### Extruder 0
+     			;!Extruder drive (marked as "E0 motor" on the Duet 2 board)	assigned in COMMON SOMMANDS section.
 M569 P3 S1 D2   ;!Set the direction of the driver3 stepper and define it as spread cycle (Need to look at this to see if our 
 				;!motor is the type that can handle this. 
 				;!https://duet3d.dozuki.com/Wiki/Gcode?revisionid=HEAD#Section_M569_Set_motor_driver_direction_enable_polarity_and_step_pulse_timing
 M572 D0 S0.1	;!Set pressure advance on Extruder Drive 0		
 		
-				;!#### Extruder offsets
-				;!These offsets are used to create a translation so the nozzle will go to the correct X,Y,Z location 
-G10 P0 X-56 Y32 Z-0.61			;! Set tool 0 offset from machine coordinates (Z probe with tactical bed plate installed on prototype MDF bed)				
+
 				
 				;!#### Filament Heater (H1)
-m308 S"E0 Temp" P"e0temp" Y"thermistor" T100000 B3950  A"Tool0 Hot end Temp"		;!Create a sensor(S) with ID "E0 Temp", that uses a thermistor (Y) that is 100K ohms at at 25C(T)
+m308 S1 P"e0temp" Y"thermistor" T100000 B3950  A"Tool0 Hot end Temp"		;!Create a sensor(S) with ID 1, that uses a thermistor (Y) that is 100K ohms at at 25C(T)
 																					;!and coefficient of 3950 (B)
-M950 H1 C"e0heat" T"E0 Temp"    ;!Define a Heater (H) with ID 1, map output to pin (C) named "e0heat", and associate with the temperature sensor we earlier named "E0 Temp"	     
+M950 H1 C"e0heat" T1    ;!Define a Heater (H) with ID 1, map output to pin (C) named "e0heat", and associate with the temperature sensor we earlier named "S0"	     
 						;!Heater  H1 defined in the heater definition section before tool definitions.
-M301 H1    				;! Set the PID values for this heater (H0). Values can be found using M303 (we need a macro for this)
+;M301 H1    				;! Set the PID values for this heater (H0). Values can be found using M303 (we need a macro for this)
+;M307 H1 B0 R3.807 C137.1:120.9 D14.32 S1.00 V24.1 ;!Set the heater control parameters. These were found using the M303 command.
+M307 H1 B0 R3.807 C137.1:120.9 D14.32 S0.5 V24.1 ;!Set the heater control parameters. These were found using the M303 command.
 M570 H1 S30     		;! Print will be terminated if a heater fault is not reset within 30 minutes.
 M143 H1 S260    		;! Set Maximum H1 (Extruder) heater temperature
 M568 P0 R180 S210 A0 	;! Set tool 0 standby temp to 180, active temperature to 210, but turn the heater off (A0)
@@ -196,33 +221,35 @@ M106 P0 T45 S1.0 H1	;! Turn on Fan 0 (P0 - the Hot End fan) to 100% (S1.0) when 
 M950 F2 C"fan2"		;! Define that Fan 0 is connected to pin named "fan0". this is the part cooling fan.
 M106 P2 T45 S1.0 H1	;! Turn on Fan 2 (P2 - the part cooling fan) to 100% (S1.0) when the heater H1 get above 45 degs.  This command migght belong in the tpre0.g file so it gets initialted when the tool is selected.
 
+				;!#### Define the tool
+				;!Now that all the pieces are defined, pull them together into a tool.	
+M563 P0 S"Extruder 0" D0 H1 F0   ;! Define tool #0 (P0) with name "Extruder 0", using motor driver 3 (D0) (first drive defined after the axes), and Fan 0
+
+				;!#### Extruder offsets
+				;!These offsets are used to create a translation so the nozzle will go to the correct X,Y,Z location 
+G10 P0 X-3.5 Y38.5 Z.45   ;! Set tool 0 offset from machine coordinates. These values are subtracted from machine coordinates to get tool coordinate to move to.
 
 
-;TOOL 1 - NEEDS TO BE FINISHED
+;TOOL 1 - NEEDS TO BE FINISHED ******************************************
 			;!### Tool 1 - Printhead 1
 				;!This secion defines the parts of the tool (Extruders, fans, heaters, temperature sensors, etc) before declaring their collection a tool.
-M584 E4			;!Define driver4 (marked as "E1 motor" on the Duet 2 board)	as an extruder motor
+     			;!Extruder drive (marked as "E1 motor" on the Duet 2 board)	assigned in COMMON SOMMANDS section.
 M569 P4 S1 D2   ;!Set the direction of the driver4 stepper and define it as spread cycle (Need to look at this to see if our 
 				;!motor is the type that can handle this. 
 				;!https://duet3d.dozuki.com/Wiki/Gcode?revisionid=HEAD#Section_M569_Set_motor_driver_direction_enable_polarity_and_step_pulse_timing
 				
 
-;TOOL 2 - NEEDS TO BE FINISHED
+;TOOL 2 - NEEDS TO BE FINISHED ******************************************
 			;!### Tool 2 - Printhead
 				;!This secion defines the parts of the tool (Extruders, fans, heaters, temperature sensors, etc) before declaring their collection a tool.
-M584 E5			;!Define driver5 (marked as "E2 motor" on the Duex Expander board)	as an extruder motor	
-M569 P5 S1 D2   ;!Set the direction of the driver5 stepper and define it as spread cycle (Need to look at this to see if our 
+				;!Extruder drive (marked as "????" on the Duet 2 or Duex 5 board)	assigned in COMMON SOMMANDS section.	
+;M569 P5 S1 D2   ;!Set the direction of the driver5 stepper and define it as spread cycle (Need to look at this to see if our 
 				;!motor is the type that can handle this. 
 				;!https://duet3d.dozuki.com/Wiki/Gcode?revisionid=HEAD#Section_M569_Set_motor_driver_direction_enable_polarity_and_step_pulse_timing
 
 
-;TOOL 3 - NEEDS TO BE FINISHED
-			;!### Tool settings with a shared gcode
-			;!Some gcodes that apply to separate tool functions need to use a single command in the config file
-M92 E420:420:420		;! Set steps per mm Extruder: This works for our L3D Dual Drive Extruder with 17HS4023 Usongshine Stepper Motor. 
-M203 E8000:8000:8000  	;!Set Maximum speed of the extruders (mm/min). Depends on hot end and material.			
-M201 E1300:1300:1300	;!Set Max Acceleration (in mm/sec^2) of the extruder motors. The value for each extruder is separated by a colon.
-M566 E3000:3000:3000	;!Set Max instantaneous soeep change on extruders. Not sure this matters much for extruders. 
+;TOOL 3 - NEEDS TO BE FINISHED ******************************************
+
 
 
 ;END OF TOOL SETUP SECTION
@@ -245,7 +272,7 @@ M350 E16:16:16 I1 	;!Set 16x microstepping for each of the three Extruders. Use 
 			;!Ths section sets up the peak motor drive currents. Do not exceed 90% of full XY motor current rating without heatsinking the XY motor drivers. Another gcode that needs to come after all M584 commands		
 M906 X2263 Y2263    	;! LDO XY motor currents (mA). 2263mA is 80% of 2828mA Peak Current. (2828mA Peak is 2000mA RMS)
 M906 Z1600          	;! LDO ZZZ Motor currents (mA). Conservative.  *Need to look up our NEMA 17 motors and maybe adjust this* 
-M906 E1250:1250:1250    ;! Extruder Motor currents E (mA). *Need to look up our extruder 17 motors and maybe adjust this*
+M906 E900:900           ;! Extruder Motor currents E (mA). *Need to look up our extruder 17 motors and maybe adjust this*
 M906 U670	            ;! LDO Toolchanger Elastic Lock motor current (mA) and idle motor percentage.
 M906 I60				;! Set idle current as a percentage of peak.   Note: Idle current setting is common across all motors (XYZZZU).Default is 30, why are we 60?
                                         
@@ -260,7 +287,7 @@ M906 I60				;! Set idle current as a percentage of peak.   Note: Idle current se
 		;!## Define the heated bed.
 			;!### Define the Bed temperature sensor
 			;!Create a sensor(S) with ID "BED", that uses a thermistor (Y) that is 100K ohms at at 25C(T)  and coefficient of 3950 (B)
-M308 S"Bed" P"bedtemp"  Y"thermistor" T100000 B3950 A"Bed Temp" 
+M308 S0 P"bedtemp"  Y"thermistor" T100000 B3950 A"Bed Temp" 
 
 			;!### Define the bed heater and map the temp sensor to it.
 			;!Define Heater (H) with ID 0, map output to pin (C) named "bedheat",  and associate with temperature sensor we earlier named "Bed" P0 S"Bed" T10000 B3984 H0 L160          
@@ -278,19 +305,39 @@ M304 P25 I0.400 D66.3	    ;! Set the PID parameters for the bed heater. These ar
 
 
 ;###############################################
-;START OF MESH BED COMPENSATION CONFIG SECTION
+;START OF Z_PROBE AND MESH BED COMPENSATION CONFIG SECTION
 
-		;!## Mesh Bed Compensation Settings. 
-		;!### Define probe area
-		;!Define points to probe for Bed compensation used when G29 is called. Not in bed.g because bed leveling (G29) could be called without going through bed.g.
-M557 X20:280 Y50:350 P5		;!Max and min X and Y box edges for probing, P5 defines 5 points in each direction (a 5 x 5 probe matrix). CHanged from S40 (40mm probe point spacing). 
-							;!X and Y are machnie coordinates and need to compensate for probe offset frmo X0,Y0
+		;!## z-Probe and Mesh Bed Compensation Settings. 
+		;!Define the z probe we are using and the parameters for that probe. Also define the bed unevenness compensation. 
+		
+		;!### Define the probe type and usage
+M558 P5 C"zprobe.in" H3 A1 T10000 F600:30 S0.02  ;!Probe definition:
+										 ;!- probe type is a switch (P5) 
+	                                     ;!- connected to pin "zprobe.in"
+										 ;!- using dive height (fast move to this z) 3mm (H3)
+										 ;!- on probe request, probe the location 1 time (A1)
+										 ;!- the a travel speed between points is 10000mm.min (T10000)
+										 ;!- using a dual probe speed Zmovement) 3000mm/min to get close, then 100mm/min for accuracy
+										 ;!- with a tolerance of 0.02mm for multiple probes (probes out of tolerance will be repeated).	
+										 
 
-		;!### Set probe type 
-M558 P5 C"zprobe.in" H3 A1 T10000 S0.02  ;! probe type is a switch (P5) connected to pin "zprobe.in", using dive height (fast move to this z) 3mm (H3), probing each point 1 time (A1), 
-							;!th a travel speed between points of 10000mm.min (T10000) and a solerance of 0.02mm for multiple probes. 
 
-;END OF MESH BED COMPENSATION CONFIG SECTION
+		;!### Mesh bed compensation parameters
+			;!Define probe area for mesh bed compensation. Used when G29 is called. This is where the mesh area is defined, the numbber of points to be probed are defined and the number of times each point is probed. Not in bed.g because bed leveling (G29) could be called without going through bed.g.
+		 
+M557 X0:{335 + global.Z_probe_Xoffset} Y{27+global.Z_probe_Yoffset}:{368 + global.Z_probe_Yoffset} P5		
+			;!- Define bed compensation probing grid. Min and max X and Y box edges for probing, P5 defines 5 points in each direction (a 5 x 5 probe matrix). Chnged from S40 (40mm probe point spacing). 
+			
+
+		;!### X/Y positions of kinematic balls
+			;!Define positions of the Z leadscrews or bed-leveling screws. Since we are using kinematic ball joints, these are the correct positions for us to use. Need to change the X and Y values after we settle on a physical position for machine X=0 and Y=0. We probably need to create a 0,0 target mark on the heated bed. 
+			;! Locations are extracted from CAD model assuming:
+				;   350x350mm build region offset from the 370x450mm plate.
+				;   front left corner of build region is (0, 0).
+M671 X-34:368.5:164 Y74:74:400 S10 ; Front Left: (-34, 74) | Front Right: (368.5, 74) | Back: (164, 400)			
+
+
+;END OF Z_PROBE AND MESH BED COMPENSATION CONFIG SECTION
 ;###############################################
 
 
@@ -302,3 +349,5 @@ M593 F33.33  ;! Reduce resonances at 33Hz based on XY vibration pattern on print
 M98 P"config-user.g"                    ; Load custom user config
 
 M501                                    ; Load saved parameters from non-volatile memory
+
+set global.all_loaded = "Yes"
