@@ -32,7 +32,7 @@ if !move.axes[1].homed
 
 
 ;################;! Move the probe to the center of the bed
-g0 X{165 + global.Z_probe_Xoffset} Y{200+global.Z_probe_Yoffset}
+G0 X{165 + global.Z_probe_Xoffset} Y{200+global.Z_probe_Yoffset}
 
 
 
