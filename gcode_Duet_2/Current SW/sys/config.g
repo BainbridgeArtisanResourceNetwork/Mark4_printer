@@ -51,14 +51,14 @@ global Z_Probe_Type = "prox" ;! Create a clobal variable to set the type of z-pr
 		;!### Z PROBE  GLOBAL VARIABLES  - X,Y offsets. 
 			;! set Z-probe global variable based on probe type
 if global.Z_Probe_Type = "prox" 
-	M291 P"Z-probe PROXIMITY sensor being used" S0 T0
-		;!Create two variables, global.Z_probe_Xoffset and global.ZZ_probe_Yoffset. These values can be ADDED to any the X and Y coordinates to move the probe to that position. the expression must be inside curly brackets {}.  This is useful because is lets us set the offset one time and use it lots of places.  Example: G0 x{100 + global.Z-probe-Xoffset}  Y{200 + global.Z-probe-Yoffset} moves the printhead so that the probe is over the machine point 100,200.
+  M291 P"Z-probe PROXIMITY sensor being used" S1 T20
+  ;!Create two variables, global.Z_probe_Xoffset and global.ZZ_probe_Yoffset. These values can be ADDED to any the X and Y coordinates to move the probe to that position. the expression must be inside curly brackets {}.  This is useful because is lets us set the offset one time and use it lots of places.  Example: G0 x{100 + global.Z-probe-Xoffset}  Y{200 + global.Z-probe-Yoffset} moves the printhead so that the probe is over the machine point 100,200.
   global Z_probe_Xoffset =  -49;!- Create variable  global.Z_probe_Xoffset and set it's value.
   global Z_probe_Yoffset =  -26;!- Create variable  global.Z_probe_Yoffset and set it's value.
  
 elif global.Z_Probe_Type = "touch"
-  M291 P"Z-probe TOUCH sensor being used" S0 T0
-		;!Create two variables, global.Z_probe_Xoffset and global.ZZ_probe_Yoffset. These values can be ADDED to any the X and Y coordinates to move the probe to that position. the expression must be inside curly brackets {}.  This is useful because is lets us set the offset one time and use it lots of places.  Example: G0 x{100 + global.Z-probe-Xoffset}  Y{200 + global.Z-probe-Yoffset} moves the printhead so that the probe is over the machine point 100,200.
+  M291 P"Z-probe TOUCH sensor being used" S1 T20
+  ;!Create two variables, global.Z_probe_Xoffset and global.ZZ_probe_Yoffset. These values can be ADDED to any the X and Y coordinates to move the probe to that position. the expression must be inside curly brackets {}.  This is useful because is lets us set the offset one time and use it lots of places.  Example: G0 x{100 + global.Z-probe-Xoffset}  Y{200 + global.Z-probe-Yoffset} moves the printhead so that the probe is over the machine point 100,200.
   global Z_probe_Xoffset =  0;!- Create variable  global.Z_probe_Xoffset and set it's value.
   global Z_probe_Yoffset =  10;!- Create variable  global.Z_probe_Yoffset and set it's value.
   
@@ -197,9 +197,9 @@ M669 K1         ; CoreXY mode
 M584 E3:4    			;!Assign Duet connector "E0 motor" (driver #3) to Extruder 0, and connector "E1 Motor" (driver 4) to Extruder 1. 
 						;!Add more exrtuders here as new tools are defined.
 M92  E420:420			;! Set steps per mm Extruder: This works for our L3D Dual Drive Extruder with 17HS4023 Usongshine Stepper Motor. 
-M203 E8000:8000:8000  	;!Set Maximum speed of the extruders (mm/min). Depends on hot end and material.			
-M201 E1300:1300:1300	;!Set Max Acceleration (in mm/sec^2) of the extruder motors. The value for each extruder is separated by a colon.
-M566 E3000:3000:3000	;!Set Max instantaneous soeep change on extruders. Not sure this matters much for extruders. 
+M203 E8000:8000  	;!Set Maximum speed of the extruders (mm/min). Depends on hot end and material.			
+M201 E1300:1300		;!Set Max Acceleration (in mm/sec^2) of the extruder motors. The value for each extruder is separated by a colon.
+M566 E3000:3000		;!Set Max instantaneous soeep change on extruders. Not sure this matters much for extruders. 
 
 ;TOOL 0 ********************************************
 			;!### Tool 0 - Printhead 0
@@ -277,7 +277,7 @@ M350 X16 I1 		;!Set 16x microstepping for the X stepper driver. Use interpolatio
 M350 Y16 I1 		;!Set 16x microstepping for the Y stepper driver. Use interpolation.
 M350 Z16 I1			;!Set 16x microstepping for the Z stepper driver. Use interpolation.
 M350 U4 I1 	        ;!Set 4x microstepping for the tool lock/inlock stepper drive. Use interpolation.
-M350 E16:16:16 I1 	;!Set 16x microstepping for each of the three Extruders. Use interpolation.
+M350 E16:16 I1 	;!Set 16x microstepping for each of the three Extruders. Use interpolation.
 
 			
 			;!### Motor Currents
@@ -303,7 +303,7 @@ M308 S0 P"bedtemp"  Y"thermistor" T100000 B3950 A"Bed Temp"
 
 			;!### Define the bed heater and map the temp sensor to it.
 			;!Define Heater (H) with ID 0, map output to pin (C) named "bedheat",  and associate with temperature sensor we earlier named "Bed" P0 S"Bed" T10000 B3984 H0 L160          
-M950 H0 C"bedheat" T"Bed"   ;!Define Heater (H) with ID 0, map output to pin (C) named "bedheat", and associate with temperature sensor we earlier 
+M950 H0 C"bedheat" T0   ;!Define Heater (H) with ID 0, map output to pin (C) named "bedheat", and associate with temperature sensor we earlier 
 							;!named "Bed" P0 S"Bed" T10000 B3984 H0 L160BOM-specified Terminal Lug Thermistor values. (Not for L3D)
 M140 H0					    ;!Map Heated bed to Heater H0...added for L3D. Not clear is this command is really needed with RR3 fw and M308
 M143 H0 S100                ;! Set Maximum H0 (Bed) heater temperature
@@ -325,26 +325,26 @@ M304 P25 I0.400 D66.3	    ;! Set the PID parameters for the bed heater. These ar
 		;!### Define the probe type and usage
 if global.Z_Probe_Type = "prox" 
   ;M558 P5 C"zprobe.in" H3 A1 T10000 F600:30 S0.02  ;!Probe definition:     ; use when probe connected to z-probe connector
-  M558 P5 C4 H3 A1 T10000 F600:30 S0.02  ;!Probe definition:
-										 ;!- probe type is a switch (P5) 
-	                                     ;!- connected to pin "zprobe.in"
-										 ;!- using dive height (fast move to this z) 3mm (H3)
-										 ;!- on probe request, probe the location 1 time (A1)
-										 ;!- the a travel speed between points is 10000mm.min (T10000)
-										 ;!- using a dual probe speed Zmovement) 3000mm/min to get close, then 100mm/min for accuracy
-										 ;!- with a tolerance of 0.02mm for multiple probes (probes out of tolerance will be repeated).	
+  M558 P5 C"e1stop" H3 A1 T10000 F600:30 S0.02  ;!Probe definition:
+  ;!- probe type is a switch (P5) 
+  ;!- connected to pin "zprobe.in"
+  ;!- using dive height (fast move to this z) 3mm (H3)
+  ;!- on probe request, probe the location 1 time (A1)
+  ;!- the a travel speed between points is 10000mm.min (T10000)
+   ;!- using a dual probe speed Zmovement) 3000mm/min to get close, then 100mm/min for accuracy
+  ;!- with a tolerance of 0.02mm for multiple probes (probes out of tolerance will be repeated).	
 elif global.Z_Probe_Type = "touch" 
   M558 P9 C"^zprobe.in" H3 A1 T10000 F600:30 S0.02  ;!Probe definition:
-										 ;!- P4 = probe type is a switch connected to something other than the z-endstop switch. 
-	                                     ;!- ^C4 = connected to E1 endstop connector. the "^" character enables the pullup resistor
-										 ;!- H3 = using dive height (fast move to this z) 3mm
-										 ;!- A1 = on probe request, probe the location 1 time
-										 ;!- T = the a travel speed between points is 10000mm.min (T10000)
-										 ;!- F = using a dual probe speed Zmovement) 600mm/min to get close, then 30mm/min for accuracy
-										 ;!- s = with a tolerance of 0.02mm for multiple probes (probes out of tolerance will be repeated).
+  ;!- P4 = probe type is a switch connected to something other than the z-endstop switch. 
+  ;!- ^C4 = connected to E1 endstop connector. the "^" character enables the pullup resistor
+  ;!- H3 = using dive height (fast move to this z) 3mm
+  ;!- A1 = on probe request, probe the location 1 time
+  ;!- T = the a travel speed between points is 10000mm.min (T10000)
+  ;!- F = using a dual probe speed Zmovement) 600mm/min to get close, then 30mm/min for accuracy
+  ;!- s = with a tolerance of 0.02mm for multiple probes (probes out of tolerance will be repeated).
   M950 S0 C"exp.heater3"                 ;! Define probe deployment pine for the BLTouch probe.  
-									     ;! S0 = define servo #0
-                                         ;! C"exp.heater3" = create servo/gpio 0 on heater 3 pin on expansion connector
+  ;! S0 = define servo #0
+  ;! C"exp.heater3" = create servo/gpio 0 on heater 3 pin on expansion connector
   M280 P0 S10                            ;! Send a control signal to Servo 0  (P0) to move to position "10" - Deploy.   NOT SURE WE WANT TO DEPLOY THE PROBE AT THIS TIME.
 										 
 
