@@ -22,6 +22,7 @@ M555 P2   ;! Set to RepRapFirmware style gcode
 G21       ;! Set dimensions to millimeters
 G90       ;! Use absolute coordinates...
 M83       ;! ...but relative extruder moves
+M575  P1 S1 B57600  ;! ENable panel Due. Comment out if we aren't using it. 
 
 ;END OF CONTROLLER ID, DEBUG SETUP, GENERALPREFERENCES
 ;###############################################
@@ -46,7 +47,8 @@ M586 P2 S0     ;! Disable Telnet
 ;START OF GLOBAL VARIABLE DEFINITION
 		;!## Define global variables
 global all_loaded = "No"    ;! Set a global variable that we can use to verify the whole config.g file was loaded. Use M117 {global.all_loaded} to check
-global Z_Probe_Type = "prox" ;! Create a clobal variable to set the type of z-probe being used. Valid valeus are "prox" and "touch" 
+;global Z_Probe_Type = "prox" ;! Create a clobal variable to set the type of z-probe being used. Valid valeus are "prox" and "touch" 
+global Z_Probe_Type = "touch" ;! Create a clobal variable to set the type of z-probe being used. Valid valeus are "prox" and "touch" 
 
 		;!### Z PROBE  GLOBAL VARIABLES  - X,Y offsets. 
 			;! set Z-probe global variable based on probe type
@@ -59,11 +61,11 @@ if global.Z_Probe_Type = "prox"
 elif global.Z_Probe_Type = "touch"
   M291 P"Z-probe TOUCH sensor being used" S1 T20
   ;!Create two variables, global.Z_probe_Xoffset and global.ZZ_probe_Yoffset. These values can be ADDED to any the X and Y coordinates to move the probe to that position. the expression must be inside curly brackets {}.  This is useful because is lets us set the offset one time and use it lots of places.  Example: G0 x{100 + global.Z-probe-Xoffset}  Y{200 + global.Z-probe-Yoffset} moves the printhead so that the probe is over the machine point 100,200.
-  global Z_probe_Xoffset =  0;!- Create variable  global.Z_probe_Xoffset and set it's value.
-  global Z_probe_Yoffset =  10;!- Create variable  global.Z_probe_Yoffset and set it's value.
+  global Z_probe_Xoffset =  -2;!- Create variable  global.Z_probe_Xoffset and set it's value.
+  global Z_probe_Yoffset =  -40;!- Create variable  global.Z_probe_Yoffset and set it's value.
   
 else 
-  M291 P"config.g file does not have a valid Z-probe assigned. Check ~line 49" S0 T0
+;  M291 P"config.g file does not have a valid Z-probe assigned. Check ~line 49" S0 T0
 
 
 ;END  GLOBAL VARIABLE DEFINITION
@@ -342,7 +344,7 @@ elif global.Z_Probe_Type = "touch"
   ;!- T = the a travel speed between points is 10000mm.min (T10000)
   ;!- F = using a dual probe speed Zmovement) 600mm/min to get close, then 30mm/min for accuracy
   ;!- s = with a tolerance of 0.02mm for multiple probes (probes out of tolerance will be repeated).
-  M950 S0 C"exp.heater3"                 ;! Define probe deployment pine for the BLTouch probe.  
+  M950 S0 C"exp.heater7"                 ;! Define probe deployment pine for the BLTouch probe.  
   ;! S0 = define servo #0
   ;! C"exp.heater3" = create servo/gpio 0 on heater 3 pin on expansion connector
   M280 P0 S10                            ;! Send a control signal to Servo 0  (P0) to move to position "10" - Deploy.   NOT SURE WE WANT TO DEPLOY THE PROBE AT THIS TIME.
