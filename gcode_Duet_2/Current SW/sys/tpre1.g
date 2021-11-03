@@ -1,5 +1,5 @@
 ; tpre1.g
-;!<summary>preN.g starts the preheat for tool N. This macro is called when tool N is selected, and after tfreeM.g is run for any toolM that was already selected. Further reading [HERE](https://duet3d.dozuki.com/Wiki/ConfiguringRepRapFirmwareCartesianPrinter#Section_Tool_change_files)]  I think the things to go in are:
+;!<summary>Actions to do with the new tool before it is selected.   preN.g starts the preheat for tool N. This macro is called when tool N is selected, and after tfreeM.g is run for any toolM that was already selected. Further reading [HERE](https://duet3d.dozuki.com/Wiki/ConfiguringRepRapFirmwareCartesianPrinter#Section_Tool_change_files)]  I think the things to go in are:
 ;!0. Heat the nozzle to it's target temperature.
 
 ;!</summary>

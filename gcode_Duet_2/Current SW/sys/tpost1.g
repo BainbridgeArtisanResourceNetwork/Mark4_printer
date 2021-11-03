@@ -1,4 +1,4 @@
-;!<summary>tPostN. is the third macro called in transitions fm one tool to another. tpreM.g is used to dock the previous tool (M). The tpreN is used to preheat the new tool (N). Finally tpost.N (this macro) is used to get engage the tool and return to the starting position. 
+;!<summary>Actions to do with the new tool after it is selected. tPostN.g is the third macro called in transitions fm one tool to another. tpreM.g is used to dock the previous tool (M). The tpreN is used to preheat the new tool (N). Finally tpost.N (this macro) is used to get engage the tool and return to the starting position. 
 ;!Further reading [HERE](https://duet3d.dozuki.com/Wiki/ConfiguringRepRapFirmwareCartesianPrinter#Section_Tool_change_files)]  I think the things to go in are:
 ;!1. Lower the bed a bit so we don;t hit anything. 
 ;!2. Switch to the master coordinate system so we can find the tool dock.

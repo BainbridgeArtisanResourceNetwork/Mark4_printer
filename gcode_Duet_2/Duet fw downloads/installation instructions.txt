@@ -1,0 +1,7 @@
+If you are updating update from something older than 3.0, you MUST UPDATE TO 3.0 FIRST.
+
+Copy the file "Duet2 and 3Firmware-3.0.zip" the sys directory on the SD card using the web interface. The system should ask if you want to install the new fw. Say yes.
+
+
+If you are already at 3.0 or higher, you should follow the same procedure for teh latest fw zip package. 
+

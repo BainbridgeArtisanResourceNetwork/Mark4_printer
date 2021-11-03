@@ -48,7 +48,8 @@ M586 P2 S0     ;! Disable Telnet
 		;!## Define global variables
 global all_loaded = "No"    ;! Set a global variable that we can use to verify the whole config.g file was loaded. Use M117 {global.all_loaded} to check
 ;global Z_Probe_Type = "prox" ;! Create a clobal variable to set the type of z-probe being used. Valid valeus are "prox" and "touch" 
-global Z_Probe_Type = "touch" ;! Create a clobal variable to set the type of z-probe being used. Valid valeus are "prox" and "touch" 
+;global Z_Probe_Type = "touch" ;! Create a clobal variable to set the type of z-probe being used. Valid valeus are "prox" and "touch"
+M98 P"0:/sys/z_probetype_query.g"
 
 		;!### Z PROBE  GLOBAL VARIABLES  - X,Y offsets. 
 			;! set Z-probe global variable based on probe type
@@ -102,7 +103,7 @@ M203 Y13000			;!Set max Y speed (mm/min) conservative. 18000+ possible on XY. De
 M201 Y1000      	;!Set max Y acceleration (in mm/sec^2) for print moves.
 M566 Y10000         ;!Set Maximum instantaneous speed change in (mm/minute). Too low and curves are super slow, too fast and there may be ringing
 M574 Y1 P"ystop" S1 ;!Define an active high (S1) limit switch at the minY end (Y1) connected to the ystop pin on the Duet2 board
-M208 Y-42:400		;!Set the Min:Max Y axis soft limits. Min position is value set when Y endstop is triggered.
+M208 Y-42:350		;!Set the Min:Max Y axis soft limits. Min position is value set when Y endstop is triggered.
 
 
 				;!### Z-axis
@@ -344,10 +345,11 @@ elif global.Z_Probe_Type = "touch"
   ;!- T = the a travel speed between points is 10000mm.min (T10000)
   ;!- F = using a dual probe speed Zmovement) 600mm/min to get close, then 30mm/min for accuracy
   ;!- s = with a tolerance of 0.02mm for multiple probes (probes out of tolerance will be repeated).
-  M950 S0 C"exp.heater7"                 ;! Define probe deployment pine for the BLTouch probe.  
-  ;! S0 = define servo #0
-  ;! C"exp.heater3" = create servo/gpio 0 on heater 3 pin on expansion connector
-  M280 P0 S10                            ;! Send a control signal to Servo 0  (P0) to move to position "10" - Deploy.   NOT SURE WE WANT TO DEPLOY THE PROBE AT THIS TIME.
+  M950 S0 C"!duex.pwm5"                 ;! Define probe deployment pine for the BLTouch probe.
+  ;! S0 = define this connector as Servo #0
+  ;! C"!duex.pwm5" = create this servo 0 on pwm5 pin on DuEx board. Aliases for this pin are: exp.heater7, exp.31, !duex.e6heat, !duex.pwm5
+  ;! web reference:  https://duet3d.dozuki.com/Wiki/RepRapFirmware_3_overview#Section_Pin_names_for_Duet_2_WiFi_Ethernet
+  ;M280 P0 S10                            ;! Send a control signal to Servo 0  (P0) to move to position "10" - Deploy.   NOT SURE WE WANT TO DEPLOY THE PROBE AT THIS TIME.
 										 
 
 
