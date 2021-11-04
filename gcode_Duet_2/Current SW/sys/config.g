@@ -84,7 +84,7 @@ else
 			;!Before we start, clear all axis assignments so that we don't get unexpected motion.
 M18 A Y Z A B C D U V W                 ; clear all axes assignments 
 
-				;!### X-axis
+				;!### X-axis Motor assignment and configuration
 M584 X0				;!Assign the X-axis motor to use driver0 (marked as "X" on the Duet 2 board)
 M569 P0 S1      	;!Set the direction of the  driver0 (X) stepper.
 M92 X160            ;!Set Steps/mm for X motor...Modified/corrected Jubilee-defined from 200 to 160 on 10/29/2020
@@ -92,10 +92,9 @@ M203 X13000			;!Set max X speed (mm/min) conservative. 18000+ possible on XY. De
 M201 X1000      	;!Set max X acceleration (in mm/sec^2) for print moves.
 M566 X1000			;!Set Maximum instantaneous speed change in (mm/minute). Too low and curves are super slow, too fast and there may be ringing
 M574 X1 P"xstop" S1 ;!Define an active high (S1) limit switch at the minX end (X1) connected to the xstop pin on the Duet2 board
-M208 X-2:350		;!Set the Min:Max X axis soft limits. Min position is value set when X endstop is triggered.
 
 
-				;!### Y-axis
+				;!### Y-axis Motor assignment and configuration
 M584 Y1				;!Assign the Y-axis motor to use driver1 (marked as "Y" on the Duet 2 board)
 M569 P1 S1      	;!Set the direction of the  driver1 (Y) stepper.
 M92 Y160            ;!Set Steps/mm for Y motor...Modified/corrected Jubilee-defined from 200 to 160 on 10/29/2020
@@ -103,10 +102,9 @@ M203 Y13000			;!Set max Y speed (mm/min) conservative. 18000+ possible on XY. De
 M201 Y1000      	;!Set max Y acceleration (in mm/sec^2) for print moves.
 M566 Y10000         ;!Set Maximum instantaneous speed change in (mm/minute). Too low and curves are super slow, too fast and there may be ringing
 M574 Y1 P"ystop" S1 ;!Define an active high (S1) limit switch at the minY end (Y1) connected to the ystop pin on the Duet2 board
-M208 Y-42:350		;!Set the Min:Max Y axis soft limits. Min position is value set when Y endstop is triggered.
 
 
-				;!### Z-axis
+				;!### Z-axis Motor assignment and configuration
 M584 Z6:7:8			;!Assign the Z-axis motor to use drivers 6,7,8 (marked as "E3", "E4", "E5" on the Duex Expander board)
 M569 P6 S0      	;! Set the direction of the  driver6 (Front-Left Z) stepper
 M569 P7 S0      	;! Set the direction of the  driver7 (Front-Right Z) stepper 
@@ -116,11 +114,24 @@ M203 Z800			;! Set max Z speed (mm/min) conservative.
 M201 X100       	;! Set max Z acceleration (in mm/sec^2) for print moves.
 M566 Z500           ;! SetMaximum instantaneous speed change in (mm/minute). Too low and movement may be jerky if mesh bed compensation is used (we do use it).
 M574 Z1 P"zstop" S1 ;! Define an active high (S1) limit switch at the MaxZ end (Z1) connected to the zstop pin on the Duet2 board
-M208 Z-4:410		;!Set the Min:Max Z axis soft limits. Max position is value set when Y endstop is triggered if using the endstop at the bottom of the travel.
-
 
 ;END OF X-Y-Z MOTION CONFIGURATION SECTION
 ;###############################################
+
+
+
+;###############################################
+;START OF X-Y-Z SOFT LIMITS SETUP
+		;!## Soft Limits
+		;!gcode commands in this section define the soft limits of movement in each direction. These limits define the maximum and minimum positions allowed during normal operations. This means that the board may send the carriage to any location within these parameters with crashing into anything. This section DOES NOT specify where the coordinate system exists within the physical boundaries of the printer. That positioning is done with the last "G1 H1" commands in the homex.g, homey.g and homez.z files. Those commands connect a machine X, Y or Z coordinate to the carriage position when the limit switch (or Z-probe) is triggered.  
+		
+M208 X-2:350		;!Set the Min:Max X axis soft limits. Min position is value set when X endstop is triggered.
+M208 Y-42:350		;!Set the Min:Max Y axis soft limits. Min position is value set when Y endstop is triggered.
+M208 Z-4:410		;!Set the Min:Max Z axis soft limits. Max position is value set when Y endstop is triggered if using the endstop at the bottom of the travel.
+
+;###############################################
+;END OF X-Y X-Y-Z MOVEMENT LIMITS SETUP
+
 
 
 
