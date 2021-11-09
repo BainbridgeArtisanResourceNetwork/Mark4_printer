@@ -49,7 +49,7 @@ M586 P2 S0     ;! Disable Telnet
 global all_loaded = "No"    ;! Set a global variable that we can use to verify the whole config.g file was loaded. Use M117 {global.all_loaded} to check
 ;global Z_Probe_Type = "prox" ;! Create a clobal variable to set the type of z-probe being used. Valid valeus are "prox" and "touch" 
 ;global Z_Probe_Type = "touch" ;! Create a clobal variable to set the type of z-probe being used. Valid valeus are "prox" and "touch"
-M98 P"0:/sys/z_probetype_query.g"
+M98 P"0:/sys/Z-probe_type_query.g"
 
 		;!### Z PROBE  GLOBAL VARIABLES  - X,Y offsets. 
 			;! set Z-probe global variable based on probe type
