@@ -46,27 +46,28 @@ M586 P2 S0     ;! Disable Telnet
 ;###############################################
 ;START OF GLOBAL VARIABLE DEFINITION
 		;!## Define global variables
-global all_loaded = "No"    ;! Set a global variable that we can use to verify the whole config.g file was loaded. Use M117 {global.all_loaded} to check
-;global Z_Probe_Type = "prox" ;! Create a clobal variable to set the type of z-probe being used. Valid valeus are "prox" and "touch" 
-;global Z_Probe_Type = "touch" ;! Create a clobal variable to set the type of z-probe being used. Valid valeus are "prox" and "touch"
-M98 P"0:/sys/Z-probe_type_query.g"
+		
+		;!### Z PROBE  GLOBAL VARIABLES  - Probe type.		
+global Z_Probe_Type = "touch" ;! Create a clobal variable to set the type of z-probe being used. Valid values are "prox" and "touch". Comment this line out to have user select the probe type.
+if !{exists(global.Z_Probe_Type)}      ;If the probe type has net been set (because the line above is commented out), call the probe type query. 
+  M98 P"0:/sys/Z-probe_type_query.g"
 
 		;!### Z PROBE  GLOBAL VARIABLES  - X,Y offsets. 
 			;! set Z-probe global variable based on probe type
 if global.Z_Probe_Type = "prox" 
-  M291 P"Z-probe PROXIMITY sensor being used" S1 T20
-  ;!Create two variables, global.Z_probe_Xoffset and global.ZZ_probe_Yoffset. These values can be ADDED to any the X and Y coordinates to move the probe to that position. the expression must be inside curly brackets {}.  This is useful because is lets us set the offset one time and use it lots of places.  Example: G0 x{100 + global.Z-probe-Xoffset}  Y{200 + global.Z-probe-Yoffset} moves the printhead so that the probe is over the machine point 100,200.
+  M291 P"Z-probe hall effect PROXIMITY sensor being used" S1 T20   ; send a message informing of probe type
+  ;!Create two variables, global.Z_probe_Xoffset and global.ZZ_probe_Yoffset. These values can be ADDED to any X and Y coordinates to move the probe to that position. the expression must be inside curly brackets {}.  This is useful because is lets us set the offset one time and use it lots of places.  Example: G0 x{100 + global.Z-probe-Xoffset}  Y{200 + global.Z-probe-Yoffset} moves the printhead so that the probe is over the machine point 100,200.
   global Z_probe_Xoffset =  -49;!- Create variable  global.Z_probe_Xoffset and set it's value.
   global Z_probe_Yoffset =  -26;!- Create variable  global.Z_probe_Yoffset and set it's value.
  
 elif global.Z_Probe_Type = "touch"
-  M291 P"Z-probe TOUCH sensor being used" S1 T20
+  M291 P"Z-probe TOUCH sensor being used" S1 T20  ; send a message informing of probe type
   ;!Create two variables, global.Z_probe_Xoffset and global.ZZ_probe_Yoffset. These values can be ADDED to any the X and Y coordinates to move the probe to that position. the expression must be inside curly brackets {}.  This is useful because is lets us set the offset one time and use it lots of places.  Example: G0 x{100 + global.Z-probe-Xoffset}  Y{200 + global.Z-probe-Yoffset} moves the printhead so that the probe is over the machine point 100,200.
   global Z_probe_Xoffset =  -5;!- Create variable  global.Z_probe_Xoffset and set it's value.
   global Z_probe_Yoffset =  -15;!- Create variable  global.Z_probe_Yoffset and set it's value.
   
 else 
-;  M291 P"config.g file does not have a valid Z-probe assigned. Check ~line 49" S0 T0
+;  M291 P"config.g file does not have a valid Z-probe assigned. Check ~line 57" S0 T0
 
 
 ;END  GLOBAL VARIABLE DEFINITION
@@ -204,8 +205,8 @@ M669 K1         ; CoreXY mode
 				;!F7 is the fan reserved for Tool 3's  Hot end fan and connected to the DueX 5 board's "Fan 7" connector and referred to by pin name "duex.fan7". It is defined in the Tool 3 Fan section.
 				;!F8 is the fan reserved for Tool 3's Part cooling fan and connected to the DueX 5 board's "Fan 8" connector and referred to by pin name "duex.fan8". It is defined in the Tool 3 Fan section.
 
-;COMMON COMMANDS  **********************************
-			;!### Common commands
+;TOOL SETUP COMMON COMMANDS  **********************************
+			;!### Tool Setup Common commands
 			;!This section ahead of the individual tool definitions contains gcode commnds where one line must apply to all tools.
 				;!####Extruder driver assignments
 M584 E3:4    			;!Assign Duet connector "E0 motor" (driver #3) to Extruder 0, and connector "E1 Motor" (driver 4) to Extruder 1. 
@@ -287,11 +288,11 @@ M569 P4 S1 D2   ;!Set the direction of the driver4 stepper and define it as spre
 ;START OF STEPPER MOTOR INTERPOLATION (MICROSTEPS) AND CURRENT CONFIG SECTION
 			;!### Stepper Interpolation
 			;!This section sets up sub-step interpolation on the drivers. These commands must be some place after the last m584 (driver definition) command to these are here and not with the sections that define the drivers (doesn't make sense does it?)
-M350 X16 I1 		;!Set 16x microstepping for the X stepper driver. Use interpolation.
-M350 Y16 I1 		;!Set 16x microstepping for the Y stepper driver. Use interpolation.
-M350 Z16 I1			;!Set 16x microstepping for the Z stepper driver. Use interpolation.
-M350 U4 I1 	        ;!Set 4x microstepping for the tool lock/inlock stepper drive. Use interpolation.
-M350 E16:16 I1 	;!Set 16x microstepping for each of the three Extruders. Use interpolation.
+M350 X16 I1 		;!Set 16x microstepping for the X stepper driver. Use interpolation. Note: changing this affects the steps per mm in M92 commands.
+M350 Y16 I1 		;!Set 16x microstepping for the Y stepper driver. Use interpolation. Note: changing this affects the steps per mm in M92 commands.
+M350 Z16 I1			;!Set 16x microstepping for the Z stepper driver. Use interpolation. Note: changing this affects the steps per mm in M92 commands.
+M350 U4 I1 	        ;!Set 4x microstepping for the tool lock/inlock stepper drive. Use interpolation. Note: changing this affects the steps per mm in M92 commands.
+M350 E16:16 I1 	;!Set 16x microstepping for each of the Extruders. Use interpolation.
 
 			
 			;!### Motor Currents
@@ -347,6 +348,7 @@ if global.Z_Probe_Type = "prox"
   ;!- the a travel speed between points is 10000mm.min (T10000)
    ;!- using a dual probe speed Zmovement) 3000mm/min to get close, then 100mm/min for accuracy
   ;!- with a tolerance of 0.02mm for multiple probes (probes out of tolerance will be repeated).	
+  
 elif global.Z_Probe_Type = "touch" 
   M558 P9 C"^zprobe.in" H3 A1 T10000 F600:30 S0.02  ;!Probe definition:
   ;!- P4 = probe type is a switch connected to something other than the z-endstop switch. 
@@ -386,10 +388,10 @@ M671 X-34:368.5:164 Y74:74:400 S10 ; Front Left: (-34, 74) | Front Right: (368.5
 
 
 		;!## Other stuff
-M593 F33.33  ;! Reduce resonances at 33Hz based on XY vibration pattern on prints. This value could use a second opinion.
+;M593 F33.33  ;! Reduce resonances at 33Hz based on XY vibration pattern on prints. This value could use a second opinion.
 
 M98 P"config-user.g"                    ; Load custom user config
 
 M501                                    ; Load saved parameters from non-volatile memory
 
-set global.all_loaded = "Yes"
+M118 S"config.g completed loading" P0 L2    ; log and print a message that this file has finished loading.
