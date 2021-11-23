@@ -43,6 +43,7 @@ M586 P2 S0     ;! Disable Telnet
 
 
 
+
 ;###############################################
 ;START OF GLOBAL VARIABLE DEFINITION
 		;!## Define global variables
