@@ -10,4 +10,5 @@ G1 X5 F6000       ; go back a few mm
 G1 H1 X-365 F360  ; move slowly to X axis endstop once more (second pass)
 G1 H2 Z-5 F6000   ; raise Z again
 G90               ; absolute positioning
+G0 X0             ; MOVE TO X=0
 
