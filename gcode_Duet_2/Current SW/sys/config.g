@@ -60,14 +60,14 @@ if !{exists(global.Z_Probe_Type)}      ;If the probe type has not been set (beca
 		;!### Z PROBE  GLOBAL VARIABLES  - X,Y offsets. 
 			;! set Z-probe global variable based on probe type
 if global.Z_Probe_Type = "prox" 
-  M291 P"Z-probe hall effect PROXIMITY sensor being used" S1 T20   ; send a message informing of probe type
+  M291 P"Z-probe hall effect PROXIMITY sensor being used. " S1 T20   ; send a message informing of probe type
   ;!Create two variables, global.Z_probe_Xoffset and global.ZZ_probe_Yoffset. These values can be ADDED to any X and Y coordinates to move the probe to that position. ;!The expression must be inside curly brackets {}.  This is useful because is lets us set the offset one time and use it lots of places.  
   ;!Example: G0 x{100 + global.Z-probe-Xoffset}  Y{200 + global.Z-probe-Yoffset} moves the printhead so that the probe is over the machine point 100,200.
   set global.Z_probe_Xoffset =  -49;!- Create variable  global.Z_probe_Xoffset and set it's value.
   set global.Z_probe_Yoffset =  -26;!- Create variable  global.Z_probe_Yoffset and set it's value.
  
 elif global.Z_Probe_Type = "touch"
-  M291 P"Z-probe TOUCH sensor being used" S1 T20  ; send a message informing of probe type
+  ;M291 P"Z-probe TOUCH sensor being used" S1 T20  ; send a message informing of probe type
   ;!Create two variables, global.Z_probe_Xoffset and global.ZZ_probe_Yoffset. These values can be ADDED to any X and Y coordinates to move the probe to that position. ;!The expression must be inside curly brackets {}.  
   ;!This is useful because is lets us set the offset one time and use it lots of places.  
   ;!Example: G0 x{100 + global.Z-probe-Xoffset}  Y{200 + global.Z-probe-Yoffset} moves the printhead so that the probe is over the machine point 100,200.
@@ -134,7 +134,7 @@ M574 Z1 P"zstop" S1 ;! Define an active high (S1) limit switch at the MaxZ end (
 		;!## Soft Limits
 		;!gcode commands in this section define the soft limits of movement in each direction. These limits define the maximum and minimum positions allowed during normal operations. This means that the board may send the carriage to any location within these parameters with crashing into anything. This section DOES NOT specify where the coordinate system exists within the physical boundaries of the printer. That positioning is done with the last "G1 H1" commands in the homex.g, homey.g and homez.z files. Those commands connect a machine X, Y or Z coordinate to the carriage position when the limit switch (or Z-probe) is triggered.  
 		
-M208 X0:350		;!Set the Min:Max X axis soft limits. Min position is value set when X endstop is triggered.
+M208 X-2:350		;!Set the Min:Max X axis soft limits. Min position is value set when X endstop is triggered.
 M208 Y-10:350		;!Set the Min:Max Y axis soft limits. Min position is value set when Y endstop is triggered.
 M208 Z-4:410		;!Set the Min:Max Z axis soft limits. Max position is value set when Y endstop is triggered if using the endstop at the bottom of the travel.
 

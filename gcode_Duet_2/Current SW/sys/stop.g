@@ -27,7 +27,7 @@ G1 E-1 F300  ;retract the filament a bit before lifting the nozzle, to release s
 G1 Z+0.5 E-5 F9000 ;move Z up a bit and retract filament even more
 G1 Z+10  ; now lift the nozzle off the part (drop the bed)
 G90  : switch back to absolute move mode
-g0 X300 Y175 ; Move the nozzle to the resr center of the platform
+g0 X175 Y300 ; Move the nozzle to the center of the platform
 
 M84     ; disable motors
 M104 S0 ; turn off temperature
