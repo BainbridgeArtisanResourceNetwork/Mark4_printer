@@ -16,7 +16,10 @@ M550 P"ETA Large 3D Printer"                         ;! Machine name and Netbios
 M111 S0        ;! Debug off
 M929 P"eventlog.txt" S1                ; Start logging to file eventlog.txt
 
+
 		;!## Set General Preferences
+		;! call macro to create global variables we'll use later
+M98 P"0:/sys/create_global_variables.g" ; added 11/29/21 by mike s
 		;!Dimensions in mm, which fw to emulate, etc.
 M555 P2   ;! Set to RepRapFirmware style gcode
 G21       ;! Set dimensions to millimeters
@@ -49,26 +52,29 @@ M586 P2 S0     ;! Disable Telnet
 		;!## Define global variables
 		
 		;!### Z PROBE  GLOBAL VARIABLES  - Probe type.		
-global Z_Probe_Type = "touch" ;! Create a clobal variable to set the type of z-probe being used. Valid values are "prox" and "touch". Comment this line out to have user select the probe type.
-if !{exists(global.Z_Probe_Type)}      ;If the probe type has net been set (because the line above is commented out), call the probe type query. 
+global Z_Probe_Type = "touch" ;! Set teh Z-probe type to touch to refelct that we areusing the BL touch probe.Valid values are "prox" and "touch". Comment this line out to have user select the probe type.
+if !{exists(global.Z_Probe_Type)}      ;If the probe type has not been set (because the line above is commented out), call the probe type query. 
   M98 P"0:/sys/Z-probe_type_query.g"
 
 		;!### Z PROBE  GLOBAL VARIABLES  - X,Y offsets. 
 			;! set Z-probe global variable based on probe type
 if global.Z_Probe_Type = "prox" 
   M291 P"Z-probe hall effect PROXIMITY sensor being used" S1 T20   ; send a message informing of probe type
-  ;!Create two variables, global.Z_probe_Xoffset and global.ZZ_probe_Yoffset. These values can be ADDED to any X and Y coordinates to move the probe to that position. the expression must be inside curly brackets {}.  This is useful because is lets us set the offset one time and use it lots of places.  Example: G0 x{100 + global.Z-probe-Xoffset}  Y{200 + global.Z-probe-Yoffset} moves the printhead so that the probe is over the machine point 100,200.
-  global Z_probe_Xoffset =  -49;!- Create variable  global.Z_probe_Xoffset and set it's value.
-  global Z_probe_Yoffset =  -26;!- Create variable  global.Z_probe_Yoffset and set it's value.
+  ;!Create two variables, global.Z_probe_Xoffset and global.ZZ_probe_Yoffset. These values can be ADDED to any X and Y coordinates to move the probe to that position. ;!The expression must be inside curly brackets {}.  This is useful because is lets us set the offset one time and use it lots of places.  
+  ;!Example: G0 x{100 + global.Z-probe-Xoffset}  Y{200 + global.Z-probe-Yoffset} moves the printhead so that the probe is over the machine point 100,200.
+  set global.Z_probe_Xoffset =  -49;!- Create variable  global.Z_probe_Xoffset and set it's value.
+  set global.Z_probe_Yoffset =  -26;!- Create variable  global.Z_probe_Yoffset and set it's value.
  
 elif global.Z_Probe_Type = "touch"
   M291 P"Z-probe TOUCH sensor being used" S1 T20  ; send a message informing of probe type
-  ;!Create two variables, global.Z_probe_Xoffset and global.ZZ_probe_Yoffset. These values can be ADDED to any the X and Y coordinates to move the probe to that position. the expression must be inside curly brackets {}.  This is useful because is lets us set the offset one time and use it lots of places.  Example: G0 x{100 + global.Z-probe-Xoffset}  Y{200 + global.Z-probe-Yoffset} moves the printhead so that the probe is over the machine point 100,200.
-  global Z_probe_Xoffset =  -37.5 Create variable  global.Z_probe_Xoffset and set it's value.
-  global Z_probe_Yoffset =  57;!- Create variable  global.Z_probe_Yoffset and set it's value.
+  ;!Create two variables, global.Z_probe_Xoffset and global.ZZ_probe_Yoffset. These values can be ADDED to any X and Y coordinates to move the probe to that position. ;!The expression must be inside curly brackets {}.  
+  ;!This is useful because is lets us set the offset one time and use it lots of places.  
+  ;!Example: G0 x{100 + global.Z-probe-Xoffset}  Y{200 + global.Z-probe-Yoffset} moves the printhead so that the probe is over the machine point 100,200.
+  set global.Z_probe_Xoffset =  -37.5 Create variable  global.Z_probe_Xoffset and set it's value.
+  set global.Z_probe_Yoffset =  57;!- Create variable  global.Z_probe_Yoffset and set it's value.
   
 else 
-;  M291 P"config.g file does not have a valid Z-probe assigned. Check ~line 57" S0 T0
+;  M291 P"config.g file does not have a valid Z-probe assigned. Check ~line 55" S0 T0
 
 
 ;END  GLOBAL VARIABLE DEFINITION
@@ -381,7 +387,7 @@ M557 X0:{345 + global.Z_probe_Xoffset} Y{5+global.Z_probe_Yoffset}:345 P5
 			;! Locations are extracted from CAD model assuming:
 				;   350x350mm build region offset from the 370x450mm plate.
 				;   front left corner of build region is (0, 0).
-M671 X-34:368.5:164 Y74:74:400 S10 ; Front Left: (-34, 74) | Front Right: (368.5, 74) | Back: (164, 400)			
+M671 X-28.517:378.517:175 Y27.5:72.5:431.313 S10 ; Front Left: (-28.517, 72.5) | Front Right: (378.517, 72.5) | Back: (175, 413.313)			
 
 
 ;END OF Z_PROBE AND MESH BED COMPENSATION CONFIG SECTION

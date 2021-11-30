@@ -32,8 +32,8 @@ if !move.axes[1].homed
 
 
 
-;################;! Move the probe to the center of the bed
-G0 X{165 + global.Z_probe_Xoffset} Y{165+global.Z_probe_Yoffset}
+;################;! Move the probe to the center of the bed quickly.
+G1 X{175 + global.Z_probe_Xoffset} Y{175+global.Z_probe_Yoffset} F6000
 
 
 ;################;! Probe the bed and set the probe trigger point to Z=0
