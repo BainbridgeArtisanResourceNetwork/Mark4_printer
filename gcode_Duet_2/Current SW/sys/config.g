@@ -25,6 +25,7 @@ M555 P2   ;! Set to RepRapFirmware style gcode
 G21       ;! Set dimensions to millimeters
 G90       ;! Use absolute coordinates...
 M83       ;! ...but relative extruder moves
+G0 F6000  ; Set a fast speed for rapid moves. 
 M575  P1 S1 B57600  ;! ENable panel Due. Comment out if we aren't using it. 
 
 ;END OF CONTROLLER ID, DEBUG SETUP, GENERALPREFERENCES
