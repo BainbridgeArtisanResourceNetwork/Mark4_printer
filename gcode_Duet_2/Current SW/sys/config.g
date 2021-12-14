@@ -263,7 +263,7 @@ M563 P0 S"Extruder 0" D0 H1 F0   ;! Define tool #0 (P0) with name "Extruder 0", 
 				;!#### Extruder offsets
 				;!These offsets are used to create a translation so the nozzle will go to the correct X,Y,Z location 
    ;! Set tool 0 offset from machine coordinates. These values are subtracted from machine coordinates to get tool coordinate to move to.
-G10 P0 X0 Y0 Z2.65
+G10 P0 X0 Y0 Z2.15
 
 
 
