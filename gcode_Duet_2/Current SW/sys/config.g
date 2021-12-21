@@ -72,7 +72,7 @@ elif global.Z_Probe_Type = "touch"
   ;!This is useful because is lets us set the offset one time and use it lots of places.  
   ;!Example: G0 x{100 + global.Z-probe-Xoffset}  Y{200 + global.Z-probe-Yoffset} moves the printhead so that the probe is over the machine point 100,200.
   set global.Z_probe_Xoffset =  -37.5 Create variable  global.Z_probe_Xoffset and set it's value.
-  set global.Z_probe_Yoffset =  57;!- Create variable  global.Z_probe_Yoffset and set it's value.
+  set global.Z_probe_Yoffset =  +57;!- Create variable  global.Z_probe_Yoffset and set it's value.
   
 else 
 ;  M291 P"config.g file does not have a valid Z-probe assigned. Check ~line 55" S0 T0
@@ -375,11 +375,13 @@ elif global.Z_Probe_Type = "touch"
   ;M280 P0 S10                            ;! Send a control signal to Servo 0  (P0) to move to position "10" - Deploy.   NOT SURE WE WANT TO DEPLOY THE PROBE AT THIS TIME.
 										 
 
+	; Set the Z probe X,Y, and Z offsets. Note. This command must come after the last M558 command. 
+G31 X{global.Z_probe_Xoffset} Y{global.Z_probe_Yoffset} Z0  ;! Set the Z probe X, Y and Z offsets
 
 		;!### Mesh bed compensation parameters
 			;!Define probe area for mesh bed compensation. Used when G29 is called. This is where the mesh area is defined, the numbber of points to be probed are defined and the number of times each point is probed. Not in bed.g because bed leveling (G29) could be called without going through bed.g.
 		 
-M557 X0:{345 + global.Z_probe_Xoffset} Y{5+global.Z_probe_Yoffset}:345 P5		
+M557 X{global.Z_probe_Xoffset}:345  Y{5+global.Z_probe_Yoffset}:{345-global.Z_probe_Yoffset} P5		
 			;!- Define bed compensation probing grid. Min and max X and Y box edges for probing, P5 defines 5 points in each direction (a 5 x 5 probe matrix). Chnged from S40 (40mm probe point spacing). 
 			
 
