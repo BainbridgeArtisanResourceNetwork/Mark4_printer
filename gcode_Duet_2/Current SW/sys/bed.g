@@ -9,6 +9,7 @@ M561 ;! clear any existing bed transform.
 ;!
 ;! probe three points on the bed to gather z-probe heights and on the last probe, add the S3 command that tells the Duet2 FW to perform  3 z-motor leveling. This also relies on an M671 code in the config.g file that defines the locations of the kinematic balls. Maybe that command belongs in this file. I don;t think there are other files that make independent z-motor moves and which would need it.
 
+<<<<<<< HEAD
 G30 P0 X175 Y345 Z-99999 		; Probe near back lead screw. global variables set in config.g file
 G30 P1 X0 Y110.6 Z-99999			                        ; Probe near front left lead screw. global variables set in config.g file
 G30 P2 X321.5 Y110.6 Z-99999 S3		; Probe near front right lead screw and calibrate 3 motors. global variables set in config.g file
@@ -16,5 +17,14 @@ G30 P2 X321.5 Y110.6 Z-99999 S3		; Probe near front right lead screw and calibra
 
 M98 P"homez.g" ;Rehome the Z because leveling the bed surely moved the vertical location of the center of the bed. 
 G1 g0 X165 Y200 F10000				;! move to X0 and Y0. Do we want to home to 0,0, or the center of the bed?
+=======
+G30 P0 X175   Y{345 - global.Z_probe_Yoffset} Z-99999 		; Probe near back lead screw. global variables set in config.g file
+G30 P1 X{global.Z_probe_Xoffset}     Y110.6 Z-99999	; Probe near front left lead screw. global variables set in config.g file
+G30 P2 X321.5 Y110.6 Z-99999 S3		; Probe near front right lead screw and calibrate 3 motors. global variables set in config.g file
+;!
+
+M98 P"homez.g" Rehome the Z because leveling the bed surely moved the vertical location of the center of the bed. 
+G1 g0 X165  Y300 F10000				;! move to center rear of the bed
+>>>>>>> ced9035f755e18ff9867ada02f6df12220ba0191
 
 
