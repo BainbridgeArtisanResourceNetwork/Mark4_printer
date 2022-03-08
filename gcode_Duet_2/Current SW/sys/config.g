@@ -358,7 +358,6 @@ if global.Z_Probe_Type = "prox"
   ;!- the a travel speed between points is 10000mm.min (T10000)
    ;!- using a dual probe speed Zmovement) 3000mm/min to get close, then 100mm/min for accuracy
   ;!- with a tolerance of 0.02mm for multiple probes (probes out of tolerance will be repeated).	
-  G31 X{global.Z_probe_Xoffset} Y {global.Z_probe_Yoffset} Z0 ;! set the probe X and Y offsets to the global variables we defined earlier
   
 elif global.Z_Probe_Type = "touch" 
   M558 P9 C"^zprobe.in" H3 A1 T10000 F600:30 S0.02  ;!Probe definition:
@@ -369,9 +368,7 @@ elif global.Z_Probe_Type = "touch"
   ;!- T = the a travel speed between points is 10000mm.min (T10000)
   ;!- F = using a dual probe speed Zmovement) 600mm/min to get close, then 30mm/min for accuracy
   ;!- s = with a tolerance of 0.02mm for multiple probes (probes out of tolerance will be repeated).
-  G31 X{global.Z_probe_Xoffset} Y {global.Z_probe_Yoffset} Z0 ;! set the probe X and Y offsets to the global variables we defined earlier
-  
-  M950 S0 C"duex.pwm5"                 ;! Define probe deployment pin for the BLTouch probe.
+  M950 S0 C"duex.pwm5"                 ;! Define probe deployment pine for the BLTouch probe.
   ;! S0 = define this connector as Servo #0
   ;! C"!duex.pwm5" = create this servo 0 on pwm5 pin on DuEx board. Aliases for this pin are: exp.heater7, exp.31, !duex.e6heat, !duex.pwm5
   ;! web reference:  https://duet3d.dozuki.com/Wiki/RepRapFirmware_3_overview#Section_Pin_names_for_Duet_2_WiFi_Ethernet
@@ -384,12 +381,7 @@ G31 X{global.Z_probe_Xoffset} Y{global.Z_probe_Yoffset} Z0  ;! Set the Z probe X
 		;!### Mesh bed compensation parameters
 			;!Define probe area for mesh bed compensation. Used when G29 is called. This is where the mesh area is defined, the numbber of points to be probed are defined and the number of times each point is probed. Not in bed.g because bed leveling (G29) could be called without going through bed.g.
 		 
-<<<<<<< HEAD
-M557 X{global.Z_probe_Xoffset+5}:345 Y5:{345+global.Z_probe_Yoffset} P5
-;M557 X0:{345 + global.Z_probe_Xoffset} Y{5+global.Z_probe_Yoffset}:345 P5		
-=======
 M557 X{global.Z_probe_Xoffset}:345  Y{5+global.Z_probe_Yoffset}:{345-global.Z_probe_Yoffset} P5		
->>>>>>> ced9035f755e18ff9867ada02f6df12220ba0191
 			;!- Define bed compensation probing grid. Min and max X and Y box edges for probing, P5 defines 5 points in each direction (a 5 x 5 probe matrix). Chnged from S40 (40mm probe point spacing). 
 			
 
