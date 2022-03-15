@@ -71,8 +71,8 @@ elif global.Z_Probe_Type = "touch"
   ;!Create two variables, global.Z_probe_Xoffset and global.ZZ_probe_Yoffset. These values can be ADDED to any X and Y coordinates to move the probe to that position. ;!The expression must be inside curly brackets {}.  
   ;!This is useful because is lets us set the offset one time and use it lots of places.  
   ;!Example: G0 x{100 + global.Z-probe-Xoffset}  Y{200 + global.Z-probe-Yoffset} moves the printhead so that the probe is over the machine point 100,200.
-  set global.Z_probe_Xoffset =  -37.5 Create variable  global.Z_probe_Xoffset and set it's value.
-  set global.Z_probe_Yoffset =  +57;!- Create variable  global.Z_probe_Yoffset and set it's value.
+  set global.Z_probe_Xoffset =  +37.5  ;! Create variable  global.Z_probe_Xoffset and set it's value.
+  set global.Z_probe_Yoffset =  -57    ;!- Create variable  global.Z_probe_Yoffset and set it's value.
   
 else 
 ;  M291 P"config.g file does not have a valid Z-probe assigned. Check ~line 55" S0 T0
@@ -263,7 +263,7 @@ M563 P0 S"Extruder 0" D0 H1 F0   ;! Define tool #0 (P0) with name "Extruder 0", 
 				;!#### Extruder offsets
 				;!These offsets are used to create a translation so the nozzle will go to the correct X,Y,Z location 
    ;! Set tool 0 offset from machine coordinates. These values are subtracted from machine coordinates to get tool coordinate to move to.
-G10 P0 X0 Y0 Z2.15
+G10 P0 X0 Y0 Z2.75
 
 
 
@@ -381,7 +381,7 @@ G31 X{global.Z_probe_Xoffset} Y{global.Z_probe_Yoffset} Z0  ;! Set the Z probe X
 		;!### Mesh bed compensation parameters
 			;!Define probe area for mesh bed compensation. Used when G29 is called. This is where the mesh area is defined, the numbber of points to be probed are defined and the number of times each point is probed. Not in bed.g because bed leveling (G29) could be called without going through bed.g.
 		 
-M557 X{global.Z_probe_Xoffset}:345  Y{5+global.Z_probe_Yoffset}:{345-global.Z_probe_Yoffset} P5		
+M557 X40:345  Y5:285 P5		
 			;!- Define bed compensation probing grid. Min and max X and Y box edges for probing, P5 defines 5 points in each direction (a 5 x 5 probe matrix). Chnged from S40 (40mm probe point spacing). 
 			
 

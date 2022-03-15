@@ -16,18 +16,10 @@ set global.this_print_filename = job.file.fileName
  
 
 
-
-
-
-
-
-
-
-
 ;HOMING AND BED LEVEING
-G28 ; home all axes
-G32 ; run bed.g macro, which levels the bed (unless we add more to it)
-G29 S0; execute bed mesh measurement 
+;G28 ; home all axes
+;G32 ; run bed.g macro, which levels the bed (unless we add more to it)
+;G29 S0; execute bed mesh measurement 
 
 
 ;READY TO PRINT

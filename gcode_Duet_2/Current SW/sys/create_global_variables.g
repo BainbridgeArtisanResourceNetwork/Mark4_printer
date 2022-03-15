@@ -1,6 +1,6 @@
 ;!<summary> This file is used as the preferred place to create global variables. The normal usage is that they are created here (in alphabetical order) and assigned a null value.  When a macor wants to assign a value to one it does not need to check for it's existence, and then either create, or just assign. Should make other macros easier to read.
 ;This macro is called as the first command in config.g.
-: The idea of doing this is all from teh BARN team. This is not a DUET idea, so blame us if it's dumb.
+; The idea of doing this is all from teh BARN team. This is not a DUET idea, so blame us if it's dumb.
 
 
 
