@@ -11,3 +11,5 @@ global this_print_start_time    = null  ; used in start.g to collect the start t
 
 global Z_probe_Xoffset          = null  ; used to capture the X offset of the z Probe. 
 global Z_probe_Yoffset          = null  ; used to capture the Y offset of the z Probe. 
+
+global homeall_running = false   ; will be set to true at the beginning of  homeall.g and used in homeX, Y, and Z to skip dropping the bed.
