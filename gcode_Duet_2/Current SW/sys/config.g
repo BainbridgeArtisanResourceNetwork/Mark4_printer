@@ -51,32 +51,14 @@ M586 P2 S0     ;! Disable Telnet
 ;###############################################
 ;START OF GLOBAL VARIABLE DEFINITION
 		;!## Define global variables
+        ;! Global variables should now all be declatred in the create_global_variables.g file so that they can be "set" in any file without testing for their existence first.
 		
-		;!### Z PROBE  GLOBAL VARIABLES  - Probe type.		
-global Z_Probe_Type = "touch" ;! Set teh Z-probe type to touch to refelct that we areusing the BL touch probe.Valid values are "prox" and "touch". Comment this line out to have user select the probe type.
-if !{exists(global.Z_Probe_Type)}      ;If the probe type has not been set (because the line above is commented out), call the probe type query. 
-  M98 P"0:/sys/Z-probe_type_query.g"
-
-		;!### Z PROBE  GLOBAL VARIABLES  - X,Y offsets. 
-			;! set Z-probe global variable based on probe type
-if global.Z_Probe_Type = "prox" 
-  M291 P"Z-probe hall effect PROXIMITY sensor being used. " S1 T20   ; send a message informing of probe type
-  ;!Create two variables, global.Z_probe_Xoffset and global.ZZ_probe_Yoffset. These values can be ADDED to any X and Y coordinates to move the probe to that position. ;!The expression must be inside curly brackets {}.  This is useful because is lets us set the offset one time and use it lots of places.  
-  ;!Example: G0 x{100 + global.Z-probe-Xoffset}  Y{200 + global.Z-probe-Yoffset} moves the printhead so that the probe is over the machine point 100,200.
-  set global.Z_probe_Xoffset =  -49;!- Create variable  global.Z_probe_Xoffset and set it's value.
-  set global.Z_probe_Yoffset =  -26;!- Create variable  global.Z_probe_Yoffset and set it's value.
- 
-elif global.Z_Probe_Type = "touch"
-  ;M291 P"Z-probe TOUCH sensor being used" S1 T20  ; send a message informing of probe type
-  ;!Create two variables, global.Z_probe_Xoffset and global.ZZ_probe_Yoffset. These values can be ADDED to any X and Y coordinates to move the probe to that position. ;!The expression must be inside curly brackets {}.  
-  ;!This is useful because is lets us set the offset one time and use it lots of places.  
-  ;!Example: G0 x{100 + global.Z-probe-Xoffset}  Y{200 + global.Z-probe-Yoffset} moves the printhead so that the probe is over the machine point 100,200.
-  set global.Z_probe_Xoffset =  +37.5  ;! Create variable  global.Z_probe_Xoffset and set it's value.
-  set global.Z_probe_Yoffset =  -57    ;!- Create variable  global.Z_probe_Yoffset and set it's value.
-  
-else 
-;  M291 P"config.g file does not have a valid Z-probe assigned. Check ~line 55" S0 T0
-
+        
+        
+        ;!### Z PROBE  GLOBAL VARIABLES  - X,Y offsets. Offset for the probe. 
+            ;!SET two variables, global.Z_probe_Xoffset and global.Z_probe_Yoffset. 
+set global.Z_probe_Xoffset =  +37.5  ;! Create variable  global.Z_probe_Xoffset and set it's value. Positive value means the probe is at a greater X value than the nozzle.
+set global.Z_probe_Yoffset =  -57    ;!- Create variable  global.Z_probe_Yoffset and set it's value. Negative value means the probe is at a lower Y value than the nozzle.
 
 ;END  GLOBAL VARIABLE DEFINITION
 ;###############################################
@@ -348,39 +330,24 @@ M304 P25 I0.400 D66.3	    ;! Set the PID parameters for the bed heater. These ar
 		;!Define the z probe we are using and the parameters for that probe. Also define the bed unevenness compensation. 
 		
 		;!### Define the probe type and usage
-if global.Z_Probe_Type = "prox" 
-  ;M558 P5 C"zprobe.in" H3 A1 T10000 F600:30 S0.02  ;!Probe definition:     ; use when probe connected to z-probe connector
-  M558 P5 C"e1stop" H3 A1 T10000 F600:30 S0.02  ;!Probe definition:
-  ;!- probe type is a switch (P5) 
-  ;!- connected to pin "zprobe.in"
-  ;!- using dive height (fast move to this z) 3mm (H3)
-  ;!- on probe request, probe the location 1 time (A1)
-  ;!- the a travel speed between points is 10000mm.min (T10000)
-   ;!- using a dual probe speed Zmovement) 3000mm/min to get close, then 100mm/min for accuracy
-  ;!- with a tolerance of 0.02mm for multiple probes (probes out of tolerance will be repeated).	
-  
-elif global.Z_Probe_Type = "touch" 
-  M558 P9 C"^zprobe.in" H3 A1 T10000 F600:30 S0.02  ;!Probe definition:
-  ;!- P4 = probe type is a switch connected to something other than the z-endstop switch. 
-  ;!- ^C4 = connected to E1 endstop connector. the "^" character enables the pullup resistor
-  ;!- H3 = using dive height (fast move to this z) 3mm
-  ;!- A1 = on probe request, probe the location 1 time
-  ;!- T = the a travel speed between points is 10000mm.min (T10000)
-  ;!- F = using a dual probe speed Zmovement) 600mm/min to get close, then 30mm/min for accuracy
-  ;!- s = with a tolerance of 0.02mm for multiple probes (probes out of tolerance will be repeated).
-  M950 S0 C"duex.pwm5"                 ;! Define probe deployment pine for the BLTouch probe.
-  ;! S0 = define this connector as Servo #0
-  ;! C"!duex.pwm5" = create this servo 0 on pwm5 pin on DuEx board. Aliases for this pin are: exp.heater7, exp.31, !duex.e6heat, !duex.pwm5
-  ;! web reference:  https://duet3d.dozuki.com/Wiki/RepRapFirmware_3_overview#Section_Pin_names_for_Duet_2_WiFi_Ethernet
-  ;M280 P0 S10                            ;! Send a control signal to Servo 0  (P0) to move to position "10" - Deploy.   NOT SURE WE WANT TO DEPLOY THE PROBE AT THIS TIME.
-										 
+M558 P9 C"^zprobe.in" H3 A1 T10000 F600:30 S0.02  ;!Probe definition:
+            ;!- P4 = probe type is a switch connected to something other than the z-endstop switch. 
+            ;!- ^C4 = connected to E1 endstop connector. the "^" character enables the pullup resistor
+            ;!- H3 = using dive height (fast move to this z) 3mm
+            ;!- A1 = on probe request, probe the location 1 time
+            ;!- T = the a travel speed between points is 10000mm.min (T10000)
+            ;!- F = using a dual probe speed Zmovement) 600mm/min to get close, then 30mm/min for accuracy
+            ;!- s = with a tolerance of 0.02mm for multiple probes (probes out of tolerance will be repeated).
+M950 S0 C"duex.pwm5"                 ;! Define probe deployment pin for the BLTouch probe.
+            ;! S0 = define this connector as Servo #0
+            ;! C"!duex.pwm5" = create this servo 0 on pwm5 pin on DuEx board. Aliases for this pin are: exp.heater7, exp.31, !duex.e6heat, !duex.pwm5
+            ;! web reference:  https://duet3d.dozuki.com/Wiki/RepRapFirmware_3_overview#Section_Pin_names_for_Duet_2_WiFi_Ethernet
 
-	; Set the Z probe X,Y, and Z offsets. Note. This command must come after the last M558 command. 
+        ;! Set the Z probe X,Y, and Z offsets. Note. This command must come after the last M558 command. 
 G31 X{global.Z_probe_Xoffset} Y{global.Z_probe_Yoffset} Z0  ;! Set the Z probe X, Y and Z offsets
 
-		;!### Mesh bed compensation parameters
+        ;!### Mesh bed compensation parameters
 			;!Define probe area for mesh bed compensation. Used when G29 is called. This is where the mesh area is defined, the numbber of points to be probed are defined and the number of times each point is probed. Not in bed.g because bed leveling (G29) could be called without going through bed.g.
-		 
 M557 X40:345  Y5:285 P5		
 			;!- Define bed compensation probing grid. Min and max X and Y box edges for probing, P5 defines 5 points in each direction (a 5 x 5 probe matrix). Chnged from S40 (40mm probe point spacing). 
 			
