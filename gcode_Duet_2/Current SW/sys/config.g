@@ -52,9 +52,7 @@ M586 P2 S0     ;! Disable Telnet
 ;START OF GLOBAL VARIABLE DEFINITION
 		;!## Define global variables
         ;! Global variables should now all be declatred in the create_global_variables.g file so that they can be "set" in any file without testing for their existence first.
-		
-        
-        
+
         ;!### Z PROBE  GLOBAL VARIABLES  - X,Y offsets. Offset for the probe. 
             ;!SET two variables, global.Z_probe_Xoffset and global.Z_probe_Yoffset. 
 set global.Z_probe_Xoffset =  +37.5  ;! Create variable  global.Z_probe_Xoffset and set it's value. Positive value means the probe is at a greater X value than the nozzle.
@@ -79,20 +77,18 @@ M18 A Y Z A B C D U V W                 ; clear all axes assignments
 M584 X0				;!Assign the X-axis motor to use driver0 (marked as "X" on the Duet 2 board)
 M569 P0 S1      	;!Set the direction of the  driver0 (X) stepper.
 M92 X160            ;!Set Steps/mm for X motor...Modified/corrected Jubilee-defined from 200 to 160 on 10/29/2020
-M203 X13000			;!Set max X speed (mm/min) conservative. 18000+ possible on XY. Depends on tool.
+M203 X60000			;!Set max X speed (mm/min) conservative. 18000+ possible on XY. Depends on tool.
 M201 X1000      	;!Set max X acceleration (in mm/sec^2) for print moves.
 M566 X1000			;!Set Maximum instantaneous speed change in (mm/minute). Too low and curves are super slow, too fast and there may be ringing
-M574 X1 P"xstop" S1 ;!Define an active high (S1) limit switch at the minX end (X1) connected to the xstop pin on the Duet2 board
 
 
 				;!### Y-axis Motor assignment and configuration
 M584 Y1				;!Assign the Y-axis motor to use driver1 (marked as "Y" on the Duet 2 board)
 M569 P1 S1      	;!Set the direction of the  driver1 (Y) stepper.
 M92 Y160            ;!Set Steps/mm for Y motor...Modified/corrected Jubilee-defined from 200 to 160 on 10/29/2020
-M203 Y13000			;!Set max Y speed (mm/min) conservative. 18000+ possible on XY. Depends on tool.
+M203 Y60000			;!Set max Y speed (mm/min) conservative. 18000+ possible on XY. Depends on tool.
 M201 Y1000      	;!Set max Y acceleration (in mm/sec^2) for print moves.
 M566 Y10000         ;!Set Maximum instantaneous speed change in (mm/minute). Too low and curves are super slow, too fast and there may be ringing
-M574 Y1 P"ystop" S1 ;!Define an active high (S1) limit switch at the minY end (Y1) connected to the ystop pin on the Duet2 board
 
 
 				;!### Z-axis Motor assignment and configuration
@@ -104,10 +100,23 @@ M92 Z3200           ;! Set Steps/mm for Z for a T8x2 leadscrew and 0.9mm stepper
 M203 Z800			;! Set max Z speed (mm/min) conservative. 
 M201 X100       	;! Set max Z acceleration (in mm/sec^2) for print moves.
 M566 Z500           ;! SetMaximum instantaneous speed change in (mm/minute). Too low and movement may be jerky if mesh bed compensation is used (we do use it).
-M574 Z1 P"zstop" S1 ;! Define an active high (S1) limit switch at the MaxZ end (Z1) connected to the zstop pin on the Duet2 board
+
 
 ;END OF X-Y-Z MOTION CONFIGURATION SECTION
 ;###############################################
+
+
+
+
+;###############################################
+;START OF ENDSTOP SETUP SECTION
+M574 X1 P"xstop" S1 ;! Define an active high (S1) limit switch at the minX end (X1) connected to the xstop pin on the Duet2 board
+M574 Y1 P"ystop" S1 ;! Define an active high (S1) limit switch at the minY end (Y1) connected to the ystop pin on the Duet2 board
+M574 Z1 P"zstop" S1 ;! Define an active high (S1) limit switch at the MaxZ end (Z1) connected to the zstop pin on the Duet2 board
+
+;END OF ENDSTOP SETUP SECTION
+;###############################################
+
 
 
 
@@ -330,7 +339,7 @@ M304 P25 I0.400 D66.3	    ;! Set the PID parameters for the bed heater. These ar
 		;!Define the z probe we are using and the parameters for that probe. Also define the bed unevenness compensation. 
 		
 		;!### Define the probe type and usage
-M558 P9 C"^zprobe.in" H3 A1 T10000 F600:30 S0.02  ;!Probe definition:
+M558 P9 C"^zprobe.in" H3 A1 T10000 F600:1200 S0.02  ;!Probe definition:
             ;!- P4 = probe type is a switch connected to something other than the z-endstop switch. 
             ;!- ^C4 = connected to E1 endstop connector. the "^" character enables the pullup resistor
             ;!- H3 = using dive height (fast move to this z) 3mm
