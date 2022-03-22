@@ -29,7 +29,7 @@ G1 Z+10  ; now lift the nozzle off the part (drop the bed)
 G90  : switch back to absolute move mode
 g0 X175 Y300 ; Move the nozzle to the center of the platform
 
-M84     ; disable motors
+;M84     ; disable motors
 M104 S0 ; turn off temperature
 M140 S0 ;  turn off heated bed
 
