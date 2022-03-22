@@ -96,9 +96,9 @@ M584 Z6:7:8			;!Assign the Z-axis motor to use drivers 6,7,8 (marked as "E3", "E
 M569 P6 S0      	;! Set the direction of the  driver6 (Front-Left Z) stepper
 M569 P7 S0      	;! Set the direction of the  driver7 (Front-Right Z) stepper 
 M569 P8 S0      	;! Set the direction of the  driver8 (Rear Z) stepper
-M92 Z3200           ;! Set Steps/mm for Z for a T8x2 leadscrew and 0.9mm stepper. Calculation:  (16 * 400)/2
+M92  Z3200           ;! Set Steps/mm for Z for a T8x2 leadscrew and 0.9mm stepper. Calculation:  (16 * 400)/2
 M203 Z800			;! Set max Z speed (mm/min) conservative. 
-M201 X100       	;! Set max Z acceleration (in mm/sec^2) for print moves.
+M201 Z100       	;! Set max Z acceleration (in mm/sec^2) for print moves.
 M566 Z500           ;! SetMaximum instantaneous speed change in (mm/minute). Too low and movement may be jerky if mesh bed compensation is used (we do use it).
 
 
