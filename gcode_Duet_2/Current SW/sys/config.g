@@ -339,7 +339,7 @@ M304 P25 I0.400 D66.3	    ;! Set the PID parameters for the bed heater. These ar
 		;!Define the z probe we are using and the parameters for that probe. Also define the bed unevenness compensation. 
 		
 		;!### Define the probe type and usage
-M558 P9 C"^zprobe.in" H3 A1 T10000 F600:1200 S0.02  ;!Probe definition:
+M558 P9 C"^zprobe.in" H3 A1 T10000 F600:300 S0.02  ;!Probe definition:
             ;!- P4 = probe type is a switch connected to something other than the z-endstop switch. 
             ;!- ^C4 = connected to E1 endstop connector. the "^" character enables the pullup resistor
             ;!- H3 = using dive height (fast move to this z) 3mm
