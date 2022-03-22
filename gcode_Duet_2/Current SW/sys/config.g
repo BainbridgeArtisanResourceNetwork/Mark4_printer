@@ -78,7 +78,7 @@ M584 X0				;!Assign the X-axis motor to use driver0 (marked as "X" on the Duet 2
 M569 P0 S1      	;!Set the direction of the  driver0 (X) stepper.
 M92 X160            ;!Set Steps/mm for X motor...Modified/corrected Jubilee-defined from 200 to 160 on 10/29/2020
 M203 X60000			;!Set max X speed (mm/min) conservative. 18000+ possible on XY. Depends on tool.
-M201 X1000      	;!Set max X acceleration (in mm/sec^2) for print moves.
+M201 X10000      	;!Set max X acceleration (in mm/sec^2) for print moves.
 M566 X1000			;!Set Maximum instantaneous speed change in (mm/minute). Too low and curves are super slow, too fast and there may be ringing
 
 
@@ -357,7 +357,7 @@ G31 X{global.Z_probe_Xoffset} Y{global.Z_probe_Yoffset} Z0  ;! Set the Z probe X
 
         ;!### Mesh bed compensation parameters
 			;!Define probe area for mesh bed compensation. Used when G29 is called. This is where the mesh area is defined, the numbber of points to be probed are defined and the number of times each point is probed. Not in bed.g because bed leveling (G29) could be called without going through bed.g.
-M557 X40:345  Y5:285 P5		
+M557 X40:345  Y5:285 P10		
 			;!- Define bed compensation probing grid. Min and max X and Y box edges for probing, P5 defines 5 points in each direction (a 5 x 5 probe matrix). Chnged from S40 (40mm probe point spacing). 
 			
 
