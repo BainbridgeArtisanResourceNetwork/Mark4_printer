@@ -238,7 +238,7 @@ M950 H1 C"e0heat" T1    ;!Define a Heater (H) with ID 1, map output to pin (C) n
 M307 H1 B0 R3.807 C137.1:120.9 D14.32 S0.5 V24.1 ;!Set the heater control parameters. These were found using the M303 command.
 M570 H1 S30     		;! Print will be terminated if a heater fault is not reset within 30 minutes.
 M143 H1 S260    		;! Set Maximum H1 (Extruder) heater temperature
-M568 P0 R180 S210 A0 	;! Set tool 0 standby temp to 180, active temperature to 210, but turn the heater off (A0)
+
 
 				;!#### Fans
 				;! Set up the extruder fan and the part cooling fan.
@@ -250,6 +250,8 @@ M106 P2 T45 S1.0 H1	;! Turn on Fan 2 (P2 - the part cooling fan) to 100% (S1.0) 
 				;!#### Define the tool
 				;!Now that all the pieces are defined, pull them together into a tool.	
 M563 P0 S"Extruder 0" D0 H1 F0   ;! Define tool #0 (P0) with name "Extruder 0", using motor driver 3 (D0) (first drive defined after the axes), and Fan 0
+M568 P0 R180 S210 A0 	;! Set tool 0 standby temp to 180, active temperature to 210, but turn the heater off (A0)
+
 
 				;!#### Extruder offsets
 				;!These offsets are used to create a translation so the nozzle will go to the correct X,Y,Z location 
