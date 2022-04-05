@@ -361,7 +361,7 @@ G31 X{global.Z_probe_Xoffset} Y{global.Z_probe_Yoffset} Z0  ;! Set the Z probe X
 			;!Define probe area for mesh bed compensation. Used when G29 is called. This is where the mesh area is defined, the numbber of points to be probed are defined and the number of times each point is probed. Not in bed.g because bed leveling (G29) could be called without going through bed.g.
 M557 X40:345  Y5:285 P10		
 			;!- Define bed compensation probing grid. Min and max X and Y box edges for probing, P5 defines 5 points in each direction (a 5 x 5 probe matrix). Chnged from S40 (40mm probe point spacing). 
-G29 S1 P"heightmap.csv" ; Load height map file "hightmap.csv" and enable mesh bed compensation. This is so that there will be compensation at power on even if it is not run manually.
+
 			
 
 		;!### X/Y positions of kinematic balls

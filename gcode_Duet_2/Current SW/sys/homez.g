@@ -35,6 +35,7 @@ G1 X{175 - global.Z_probe_Xoffset} Y{175-global.Z_probe_Yoffset} F6000
 ;################;! Probe the bed and set the probe trigger point to Z=0
 G30 
 
+G29 S1 P"heightmap.csv" ; Load height map file "hightmap.csv" and enable mesh bed compensation. This is so that there will be compensation at power on even if it is not run manually.
 
 
 
