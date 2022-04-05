@@ -379,7 +379,7 @@ M671 X-28.517:378.517:175 Y27.5:72.5:431.313 S10 ; Front Left: (-28.517, 72.5) |
 
 
 		;!## Other stuff
-;M593 F33.33  ;! Reduce resonances at 33Hz based on XY vibration pattern on prints. This value could use a second opinion.
+;M593 P"zvdd" F35  ;! Reduce resonances at 33Hz based on XY vibration pattern on prints. This value could use a second opinion.
 
 M98 P"config-user.g"                    ; Load custom user config
 
