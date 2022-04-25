@@ -17,7 +17,7 @@ if {state.currentTool < 0}
 
 ;Prep for removal
 M568  S{param.T}  ;set hotend temperature
-M291 P"Heating... " R"Unloading Filament"  S0 
+M291 P"Heating.... Another message will appear when it's time to pull out the filament." R"Unloading Filament"  S1 T0 
 M116 P{state.currentTool} S2	;wait for hot end (P) to heat up to within 2 degrees (S2) of the load temperature.
 M291 P"Heating complete. Get ready to pull out filament and press OK." R"Unloading Filament"  S3  T-1
 
