@@ -183,19 +183,19 @@ M669 K1         ; CoreXY mode
 				;!#### Sensors
 				;!S0 is the temperature sensor on the heated bed and is defined in the "Heated Bed" section of this file.
 				;!S1 is the temperature sensor on the extruder on Tool 0, and connected to pin "e0temp".
-				;!S2 is the temperature sensor on the extruder on Tool 0, but not defined yet.
+				;!S2 is the temperature sensor on the extruder on Tool 1, but not defined yet.
 				
 				
 				;!#### Heaters
 				;!Heater H0 is the bed heater and is defined in the "Heated Bed" section of this file.
-				;!H1 is the heater for Extruder 1 and connected to the Duet 2 conenctor "E0 heater" and refered by pin name "e0heat". Heater defined in the tool 0 Filament Heater section.
-				;!H2 is the heater reserved for Extruder 2 and connected to the Duet 2 conenctor "E1 heater" and refered by pin name "e1heat". Heater defined in the tool 0 Filament Heater section.
-				;!H3 is the heater reserved for Extruder 3 and connected to the Duex 5 conenctor "E2 heater" and refered by pin name "!duex.e2heat". Heater defined in the tool 0 Filament Heater section.
-				;!H4 is the heater reserved for Extruder 4 and connected to the Duet 2 conenctor "E3 heater" and refered by pin name "!duex.e2heat".	Heater defined in the tool 0 Filament Heater section.
+				;!H1 is the heater for Extruder 0 and connected to the Duet 2 conenctor "E0 heater" and refered by pin name "e0heat". Heater defined in the tool 0 Filament Heater section.
+				;!H2 is the heater reserved for Extruder 1 and connected to the Duet 2 conenctor "E1 heater" and refered by pin name "e1heat". Heater defined in the tool 0 Filament Heater section.
+				;!H3 is the heater reserved for Extruder 2 and connected to the Duex 5 conenctor "E2 heater" and refered by pin name "!duex.e2heat". Heater defined in the tool 0 Filament Heater section.
+				;!H4 is the heater reserved for Extruder 3 and connected to the Duet 2 conenctor "E3 heater" and refered by pin name "!duex.e2heat".	Heater defined in the tool 0 Filament Heater section.
 				
 				;!#### Fans
 				;!F0 is the fan for Tool 0's  Hot end fan and connected to the Duet 2 board's "Fan 0" connector and referred to by pin name "fan0". It is defined in the Tool 0 Fan section.
-				;!F1 is reserverd for a potential future enclosure cooling fan, along with the "Fan 1" connector on teh Duet 2 board. 
+				;!F1 is reserverd for a potential future enclosure cooling fan, along with the "Fan 1" connector on the Duet 2 board. 
 				;!F2 is the fan for Tool 0's Part cooling fan and connected to the Duet 2 board's "Fan 2" connector and referred to by pin name "fan2". It is defined in the Tool 0 Fan section.
 				;!F3 is the fan reserved for Tool 1's  Hot end fan and connected to the DueX 5 board's "Fan 3" connector and referred to by pin name "duex.fan3". It is defined in the Tool 1 Fan section.
 				;!F4 is the fan reserved for Tool 1's Part cooling fan and connected to the DueX 5 board's "Fan 4" connector and referred to by pin name "duex.fan4". It is defined in the Tool 1 Fan section.
@@ -258,14 +258,9 @@ G10 P0 X0 Y0 Z3.25   ; Increasing the offset moves the nozzle closer to the bed.
 
 
 
-;TOOL 1 - NEEDS TO BE FINISHED ******************************************
-			;!### Tool 1 - Printhead 1
-				;!This secion defines the parts of the tool (Extruders, fans, heaters, temperature sensors, etc) before declaring their collection a tool.
-     			;!Extruder drive (marked as "E1 motor" on the Duet 2 board)	assigned in COMMON SOMMANDS section.
-M569 P4 S1 D2   ;!Set the direction of the driver4 stepper and define it as spread cycle (Need to look at this to see if our 
-				;!motor is the type that can handle this. 
-				;!https://duet3d.dozuki.com/Wiki/Gcode?revisionid=HEAD#Section_M569_Set_motor_driver_direction_enable_polarity_and_step_pulse_timing
-				
+;TOOL 1 -  ******************************************
+M98 P"0:/sys/tool_1_config.g"  ; Call the macro that has all the Ttool 1 configuration info in it. 
+
 
 ;TOOL 2 - NEEDS TO BE FINISHED ******************************************
 			;!### Tool 2 - Printhead
