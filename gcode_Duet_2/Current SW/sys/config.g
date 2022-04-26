@@ -224,7 +224,7 @@ M566 E3000:3000		;!Set Max instantaneous soeep change on extruders. Not sure thi
 M569 P3 S1 D2   ;!Set the direction of the driver3 stepper and define it as spread cycle (Need to look at this to see if our 
 				;!motor is the type that can handle this. 
 				;!https://duet3d.dozuki.com/Wiki/Gcode?revisionid=HEAD#Section_M569_Set_motor_driver_direction_enable_polarity_and_step_pulse_timing
-M572 D0 S0.1	;!Set pressure advance on Extruder Drive 0		
+	
 		
 
 				
@@ -248,7 +248,7 @@ M106 P2 T45 S1.0 H1	;! Turn on Fan 2 (P2 - the part cooling fan) to 100% (S1.0) 
 				;!#### Define the tool
 				;!Now that all the pieces are defined, pull them together into a tool.	
 M563 P0 S"Extruder 0" D0 H1 F0   ;! Define tool #0 (P0) with name "Extruder 0", using motor driver 3 (D0) (first drive defined after the axes), and Fan 0
-M568 P0 R180 S210 A0 	;! Set tool 0 standby temp to 180, active temperature to 210, but turn the heater off (A0)
+;M568 P0 R180 S210 A0 	;! Set tool 0 standby temp to 180, active temperature to 210, but turn the heater off (A0)
 
 
 				;!#### Extruder offsets

@@ -18,7 +18,7 @@ if !move.axes[1].homed
   M98 P"0:/sys/homey.g"  ; run the homey gcode file in the sys directory.  Note line leading spaces needed to define IF Block 0:/sys/homey.g is the way to write an absolute path
 
 
-;################ ;!If X has not been homed, home x
+;################ ;!If X has not been homed, home X
 if !move.axes[0].homed
   M291 P"X axis not yet homed. Homing now." R"Z-home using probe" S0 T5   ; S0 means no buttons, t5 means wait 5 seconds and move on.
   
