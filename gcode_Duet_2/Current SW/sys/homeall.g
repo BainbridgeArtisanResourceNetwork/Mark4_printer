@@ -4,11 +4,11 @@
 
 set global.homeall_running = true   ; Set this variable so homex.g, homey.g, and homez.g can skip some of the bed drops and lifts.
 
-;!- Call homes.g
-M98 P"0:/sys/homex.g"
-
 ;!- Call homey.g
 M98 P"0:/sys/homey.g"
+
+;!- Call homes.g
+M98 P"0:/sys/homex.g"
 
 ;!- Call homez.g
 M98 P"0:/sys/homez.g"
