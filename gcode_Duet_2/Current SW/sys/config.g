@@ -77,18 +77,19 @@ M18 A Y Z A B C D U V W                 ; clear all axes assignments
 M584 X0				;!Assign the X-axis motor to use driver0 (marked as "X" on the Duet 2 board)
 M569 P0 S1      	;!Set the direction of the  driver0 (X) stepper.
 M92 X160            ;!Set Steps/mm for X motor...Modified/corrected Jubilee-defined from 200 to 160 on 10/29/2020
-M203 X60000			;!Set max X speed (mm/min) conservative. 18000+ possible on XY. Depends on tool.
-M201 X10000      	;!Set max X acceleration (in mm/sec^2) for print moves.
+M203 X16000			;!Set max X speed (mm/min) conservative. 18000+ possible on XY. Depends on tool.
+M201 X1000      	;!Set max X acceleration (in mm/sec^2) for print moves.
 M566 X1000			;!Set Maximum instantaneous speed change in (mm/minute). Too low and curves are super slow, too fast and there may be ringing
 
 
 				;!### Y-axis Motor assignment and configuration
 M584 Y1				;!Assign the Y-axis motor to use driver1 (marked as "Y" on the Duet 2 board)
+;M584 Y9 			;!Assign the Y-axis motor to use driver1 (marked as "Y" on the Duet 2 board)
 M569 P1 S1      	;!Set the direction of the  driver1 (Y) stepper.
 M92 Y160            ;!Set Steps/mm for Y motor...Modified/corrected Jubilee-defined from 200 to 160 on 10/29/2020
-M203 Y60000			;!Set max Y speed (mm/min) conservative. 18000+ possible on XY. Depends on tool.
+M203 Y16000			;!Set max Y speed (mm/min) conservative. 18000+ possible on XY. Depends on tool.
 M201 Y1000      	;!Set max Y acceleration (in mm/sec^2) for print moves.
-M566 Y10000         ;!Set Maximum instantaneous speed change in (mm/minute). Too low and curves are super slow, too fast and there may be ringing
+M566 Y1000         ;!Set Maximum instantaneous speed change in (mm/minute). Too low and curves are super slow, too fast and there may be ringing
 
 
 				;!### Z-axis Motor assignment and configuration
