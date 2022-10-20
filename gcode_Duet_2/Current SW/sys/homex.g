@@ -14,11 +14,17 @@ if !global.homeall_running       ;if we did not get here from homeall, drop the 
   G0 Z5    ; drop the bed 5mm
   m564 H1 S1        ; don't alllow movements without homing
 
+; added 9/12/22 to enable the switch to be an endstop after homing. 
+
+M581 X T0 P-1       ;! Discontinue using trigger 0
 
 G1 H1 X-365 F3000 ; move quickly to X axis endstop and stop there (first pass)
 G1 X5 F6000       ; go back a few mm
 G1 H1 X-365 F360  ; move slowly to X axis endstop once more (second pass)
 G0 X5             ; move 5mm off the switch
+
+; x homing complete, tinme to turn the xstop into a trigger for emergency stopping 
+M581 T0 X S1  R0    ;  Assign trigger 0 (T0 - Emergency stop) to use the Xstop switch. trigger when switch goes from inactive to active (S1), trigger at any time (R0)
 
 if !global.homeall_running    ; If we are doing a homeall, skip this part where the bed moves back up
   m564 H0 S0        ; allow moves without homing
