@@ -16,7 +16,8 @@ m308 S2 P"e1temp" Y"thermistor" T100000 B3950  A"Tool1 Hot end Temp"		;!Create a
 																					;!and coefficient of 3950 (B)
 M950 H2 C"e1heat" T2    ;!Define a Heater (H) with ID 2, map output to pin (C) named "e1heat", and associate with the temperature sensor we earlier named "S2"	     
 						;!Heater  H2 defined in the heater definition section before tool definitions.
-M307 H2 R3.005 K0.423:0.000 D9.36 E1.35 S0.50 B0 V24.2  ;!Set the heater control parameters. These were found using the M303 command.
+;M307 H2 R3.005 K0.423:0.000 D9.36 E1.35 S0.50 B0 V24.2  ;!Set the heater control parameters. These were found using the M303 command.
+M307 H2 R2.883 K0.466:0.000 D9.41 E1.35 S0.50 B0 V24.1  ;!Set the heater control parameters. These were found using the M303 command for tool 1 on 8/30/22.
 M570 H2 S30     		;! Print will be terminated if a heater fault is not reset within 30 minutes.
 M143 H2 S260    		;! Set Maximum H2 (Extruder) heater temperature
 

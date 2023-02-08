@@ -1,2 +1,0 @@
-*this is an auto-generated md file for the **sys\homex.g**  *gcode file. All comments in the original file with a '!' immediately following the ';' are collected here.*
-<summary>Called to home the X axis. Lowers the print bed (to clear anything on it), move to the end stop quickly to get rought positioning, then again slowly to be more precise. After finding the end move off a bit. If we mark a 0,0 on the aluminum bed and measure the offset fmo the endstop trigger, we can change that step to "move to x=0.  </summary>

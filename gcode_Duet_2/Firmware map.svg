@@ -1,0 +1,3590 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="8.5in"
+   height="11in"
+   viewBox="0 0 215.9 279.4"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="Firmware map.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.44992525"
+     inkscape:cx="4464.0749"
+     inkscape:cy="311.1628"
+     inkscape:window-width="1920"
+     inkscape:window-height="996"
+     inkscape:window-x="1593"
+     inkscape:window-y="114"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:page
+       x="0"
+       y="0"
+       width="215.89999"
+       height="279.39999"
+       id="page5106" />
+    <inkscape:page
+       x="225.89999"
+       y="0"
+       width="215.89999"
+       height="279.39999"
+       id="page5108" />
+    <inkscape:page
+       x="451.79999"
+       y="0"
+       width="215.89999"
+       height="279.39999"
+       id="page10578" />
+    <inkscape:page
+       x="677.69995"
+       y="0"
+       width="215.89996"
+       height="279.39999"
+       id="page10580" />
+    <inkscape:page
+       x="903.59991"
+       y="0"
+       width="215.89996"
+       height="279.39999"
+       id="page10768" />
+    <inkscape:page
+       x="1129.4999"
+       y="0"
+       width="215.89996"
+       height="279.39999"
+       id="page10770" />
+    <inkscape:page
+       x="1355.3999"
+       y="0"
+       width="215.90002"
+       height="279.39999"
+       id="page10772" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <rect
+       x="1929.595"
+       y="332.57438"
+       width="151.66985"
+       height="169.69534"
+       id="rect3405" />
+    <marker
+       style="overflow:visible"
+       id="Arrow2"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Arrow2"
+       markerWidth="14.999875"
+       markerHeight="10.909"
+       viewBox="0 0 7.7 5.6"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="arrow2L" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow2-0"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Arrow2"
+       markerWidth="14.999875"
+       markerHeight="10.909"
+       viewBox="0 0 7.7 5.6"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="arrow2L-1" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g4573"
+       transform="translate(1.0583333,-12.700002)">
+      <rect
+         style="fill:#aaeeff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+         id="rect5265"
+         width="84.07576"
+         height="31.855122"
+         x="344.5014"
+         y="144.78008"
+         ry="7.953218"
+         rx="7.953218" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.88056px;line-height:1.1;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:80.1176;display:inline;stroke-width:0.264583"
+         x="31.467077"
+         y="53.237587"
+         id="text5275"
+         transform="translate(317.12053,97.320786)"><tspan
+           x="31.467077"
+           y="53.237587"
+           id="tspan2061"> - If Y and X axes not homed, call homey.g
+</tspan><tspan
+           x="31.467077"
+           y="57.506202"
+           id="tspan2063">   then homex.g
+</tspan><tspan
+           x="31.467077"
+           y="61.774817"
+           id="tspan2065">- Home Z axis using BLTouch probe
+</tspan><tspan
+           x="31.467077"
+           y="66.043433"
+           id="tspan2067">    (Sets probe trigger point to Z=0)
+</tspan><tspan
+           x="31.467077"
+           y="70.312049"
+           id="tspan2069">- Load the saved heightmap.csv file to be
+</tspan><tspan
+           x="31.467077"
+           y="74.580665"
+           id="tspan2071">   used for bed mesh compensation.</tspan></text>
+      <g
+         id="g4563">
+        <text
+           xml:space="preserve"
+           style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+           x="369.23398"
+           y="138.17715"
+           id="text5269"><tspan
+             sodipodi:role="line"
+             id="tspan5267"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+             x="369.23398"
+             y="138.17715">sys/homex.g</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+           x="369.48517"
+           y="142.48729"
+           id="text1118"><tspan
+             sodipodi:role="line"
+             style="font-size:4.23333px;stroke-width:0.264583"
+             x="369.48517"
+             y="142.48729"
+             id="tspan1116">- gcode: G28 Z</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g4337"
+       transform="translate(546.05692,38.928956)">
+      <g
+         id="g4331"
+         transform="translate(-8.7322551,11.35148)">
+        <g
+           id="g4325"
+           transform="translate(0.0601876,-10.719554)">
+          <rect
+             style="fill:#c6f7a5;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+             id="rect4319"
+             width="93.434402"
+             height="25.166107"
+             x="30.03989"
+             y="46.975117"
+             ry="7.953218"
+             rx="7.953218" />
+          <text
+             xml:space="preserve"
+             style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+             x="36.21027"
+             y="44.523346"
+             id="text4323"><tspan
+               sodipodi:role="line"
+               id="tspan4321"
+               style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+               x="36.21027"
+               y="44.523346">sys/extruder_&lt;EXT&gt;_unload_filament.g</tspan></text>
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-size:4.23333px;line-height:0;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:90.2225;display:inline;stroke-width:0.264583"
+           x="31.467077"
+           y="53.237587"
+           id="text4329"
+           transform="translate(2.6925802,-10.719554)"><tspan
+             x="31.467077"
+             y="53.237587"
+             id="tspan2075"><tspan
+               style="font-size:3.88056px;line-height:1.1"
+               id="tspan2073">Generic unloader for this extruder. May be </tspan></tspan><tspan
+             x="31.467077"
+             y="57.506202"
+             id="tspan2079"><tspan
+               style="font-size:3.88056px;line-height:1.1"
+               id="tspan2077">different for other tools/extruders.
+</tspan></tspan><tspan
+             x="31.467077"
+             y="61.774817"
+             id="tspan2083"><tspan
+               style="font-size:3.88056px;line-height:1.1"
+               id="tspan2081">Performs the steps to unload the filament.
+</tspan></tspan><tspan
+             x="31.467077"
+             y="66.337952"
+             id="tspan2089"><tspan
+               style="font-size:3.88056px;line-height:1.1"
+               id="tspan2085">Requires temperature as an input.</tspan><tspan
+               style="line-height:1.1"
+               id="tspan2087">
+</tspan></tspan></text>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="38.1507"
+         y="71.624023"
+         id="text4335"><tspan
+           sodipodi:role="line"
+           id="tspan4333"
+           style="stroke-width:0.264583"
+           x="38.1507"
+           y="71.624023" /></text>
+    </g>
+    <g
+       id="g4497"
+       transform="translate(0,-5.8208336)">
+      <g
+         id="g5236"
+         transform="translate(321.66047,23.401512)">
+        <g
+           id="g2613-4-9"
+           transform="translate(0.0601876,-10.719554)">
+          <rect
+             style="fill:#aaeeff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+             id="rect231-1-9"
+             width="86.854652"
+             height="15.929191"
+             x="22.780735"
+             y="46.272289"
+             ry="7.953218"
+             rx="7.953218" />
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-size:4.23333px;line-height:0;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:82.4375;display:inline;stroke-width:0.264583"
+           x="31.467077"
+           y="53.237587"
+           id="text2559-6-1"
+           transform="translate(-5.6855669,-11.160599)"><tspan
+             x="31.467077"
+             y="53.237587"
+             id="tspan2095"><tspan
+               style="line-height:1.1"
+               id="tspan2091"> </tspan><tspan
+               style="font-size:3.88056px;line-height:1.1"
+               id="tspan2093">- Home Y axis using end stop.
+</tspan></tspan><tspan
+             x="31.467077"
+             y="57.59973"
+             id="tspan2099"><tspan
+               style="font-size:3.88056px;line-height:1.1"
+               id="tspan2097">    (Sets Y = min Y value from 208 in config.g)</tspan></tspan></text>
+      </g>
+      <g
+         id="g4480"
+         transform="translate(-2.4417626,15.730622)">
+        <text
+           xml:space="preserve"
+           style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+           x="50.790092"
+           y="23.664227"
+           id="text2142-5-9"
+           transform="translate(321.72066,12.681958)"><tspan
+             sodipodi:role="line"
+             id="tspan2140-6-8"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+             x="50.790092"
+             y="23.664227">sys/homey.g</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+           x="373.16376"
+           y="41.354897"
+           id="text1104"><tspan
+             sodipodi:role="line"
+             style="font-size:4.23333px;stroke-width:0.264583"
+             x="373.16376"
+             y="41.354897"
+             id="tspan1106"> - gcode: G28 Y</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g2227"
+       transform="translate(0,8.9958338)">
+      <path
+         id="rect485"
+         style="fill:#ffaaaa;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.265;stroke-linecap:square;stroke-dasharray:1.06, 0.265;paint-order:stroke fill markers"
+         d="m 23.647924,21.240248 75.611456,0.207911 0.135351,7.068968 -70.70355,-0.174871 0.148828,136.307924 h 72.462951 l -0.60483,73.02325 H 23.647924 Z"
+         sodipodi:nodetypes="ccccccccc" />
+      <text
+         xml:space="preserve"
+         style="font-size:4.93889px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="25.626526"
+         y="18.940737"
+         id="text595"><tspan
+           sodipodi:role="line"
+           id="tspan593"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+           x="25.626526"
+           y="18.940737">Duet fw boots</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:67.4621;display:inline;stroke-width:0.264583"
+         x="31.467077"
+         y="53.237587"
+         id="text728"
+         transform="translate(-0.97627243,118.81484)"><tspan
+           x="31.467077"
+           y="53.237587"
+           id="tspan2101">- Attempt to connect to network
+</tspan><tspan
+           x="31.467077"
+           y="58.529246"
+           id="tspan2103">
+</tspan><tspan
+           x="31.467077"
+           y="63.82091"
+           id="tspan2105">
+</tspan><tspan
+           x="31.467077"
+           y="69.112574"
+           id="tspan2107">
+</tspan><tspan
+           x="31.467077"
+           y="74.404239"
+           id="tspan2109">
+</tspan><tspan
+           x="31.467077"
+           y="79.695903"
+           id="tspan2111">- If sys/runonce.g is present, run
+</tspan><tspan
+           x="31.467077"
+           y="84.987567"
+           id="tspan2113">   it.
+</tspan><tspan
+           x="31.467077"
+           y="90.279231"
+           id="tspan2115">
+</tspan><tspan
+           x="31.467077"
+           y="95.570895"
+           id="tspan2117">- If sys.daemon.g is present, run
+</tspan><tspan
+           x="31.467077"
+           y="100.86256"
+           id="tspan2119">   every 10 seconds in an
+</tspan><tspan
+           x="31.467077"
+           y="106.15422"
+           id="tspan2121">   asynchronous thread.
+</tspan><tspan
+           x="31.467077"
+           y="111.44589"
+           id="tspan2123">
+</tspan><tspan
+           x="31.467077"
+           y="116.73755"
+           id="tspan2125">- Wait for commands to execute.
+</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:67.4621;display:inline;stroke-width:0.264583"
+         x="31.467077"
+         y="53.237587"
+         id="text4377"
+         transform="translate(-3.7411239,-27.412512)"><tspan
+           x="31.467077"
+           y="53.237587"
+           id="tspan2127">- Run sys/config.g</tspan></text>
+    </g>
+    <g
+       id="g2500-0-1"
+       transform="translate(321.66048,7.6201731)">
+      <text
+         xml:space="preserve"
+         style="font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="38.1507"
+         y="71.624023"
+         id="text5114-6"><tspan
+           sodipodi:role="line"
+           id="tspan5112-4"
+           style="stroke-width:0.264583"
+           x="38.1507"
+           y="71.624023" /></text>
+    </g>
+    <g
+       id="g2500"
+       transform="translate(0,-6.879167)">
+      <g
+         id="g2613"
+         transform="translate(0.30469952,5.1554468)">
+        <rect
+           style="fill:#aaeeff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+           id="rect231"
+           width="70.473732"
+           height="115.13515"
+           x="30.843346"
+           y="47.305641"
+           ry="7.953218"
+           rx="7.953218" />
+        <text
+           xml:space="preserve"
+           style="font-size:4.93889px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+           x="51.634678"
+           y="44.523346"
+           id="text2142"><tspan
+             sodipodi:role="line"
+             id="tspan2140"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+             x="51.634678"
+             y="44.523346">sys/config.g</tspan></text>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:3.88056px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:67.4621;display:inline;stroke-width:0.264583"
+         x="31.467077"
+         y="53.237587"
+         id="text2559"
+         transform="translate(2.6925802,5.1554468)"><tspan
+           x="31.467077"
+           y="53.237587"
+           id="tspan2129">Main file for configuring the FW to </tspan><tspan
+           x="31.467077"
+           y="58.088286"
+           id="tspan2131">run our machine.
+</tspan><tspan
+           x="31.467077"
+           y="62.938986"
+           id="tspan2133">
+</tspan><tspan
+           x="31.467077"
+           y="67.789683"
+           id="tspan2135">- Configures Duet board fw for
+</tspan><tspan
+           x="31.467077"
+           y="72.640383"
+           id="tspan2137">  our machine configuration.
+</tspan><tspan
+           x="31.467077"
+           y="77.491084"
+           id="tspan2139">    - motor parameters
+</tspan><tspan
+           x="31.467077"
+           y="82.341784"
+           id="tspan2141">    - limit switches
+</tspan><tspan
+           x="31.467077"
+           y="87.192484"
+           id="tspan2143">    - network parameters
+</tspan><tspan
+           x="31.467077"
+           y="92.043185"
+           id="tspan2145">    - BLTouch Z probe
+</tspan><tspan
+           x="31.467077"
+           y="96.893885"
+           id="tspan2147">    - bed heater parameters
+</tspan><tspan
+           x="31.467077"
+           y="101.74459"
+           id="tspan2149">
+</tspan><tspan
+           x="31.467077"
+           y="106.59529"
+           id="tspan2151">
+</tspan><tspan
+           x="31.467077"
+           y="111.44599"
+           id="tspan2153">- Runs other macro files to configure
+</tspan><tspan
+           x="31.467077"
+           y="116.29669"
+           id="tspan2155">  each tool.  At present, tool #0 is not
+</tspan><tspan
+           x="31.467077"
+           y="121.14739"
+           id="tspan2157">  yet in it's own file, but tool 1 is.
+</tspan><tspan
+           x="31.467077"
+           y="125.99809"
+           id="tspan2159">  -  There are some parameters that
+</tspan><tspan
+           x="31.467077"
+           y="130.84879"
+           id="tspan2161">      need to be set for all tools with a
+</tspan><tspan
+           x="31.467077"
+           y="135.69948"
+           id="tspan2163">      single command and they are in
+</tspan><tspan
+           x="31.467077"
+           y="140.55017"
+           id="tspan2165">      config.g. </tspan></text>
+    </g>
+    <g
+       id="g2562"
+       transform="matrix(0.76923067,0,0,0.76923067,20.227034,73.567427)"
+       style="stroke-width:1.3">
+      <g
+         id="g2336"
+         transform="translate(102.35445,226.81216)"
+         style="stroke-width:1.3">
+        <rect
+           style="fill:#aaeeff;fill-rule:evenodd;stroke:#000000;stroke-width:0.65;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+           id="rect701"
+           width="68.382927"
+           height="13"
+           x="-64.69381"
+           y="18.085449"
+           ry="6.9455066"
+           rx="7.953218" />
+        <text
+           xml:space="preserve"
+           style="font-size:4.93889px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.343958"
+           x="-56.728954"
+           y="23.53429"
+           id="text705"><tspan
+             sodipodi:role="line"
+             id="tspan703"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.343958"
+             x="-56.728954"
+             y="23.53429">Files required by Duet</tspan></text>
+      </g>
+      <g
+         id="g2341"
+         transform="translate(175.46327,192.09147)"
+         style="stroke-width:1.3">
+        <rect
+           style="fill:#ccffaa;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.65;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+           id="rect764"
+           width="71.225197"
+           height="13"
+           x="-64.69381"
+           y="52.806141"
+           ry="6.473299"
+           rx="7.953218" />
+        <text
+           xml:space="preserve"
+           style="font-size:4.93889px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.343958"
+           x="-56.728954"
+           y="58.254986"
+           id="text768"><tspan
+             sodipodi:role="line"
+             id="tspan766"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.343958"
+             x="-56.728954"
+             y="58.254986">Files created by BARN</tspan><tspan
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.343958"
+             x="-56.728954"
+             y="64.428596"
+             id="tspan4104" /></text>
+      </g>
+    </g>
+    <g
+       id="g693"
+       transform="translate(16.097617,-14.695424)">
+      <g
+         id="g2685"
+         transform="translate(67.676905,43.975597)">
+        <rect
+           style="fill:#ccffaa;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+           id="rect2660"
+           width="93.871101"
+           height="46.617062"
+           x="31.868536"
+           y="45.708679"
+           ry="7.953218"
+           rx="7.953218" />
+        <text
+           xml:space="preserve"
+           style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+           x="59.019627"
+           y="44.016621"
+           id="text2664"><tspan
+             sodipodi:role="line"
+             id="tspan2662"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+             x="59.019627"
+             y="44.016621">sys/tool_0_config.g</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:4.23333px;line-height:0;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:93.1321;display:inline;stroke-width:0.264583"
+           x="31.467077"
+           y="53.237587"
+           id="text2672"
+           transform="translate(2.3878807)"><tspan
+             x="31.467077"
+             y="53.237587"
+             id="tspan2169"><tspan
+               style="font-size:3.88056px;line-height:1.1"
+               id="tspan2167">We made this macro because ther are a lot of </tspan></tspan><tspan
+             x="31.467077"
+             y="57.506202"
+             id="tspan2173"><tspan
+               style="font-size:3.88056px;line-height:1.1"
+               id="tspan2171">commands to set up a tool and we wanted to </tspan></tspan><tspan
+             x="31.467077"
+             y="61.774817"
+             id="tspan2177"><tspan
+               style="font-size:3.88056px;line-height:1.1"
+               id="tspan2175">reduce the clutter in config.g
+</tspan></tspan><tspan
+             x="31.467077"
+             y="66.043433"
+             id="tspan2181"><tspan
+               style="font-size:3.88056px;line-height:1.1"
+               id="tspan2179">
+</tspan></tspan><tspan
+             x="31.467077"
+             y="70.312049"
+             id="tspan2185"><tspan
+               style="font-size:3.88056px;line-height:1.1"
+               id="tspan2183">- Configures duet board for tool0
+</tspan></tspan><tspan
+             x="31.467077"
+             y="74.580665"
+             id="tspan2189"><tspan
+               style="font-size:3.88056px;line-height:1.1"
+               id="tspan2187">    - motor, extruder, heater parameters
+</tspan></tspan><tspan
+             x="31.467077"
+             y="78.84928"
+             id="tspan2193"><tspan
+               style="font-size:3.88056px;line-height:1.1"
+               id="tspan2191">    - fans (part/extruder)
+</tspan></tspan><tspan
+             x="31.467077"
+             y="83.117896"
+             id="tspan2197"><tspan
+               style="font-size:3.88056px;line-height:1.1"
+               id="tspan2195"> - Calls sys/tool0_Z_offset.g. to set the Z-offset for
+</tspan></tspan><tspan
+             x="31.467077"
+             y="87.99853"
+             id="tspan2203"><tspan
+               style="font-size:3.88056px;line-height:1.1"
+               id="tspan2199">    tool0. </tspan><tspan
+               style="line-height:1.25"
+               id="tspan2201">
+</tspan></tspan><tspan
+             x="31.467077"
+             y="93.290194"
+             id="tspan2207"><tspan
+               style="line-height:1.25"
+               id="tspan2205">
+</tspan></tspan></text>
+        <path
+           style="fill:#0000ff;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2)"
+           d="m 11.194108,72.947091 17.561105,-19.6965"
+           id="path2834"
+           sodipodi:nodetypes="cc" />
+        <path
+           style="fill:#0000ff;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2)"
+           d="M 35.483624,88.052858 19.985744,83.279931"
+           id="path4698"
+           sodipodi:nodetypes="cc" />
+      </g>
+    </g>
+    <g
+       id="g521"
+       transform="translate(82.564296,-0.06899368)">
+      <rect
+         style="fill:#ccffaa;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+         id="rect503"
+         width="92.51693"
+         height="18.358957"
+         x="32.09111"
+         y="44.997391"
+         ry="7.9532175"
+         rx="7.953218" />
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="48.395374"
+         y="43.019089"
+         id="text507"><tspan
+           sodipodi:role="line"
+           id="tspan505"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+           x="48.395374"
+           y="43.019089">sys/create_global variables.g</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:0;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:92.6272;display:inline;stroke-width:0.264583"
+         x="31.467077"
+         y="53.237587"
+         id="text519"
+         transform="translate(2.2183909,-2.6306222)"><tspan
+           x="31.467077"
+           y="53.237587"
+           id="tspan2211"><tspan
+             style="font-size:3.88056px;line-height:1.1"
+             id="tspan2209">Declares global variables we use elsewhere so we </tspan></tspan><tspan
+           x="31.467077"
+           y="57.506202"
+           id="tspan2215"><tspan
+             style="font-size:3.88056px;line-height:1.1"
+             id="tspan2213">don't need to test for their existence before using </tspan></tspan><tspan
+           x="31.467077"
+           y="62.386836"
+           id="tspan2221"><tspan
+             style="font-size:3.88056px;line-height:1.1"
+             id="tspan2217">them.</tspan><tspan
+             style="line-height:1.25"
+             id="tspan2219">
+</tspan></tspan><tspan
+           x="31.467077"
+           y="67.6785"
+           id="tspan2225"><tspan
+             style="line-height:1.25"
+             id="tspan2223">
+</tspan></tspan></text>
+    </g>
+    <path
+       style="fill:#0000ff;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2)"
+       d="M 98.051584,59.305646 111.02327,54.192268"
+       id="path4013"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#0000ff;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2)"
+       d="m 114.65541,56.748957 -10.11798,3.247977"
+       id="path4064"
+       sodipodi:nodetypes="cc" />
+    <g
+       id="g2500-0"
+       transform="translate(212.31888,6.5358527)">
+      <g
+         id="g2613-4"
+         transform="translate(0.30469952,-10.719554)">
+        <rect
+           style="fill:#aaeeff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+           id="rect231-1"
+           width="78.359634"
+           height="114.353"
+           x="29.803791"
+           y="45.408379"
+           ry="7.953218"
+           rx="7.953218" />
+        <g
+           id="g4472"
+           transform="translate(25.564556,8.5839308)">
+          <text
+             xml:space="preserve"
+             style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+             x="28.480846"
+             y="30.556906"
+             id="text2142-5"><tspan
+               sodipodi:role="line"
+               style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+               x="28.480846"
+               y="30.556906"
+               id="tspan4442">sys/homeall.g</tspan></text>
+          <text
+             xml:space="preserve"
+             style="font-size:4.93889px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+             x="34.701412"
+             y="29.634836"
+             id="text4455"><tspan
+               sodipodi:role="line"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
+               x="34.701412"
+               y="29.634836"
+               id="tspan4453" /><tspan
+               sodipodi:role="line"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
+               x="34.701412"
+               y="35.808449"
+               id="tspan4463">- gcode G28</tspan></text>
+        </g>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:74.3085;display:inline;stroke-width:0.264583"
+         x="31.467077"
+         y="53.237587"
+         id="text2559-6"
+         transform="translate(0.04674676,-12.836222)"><tspan
+           x="31.467077"
+           y="53.237587"
+           id="tspan2229">   <tspan
+   style="font-size:3.88056px"
+   id="tspan2227">Button on CONTROL screen
+</tspan></tspan><tspan
+           x="31.467077"
+           y="58.529246"
+           id="tspan2233"><tspan
+             style="font-size:3.88056px"
+             id="tspan2231">
+</tspan></tspan><tspan
+           x="31.467077"
+           y="63.82091"
+           id="tspan2237"><tspan
+             style="font-size:3.88056px"
+             id="tspan2235">- If Y not homed, call macro homey.g
+</tspan></tspan><tspan
+           x="31.467077"
+           y="69.112574"
+           id="tspan2241"><tspan
+             style="font-size:3.88056px"
+             id="tspan2239">
+</tspan></tspan><tspan
+           x="31.467077"
+           y="74.404239"
+           id="tspan2245"><tspan
+             style="font-size:3.88056px"
+             id="tspan2243">
+</tspan></tspan><tspan
+           x="31.467077"
+           y="79.695903"
+           id="tspan2249"><tspan
+             style="font-size:3.88056px"
+             id="tspan2247">
+</tspan></tspan><tspan
+           x="31.467077"
+           y="84.987567"
+           id="tspan2253"><tspan
+             style="font-size:3.88056px"
+             id="tspan2251">
+</tspan></tspan><tspan
+           x="31.467077"
+           y="90.279231"
+           id="tspan2257"><tspan
+             style="font-size:3.88056px"
+             id="tspan2255">
+</tspan></tspan><tspan
+           x="31.467077"
+           y="95.570895"
+           id="tspan2261"><tspan
+             style="font-size:3.88056px"
+             id="tspan2259">
+</tspan></tspan><tspan
+           x="31.467077"
+           y="100.86256"
+           id="tspan2265"><tspan
+             style="font-size:3.88056px"
+             id="tspan2263">- If X not homed, call macro homey.g 
+</tspan></tspan><tspan
+           x="31.467077"
+           y="106.15422"
+           id="tspan2269"><tspan
+             style="font-size:3.88056px"
+             id="tspan2267">
+</tspan></tspan><tspan
+           x="31.467077"
+           y="111.44589"
+           id="tspan2273"><tspan
+             style="font-size:3.88056px"
+             id="tspan2271">
+</tspan></tspan><tspan
+           x="31.467077"
+           y="116.73755"
+           id="tspan2277"><tspan
+             style="font-size:3.88056px"
+             id="tspan2275">
+</tspan></tspan><tspan
+           x="31.467077"
+           y="122.02922"
+           id="tspan2281"><tspan
+             style="font-size:3.88056px"
+             id="tspan2279">
+</tspan></tspan><tspan
+           x="31.467077"
+           y="127.32088"
+           id="tspan2285"><tspan
+             style="font-size:3.88056px"
+             id="tspan2283">
+</tspan></tspan><tspan
+           x="31.467077"
+           y="132.61254"
+           id="tspan2289"><tspan
+             style="font-size:3.88056px"
+             id="tspan2287">
+</tspan></tspan><tspan
+           x="31.467077"
+           y="137.9042"
+           id="tspan2293"><tspan
+             style="font-size:3.88056px"
+             id="tspan2291">
+</tspan></tspan><tspan
+           x="31.467077"
+           y="143.19586"
+           id="tspan2297"><tspan
+             style="font-size:3.88056px"
+             id="tspan2295">- If Z not homed, call macro homez.g</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="38.1507"
+         y="71.624023"
+         id="text5114"><tspan
+           sodipodi:role="line"
+           id="tspan5112"
+           style="stroke-width:0.264583"
+           x="38.1507"
+           y="71.624023" /></text>
+    </g>
+    <g
+       id="g2562-0"
+       transform="matrix(0.76923067,0,0,0.76923067,250.53745,73.567427)"
+       style="stroke-width:1.3">
+      <g
+         id="g2336-3"
+         transform="translate(102.35445,226.81216)"
+         style="stroke-width:1.3">
+        <rect
+           style="fill:#aaeeff;fill-rule:evenodd;stroke:#000000;stroke-width:0.65;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+           id="rect701-1"
+           width="68.382927"
+           height="13"
+           x="-64.69381"
+           y="18.085449"
+           ry="6.9455066"
+           rx="7.953218" />
+        <text
+           xml:space="preserve"
+           style="font-size:4.93889px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.343958"
+           x="-56.728954"
+           y="23.53429"
+           id="text705-5"><tspan
+             sodipodi:role="line"
+             id="tspan703-5"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.343958"
+             x="-56.728954"
+             y="23.53429">Files required by Duet</tspan></text>
+      </g>
+      <g
+         id="g2341-0"
+         transform="translate(175.46327,192.09147)"
+         style="stroke-width:1.3">
+        <rect
+           style="fill:#ccffaa;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.65;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+           id="rect764-1"
+           width="71.225197"
+           height="13"
+           x="-64.69381"
+           y="52.806141"
+           ry="6.473299"
+           rx="7.953218" />
+        <text
+           xml:space="preserve"
+           style="font-size:4.93889px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.343958"
+           x="-56.728954"
+           y="58.254986"
+           id="text768-1"><tspan
+             sodipodi:role="line"
+             id="tspan766-0"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.343958"
+             x="-56.728954"
+             y="58.254986">Files invented by BARN</tspan></text>
+      </g>
+    </g>
+    <path
+       style="fill:#0000ff;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2-0)"
+       d="m 320.78699,57.895557 20.6271,-0.02563"
+       id="path4013-8"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#0000ff;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2-0)"
+       d="m 344.51527,65.211571 -21.38642,-1e-6"
+       id="path4064-4"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="274.17905"
+       y="15.48453"
+       id="text4391-3"><tspan
+         sodipodi:role="line"
+         id="tspan4389-4"
+         style="stroke-width:0.264583"
+         x="274.17905"
+         y="15.48453">User initiated  after power-on</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="274.17905"
+         y="27.984531"
+         id="tspan10766" /></text>
+    <g
+       id="g5256"
+       transform="translate(318.13212,50.67911)">
+      <g
+         id="g5250"
+         transform="translate(0,15.781339)">
+        <g
+           id="g5244"
+           transform="translate(0.0601876,-16.970964)">
+          <rect
+             style="fill:#aaeeff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+             id="rect5238"
+             width="85.890007"
+             height="24.130653"
+             x="26.309086"
+             y="39.06171"
+             ry="7.953218"
+             rx="7.953218" />
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-size:3.88056px;line-height:1.1;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:83.1115;display:inline;stroke-width:0.264583"
+           x="31.467077"
+           y="53.237587"
+           id="text5248"
+           transform="translate(-3.4816171,-25.307413)"><tspan
+             x="31.467077"
+             y="53.237587"
+             id="tspan2299"> - If Y axis not homed, call homey.g
+</tspan><tspan
+             x="31.467077"
+             y="57.506202"
+             id="tspan2301"> 
+</tspan><tspan
+             x="31.467077"
+             y="61.774817"
+             id="tspan2303">- Home X axis using end stop.
+</tspan><tspan
+             x="31.467077"
+             y="66.043433"
+             id="tspan2305">    (Sets X= min X value from M208 in config.g)</tspan></text>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="38.1507"
+         y="71.624023"
+         id="text5254"><tspan
+           sodipodi:role="line"
+           id="tspan5252"
+           style="stroke-width:0.264583"
+           x="38.1507"
+           y="71.624023" /></text>
+    </g>
+    <path
+       style="fill:#0000ff;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2-0)"
+       d="m 320.78699,93.823561 21.43988,-0.0256"
+       id="path5261"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#0000ff;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2-0)"
+       d="m 344.50139,101.13958 -21.15904,0"
+       id="path5263"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#0000ff;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2-0)"
+       d="m 320.78699,139.20989 21.43988,-0.0256"
+       id="path5285"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#0000ff;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2-0)"
+       d="m 345.55974,146.52591 -22.21739,0"
+       id="path5287"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:1.06, 0.265;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Arrow2-0)"
+       d="m 409.71311,93.064199 c 11.80776,-9.876854 9.40921,-17.123008 0.35736,-23.137115"
+       id="path5289"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:1.06, 0.265;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Arrow2)"
+       d="m 409.71311,98.401176 c 11.09194,-3.79855 17.95984,-20.557389 5.13931,-30.689992"
+       id="path5857"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2-0)"
+       d="m 65.071486,166.70468 -10e-7,6.94133"
+       id="path797"
+       sodipodi:nodetypes="cc" />
+    <g
+       id="g7505"
+       transform="translate(98.102476,172.33271)">
+      <rect
+         style="fill:#aaeeff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+         id="rect7487"
+         width="86.004059"
+         height="17.082373"
+         x="21.973631"
+         y="38.006351"
+         ry="7.953218"
+         rx="7.953218" />
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="50.137844"
+         y="36.724712"
+         id="text7491"><tspan
+           sodipodi:role="line"
+           id="tspan7489"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+           x="50.137844"
+           y="36.724712">sys/runonce.g</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.88056px;line-height:1.1;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:87.8448;display:inline;stroke-width:0.264583"
+         x="31.467077"
+         y="53.237587"
+         id="text7503"
+         transform="translate(-7.2893628,-8.6076718)"><tspan
+           x="31.467077"
+           y="53.237587"
+           id="tspan2307">We added:
+</tspan><tspan
+           x="31.467077"
+           y="57.506202"
+           id="tspan2309">-  if wifi not connected, stop trying to connect. </tspan></text>
+    </g>
+    <g
+       id="g10128"
+       transform="translate(98.102476,193.87153)">
+      <rect
+         style="fill:#aaeeff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+         id="rect10118"
+         width="86.004059"
+         height="17.537189"
+         x="21.973631"
+         y="39.353176"
+         ry="7.953218"
+         rx="7.953218" />
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="50.586769"
+         y="38.337177"
+         id="text10122"><tspan
+           sodipodi:role="line"
+           id="tspan10120"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+           x="50.586769"
+           y="38.337177">sys/daemon.g</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.88056px;line-height:0;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:75.1083;display:inline;stroke-width:0.264583"
+         x="31.467077"
+         y="53.237587"
+         id="text10126"
+         transform="translate(-1.8454527,-7.4083337)"><tspan
+           x="31.467077"
+           y="53.237587"
+           id="tspan2313"><tspan
+             style="line-height:1.1"
+             id="tspan2311">We have code that looks to see if wifi is </tspan></tspan><tspan
+           x="31.467077"
+           y="57.506202"
+           id="tspan2317"><tspan
+             style="line-height:1.1"
+             id="tspan2315">connected, then stops trying after a few </tspan></tspan><tspan
+           x="31.467077"
+           y="61.774817"
+           id="tspan2321"><tspan
+             style="line-height:1.1"
+             id="tspan2319">tries.  </tspan></tspan></text>
+    </g>
+    <path
+       style="fill:#0000ff;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2)"
+       d="m 101.62178,204.68776 18.45433,6.70964"
+       id="path10181"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#0000ff;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2)"
+       d="m 120.07611,216.7735 -15.36628,-5.3761"
+       id="path10179"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#0000ff;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2)"
+       d="m 101.62178,224.42762 23.1535,8.70161"
+       id="path10193"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#0000ff;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2)"
+       d="m 123.33824,236.74496 -19.57797,-7.23147"
+       id="path10195"
+       sodipodi:nodetypes="cc" />
+    <g
+       id="g10219"
+       transform="translate(546.22145,-1.4377297)">
+      <g
+         id="g10213"
+         transform="translate(-9.7905885,11.35148)">
+        <g
+           id="g10203"
+           transform="translate(0.0601876,-10.719554)">
+          <rect
+             style="fill:#aaeeff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+             id="rect10197"
+             width="94.053581"
+             height="26.100945"
+             x="30.843346"
+             y="44.013779"
+             ry="7.953218"
+             rx="7.953218" />
+          <text
+             xml:space="preserve"
+             style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+             x="48.372513"
+             y="42.186657"
+             id="text10201"><tspan
+               sodipodi:role="line"
+               id="tspan10199"
+               style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+               x="48.372513"
+               y="42.186657">filaments/&lt;name&gt;/unload.g</tspan></text>
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-size:3.88056px;line-height:1.1;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:90.2225;display:inline;stroke-width:0.264583"
+           x="31.467077"
+           y="53.237587"
+           id="text10211"
+           transform="translate(2.6925802,-14.95289)"><tspan
+             x="31.467077"
+             y="53.237587"
+             id="tspan2323">- Looks up extruder number &lt;EXT&gt;
+</tspan><tspan
+             x="31.467077"
+             y="57.506202"
+             id="tspan2325">- Calls sys_extruder_&lt;EXT&gt;_unload_filament.g
+</tspan><tspan
+             x="31.467077"
+             y="61.774817"
+             id="tspan2327">  and passed hotend unload Temp for this
+</tspan><tspan
+             x="31.467077"
+             y="66.043433"
+             id="tspan2329">  filament
+</tspan><tspan
+             x="31.467077"
+             y="70.312049"
+             id="tspan2331">- calls M703 - WHY? </tspan></text>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="38.1507"
+         y="71.624023"
+         id="text10217"><tspan
+           sodipodi:role="line"
+           id="tspan10215"
+           style="stroke-width:0.264583"
+           x="38.1507"
+           y="71.624023" /></text>
+    </g>
+    <g
+       id="g10271"
+       transform="translate(440.40821,2.7956037)">
+      <g
+         id="g10227"
+         transform="translate(0.30469952,-10.719554)">
+        <rect
+           style="fill:#c6f7a5;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+           id="rect10221"
+           width="86.489212"
+           height="44.337635"
+           x="26.581171"
+           y="46.559296"
+           ry="7.953218"
+           rx="7.953218" />
+        <text
+           xml:space="preserve"
+           style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+           x="42.167324"
+           y="44.003571"
+           id="text10225"><tspan
+             sodipodi:role="line"
+             id="tspan10223"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+             x="42.167324"
+             y="44.003571">unload_current filament.g</tspan></text>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:0;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:82.2091;display:inline;stroke-width:0.264583"
+         x="31.467077"
+         y="53.237587"
+         id="text10265"
+         transform="translate(-1.4656365,-12.938112)"><tspan
+           x="31.467077"
+           y="53.237587"
+           id="tspan2337"><tspan
+             style="line-height:1.1"
+             id="tspan2333"> </tspan><tspan
+             style="font-size:3.88056px;line-height:1.1"
+             id="tspan2335">   Initiated from user interface panel
+</tspan></tspan><tspan
+           x="31.467077"
+           y="57.59973"
+           id="tspan2341"><tspan
+             style="font-size:3.88056px;line-height:1.1"
+             id="tspan2339">    macros screen
+</tspan></tspan><tspan
+           x="31.467077"
+           y="61.868346"
+           id="tspan2345"><tspan
+             style="font-size:3.88056px;line-height:1.1"
+             id="tspan2343">
+</tspan></tspan><tspan
+           x="31.467077"
+           y="66.136962"
+           id="tspan2349"><tspan
+             style="font-size:3.88056px;line-height:1.1"
+             id="tspan2347">- Display current tool and filament type if
+</tspan></tspan><tspan
+           x="31.467077"
+           y="70.405578"
+           id="tspan2353"><tspan
+             style="font-size:3.88056px;line-height:1.1"
+             id="tspan2351">  a tool is currently selected.
+</tspan></tspan><tspan
+           x="31.467077"
+           y="74.674193"
+           id="tspan2357"><tspan
+             style="font-size:3.88056px;line-height:1.1"
+             id="tspan2355">
+</tspan></tspan><tspan
+           x="31.467077"
+           y="78.942809"
+           id="tspan2361"><tspan
+             style="font-size:3.88056px;line-height:1.1"
+             id="tspan2359">- Run M702, which looks up the current
+</tspan></tspan><tspan
+           x="31.467077"
+           y="83.211425"
+           id="tspan2365"><tspan
+             style="font-size:3.88056px;line-height:1.1"
+             id="tspan2363">  filament &lt;name&gt; and runs filaments/</tspan></tspan><tspan
+           x="31.467077"
+           y="87.774559"
+           id="tspan2371"><tspan
+             style="font-size:3.88056px;line-height:1.1"
+             id="tspan2367">&lt;name&gt;/unload.g</tspan><tspan
+             style="line-height:1.1"
+             id="tspan2369"> </tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="38.1507"
+         y="71.624023"
+         id="text10269"><tspan
+           sodipodi:role="line"
+           id="tspan10267"
+           style="stroke-width:0.264583"
+           x="38.1507"
+           y="71.624023" /></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0.26458333,0,0,0.26458333,-440.40821,-2.7956037)"
+         id="text3403"
+         style="font-family:sans-serif;font-size:37.79527559px;line-height:1.25;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect3405)" />
+    </g>
+    <g
+       id="g10289"
+       transform="matrix(0.76923067,0,0,0.76923067,471.74757,71.943845)"
+       style="stroke-width:1.3">
+      <g
+         id="g10279"
+         transform="translate(102.35445,226.81216)"
+         style="stroke-width:1.3">
+        <rect
+           style="fill:#aaeeff;fill-rule:evenodd;stroke:#000000;stroke-width:0.65;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+           id="rect10273"
+           width="68.382927"
+           height="13"
+           x="-64.69381"
+           y="18.085449"
+           ry="6.9455066"
+           rx="7.953218" />
+        <text
+           xml:space="preserve"
+           style="font-size:4.93889px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.343958"
+           x="-56.728954"
+           y="23.53429"
+           id="text10277"><tspan
+             sodipodi:role="line"
+             id="tspan10275"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.343958"
+             x="-56.728954"
+             y="23.53429">Files required by Duet</tspan></text>
+      </g>
+      <g
+         id="g10287"
+         transform="translate(175.46327,192.09147)"
+         style="stroke-width:1.3">
+        <rect
+           style="fill:#ccffaa;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.65;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+           id="rect10281"
+           width="71.225197"
+           height="13"
+           x="-64.69381"
+           y="52.806141"
+           ry="6.473299"
+           rx="7.953218" />
+        <text
+           xml:space="preserve"
+           style="font-size:4.93889px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.343958"
+           x="-56.728954"
+           y="58.254986"
+           id="text10285"><tspan
+             sodipodi:role="line"
+             id="tspan10283"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.343958"
+             x="-56.728954"
+             y="58.254986">Files invented by BARN</tspan></text>
+      </g>
+    </g>
+    <path
+       style="fill:#0000ff;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2-0)"
+       d="M 543.17984,67.938698 564.62528,51.116817"
+       id="path10291"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#0000ff;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2-0)"
+       d="m 569.01984,66.263199 -12.67493,5.939485"
+       id="path10293"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Arrow2-0)"
+       d="M 639.48544,105.19741 573.78562,67.938698"
+       id="path10371"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Arrow2)"
+       d="m 620.42435,78.563385 1.75027,-20.664393"
+       id="path10373"
+       sodipodi:nodetypes="cc" />
+    <g
+       id="g10604"
+       transform="translate(767.0376,6.8617534)">
+      <g
+         id="g10598"
+         transform="translate(0,15.781339)">
+        <g
+           id="g10588"
+           transform="translate(0.0601876,-10.719554)">
+          <rect
+             style="fill:#aaeeff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+             id="rect10582"
+             width="98.260574"
+             height="30.119137"
+             x="11.923459"
+             y="43.226887"
+             ry="7.953218"
+             rx="7.953218" />
+          <text
+             xml:space="preserve"
+             style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+             x="44.565708"
+             y="40.008728"
+             id="text10586"><tspan
+               sodipodi:role="line"
+               id="tspan10584"
+               style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+               x="44.565708"
+               y="40.008728">sys/tfree0.g</tspan></text>
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-size:3.88056px;line-height:1.1;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:94.5886;display:inline;stroke-width:0.264583"
+           x="31.467077"
+           y="53.237587"
+           id="text10596"
+           transform="translate(-15.811484,-13.596406)"><tspan
+             x="31.467077"
+             y="53.237587"
+             id="tspan2373"> Actions to do with tool 0 before it is released. 
+</tspan><tspan
+             x="31.467077"
+             y="57.506202"
+             id="tspan2375">- Park the tool, set temperatures to standby, turn
+</tspan><tspan
+             x="31.467077"
+             y="61.774817"
+             id="tspan2377">  off fans?</tspan></text>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="38.1507"
+         y="71.624023"
+         id="text10602"><tspan
+           sodipodi:role="line"
+           id="tspan10600"
+           style="stroke-width:0.264583"
+           x="38.1507"
+           y="71.624023" /></text>
+    </g>
+    <g
+       id="g10674"
+       transform="matrix(0.76923067,0,0,0.76923067,692.56372,76.009995)"
+       style="stroke-width:1.3">
+      <g
+         id="g10664"
+         transform="translate(102.35445,226.81216)"
+         style="stroke-width:1.3">
+        <rect
+           style="fill:#aaeeff;fill-rule:evenodd;stroke:#000000;stroke-width:0.65;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+           id="rect10658"
+           width="68.382927"
+           height="13"
+           x="-64.69381"
+           y="18.085449"
+           ry="6.9455066"
+           rx="7.953218" />
+        <text
+           xml:space="preserve"
+           style="font-size:4.93889px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.343958"
+           x="-56.728954"
+           y="23.53429"
+           id="text10662"><tspan
+             sodipodi:role="line"
+             id="tspan10660"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.343958"
+             x="-56.728954"
+             y="23.53429">Files required by Duet</tspan></text>
+      </g>
+      <g
+         id="g10672"
+         transform="translate(175.46327,192.09147)"
+         style="stroke-width:1.3">
+        <rect
+           style="fill:#ccffaa;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.65;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+           id="rect10666"
+           width="71.225197"
+           height="13"
+           x="-64.69381"
+           y="52.806141"
+           ry="6.473299"
+           rx="7.953218" />
+        <text
+           xml:space="preserve"
+           style="font-size:4.93889px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.343958"
+           x="-56.728954"
+           y="58.254986"
+           id="text10670"><tspan
+             sodipodi:role="line"
+             id="tspan10668"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.343958"
+             x="-56.728954"
+             y="58.254986">Files invented by BARN</tspan></text>
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="716.20532"
+       y="17.927099"
+       id="text10682"><tspan
+         sodipodi:role="line"
+         id="tspan10680"
+         style="stroke-width:0.264583"
+         x="716.20532"
+         y="17.927099">Tool Change Macros</tspan></text>
+    <g
+       id="g10710"
+       transform="translate(767.0376,49.417509)">
+      <g
+         id="g10704"
+         transform="translate(0,15.781339)">
+        <g
+           id="g10690"
+           transform="translate(0.0601876,-16.970964)">
+          <rect
+             style="fill:#aaeeff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+             id="rect10684"
+             width="97.013115"
+             height="27.504438"
+             x="13.170924"
+             y="47.569412"
+             ry="7.953218"
+             rx="7.953218" />
+          <text
+             xml:space="preserve"
+             style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+             x="51.634678"
+             y="44.523346"
+             id="text10688"><tspan
+               sodipodi:role="line"
+               id="tspan10686"
+               style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+               x="51.634678"
+               y="44.523346">sys/tpre0.g</tspan></text>
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-size:3.88056px;line-height:1.1;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:90.3323;display:inline;stroke-width:0.264583"
+           x="31.467077"
+           y="53.237587"
+           id="text10702"
+           transform="translate(-12.957072,-13.345036)"><tspan
+             x="31.467077"
+             y="53.237587"
+             id="tspan2379">Actions to do with a new tool before tool 0 is </tspan><tspan
+             x="31.467077"
+             y="57.506202"
+             id="tspan2381">selected
+</tspan><tspan
+             x="31.467077"
+             y="61.774817"
+             id="tspan2383">- ??</tspan></text>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="38.1507"
+         y="71.624023"
+         id="text10708"><tspan
+           sodipodi:role="line"
+           id="tspan10706"
+           style="stroke-width:0.264583"
+           x="38.1507"
+           y="71.624023" /></text>
+    </g>
+    <g
+       id="g10750"
+       transform="translate(767.0376,91.427916)">
+      <g
+         id="g10744"
+         transform="translate(0,15.781339)">
+        <g
+           id="g10722"
+           transform="translate(0.0601876,-16.970964)">
+          <rect
+             style="fill:#aaeeff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+             id="rect10716"
+             width="97.844749"
+             height="54.887619"
+             x="13.170924"
+             y="45.708679"
+             ry="7.953218"
+             rx="7.953218" />
+          <text
+             xml:space="preserve"
+             style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+             x="51.634678"
+             y="44.523346"
+             id="text10720"><tspan
+               sodipodi:role="line"
+               id="tspan10718"
+               style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+               x="51.634678"
+               y="44.523346">sys/tpost0.g</tspan></text>
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-size:4.23333px;line-height:0;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:92.262;display:inline;stroke-width:0.264583"
+           x="31.467077"
+           y="53.237587"
+           id="text10742"
+           transform="translate(-12.653255,-15.91263)"><tspan
+             x="31.467077"
+             y="53.237587"
+             id="tspan2387"><tspan
+               style="font-size:3.88056px;line-height:1.1"
+               id="tspan2385">Actions to take with a new tool after it is selected
+</tspan></tspan><tspan
+             x="31.467077"
+             y="57.506202"
+             id="tspan2391"><tspan
+               style="font-size:3.88056px;line-height:1.1"
+               id="tspan2389">- Grab tool with tool changer.
+</tspan></tspan><tspan
+             x="31.467077"
+             y="61.774817"
+             id="tspan2395"><tspan
+               style="font-size:3.88056px;line-height:1.1"
+               id="tspan2393">- Turn on heaters and fans
+</tspan></tspan><tspan
+             x="31.467077"
+             y="66.043433"
+             id="tspan2399"><tspan
+               style="font-size:3.88056px;line-height:1.1"
+               id="tspan2397">- Unretract filament and wipe?
+</tspan></tspan><tspan
+             x="31.467077"
+             y="70.606568"
+             id="tspan2405"><tspan
+               style="font-size:3.88056px;line-height:1.1"
+               id="tspan2401">- Return to starting location?</tspan><tspan
+               style="line-height:1.1"
+               id="tspan2403">
+</tspan></tspan></text>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="38.1507"
+         y="71.624023"
+         id="text10748"><tspan
+           sodipodi:role="line"
+           id="tspan10746"
+           style="stroke-width:0.264583"
+           x="38.1507"
+           y="71.624023" /></text>
+    </g>
+    <g
+       id="g10792"
+       transform="translate(992.33799,9.4215643)">
+      <g
+         id="g10786"
+         transform="translate(0,15.781339)">
+        <g
+           id="g10862"
+           transform="translate(74.847901,-11.472182)">
+          <g
+             id="g10780"
+             transform="translate(-86.265148,-22.986293)">
+            <rect
+               style="fill:#aaeeff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+               id="rect10774"
+               width="105.11742"
+               height="26.640461"
+               x="23.154871"
+               y="47.787788"
+               ry="7.953218"
+               rx="7.953218" />
+            <text
+               xml:space="preserve"
+               style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+               x="67.029053"
+               y="44.523346"
+               id="text10778"><tspan
+                 sodipodi:role="line"
+                 id="tspan10776"
+                 style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+                 x="67.029053"
+                 y="44.523346">sys/start.g</tspan></text>
+          </g>
+          <text
+             xml:space="preserve"
+             style="font-size:3.88056px;line-height:1.1;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:94.5886;display:inline;stroke-width:0.264583"
+             x="31.467077"
+             y="53.237587"
+             id="text10784"
+             transform="translate(-89.98276,-22.986293)"><tspan
+               x="31.467077"
+               y="53.237587"
+               id="tspan2407">If present, run before sunning print file gcode. We </tspan><tspan
+               x="31.467077"
+               y="57.506202"
+               id="tspan2409">added:
+</tspan><tspan
+               x="31.467077"
+               y="61.774817"
+               id="tspan2411">
+</tspan><tspan
+               x="31.467077"
+               y="66.043433"
+               id="tspan2413">- Collect time for start of print.
+</tspan><tspan
+               x="31.467077"
+               y="70.312049"
+               id="tspan2415">- Collect name of file to be printed</tspan></text>
+        </g>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="38.1507"
+         y="71.624023"
+         id="text10790"><tspan
+           sodipodi:role="line"
+           id="tspan10788"
+           style="stroke-width:0.264583"
+           x="38.1507"
+           y="71.624023" /></text>
+    </g>
+    <g
+       id="g10810"
+       transform="matrix(0.76923067,0,0,0.76923067,922.51311,76.009995)"
+       style="stroke-width:1.3">
+      <g
+         id="g10800"
+         transform="translate(102.35445,226.81216)"
+         style="stroke-width:1.3">
+        <rect
+           style="fill:#aaeeff;fill-rule:evenodd;stroke:#000000;stroke-width:0.65;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+           id="rect10794"
+           width="68.382927"
+           height="13"
+           x="-64.69381"
+           y="18.085449"
+           ry="6.9455066"
+           rx="7.953218" />
+        <text
+           xml:space="preserve"
+           style="font-size:4.93889px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.343958"
+           x="-56.728954"
+           y="23.53429"
+           id="text10798"><tspan
+             sodipodi:role="line"
+             id="tspan10796"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.343958"
+             x="-56.728954"
+             y="23.53429">Files required by Duet</tspan></text>
+      </g>
+      <g
+         id="g10808"
+         transform="translate(175.46327,192.09147)"
+         style="stroke-width:1.3">
+        <rect
+           style="fill:#ccffaa;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.65;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+           id="rect10802"
+           width="71.225197"
+           height="13"
+           x="-64.69381"
+           y="52.806141"
+           ry="6.473299"
+           rx="7.953218" />
+        <text
+           xml:space="preserve"
+           style="font-size:4.93889px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.343958"
+           x="-56.728954"
+           y="58.254986"
+           id="text10806"><tspan
+             sodipodi:role="line"
+             id="tspan10804"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.343958"
+             x="-56.728954"
+             y="58.254986">Files invented by BARN</tspan></text>
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="973.59241"
+       y="18.024286"
+       id="text10814"><tspan
+         sodipodi:role="line"
+         id="tspan10812"
+         style="stroke-width:0.264583"
+         x="973.59241"
+         y="18.024286">Printing Macros</tspan></text>
+    <rect
+       style="fill:#ffccaa;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.264999;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+       id="rect10864"
+       width="67.700294"
+       height="92.736099"
+       x="-76.573555"
+       y="72.537903"
+       rx="0"
+       ry="0"
+       transform="translate(996.98699,6.8617534)" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="929.26715"
+       y="76.513123"
+       id="text10972"><tspan
+         id="tspan10970"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+         x="929.26715"
+         y="76.513123"
+         sodipodi:role="line">print file from slicer</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:0;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:67.4621;display:inline;stroke-width:0.264583"
+       x="31.467077"
+       y="53.237587"
+       id="text10984"
+       transform="translate(892.06447,32.031856)"><tspan
+         x="31.467077"
+         y="53.237587"
+         id="tspan2419"><tspan
+           style="line-height:1.1"
+           id="tspan2417">Required:
+</tspan></tspan><tspan
+         x="31.467077"
+         y="57.894249"
+         id="tspan2423"><tspan
+           style="line-height:1.1"
+           id="tspan2421">- Sliced for Mark4 printer.
+</tspan></tspan><tspan
+         x="31.467077"
+         y="62.550911"
+         id="tspan2427"><tspan
+           style="line-height:1.1"
+           id="tspan2425">- Slicer must select a tool.
+</tspan></tspan><tspan
+         x="31.467077"
+         y="67.207573"
+         id="tspan2431"><tspan
+           style="line-height:1.1"
+           id="tspan2429">- M0 at end of job
+</tspan></tspan><tspan
+         x="31.467077"
+         y="71.864235"
+         id="tspan2435"><tspan
+           style="line-height:1.1"
+           id="tspan2433">
+</tspan></tspan><tspan
+         x="31.467077"
+         y="76.520897"
+         id="tspan2439"><tspan
+           style="line-height:1.1"
+           id="tspan2437">Optional:
+</tspan></tspan><tspan
+         x="31.467077"
+         y="81.177559"
+         id="tspan2443"><tspan
+           style="line-height:1.1"
+           id="tspan2441">- Home all axes
+</tspan></tspan><tspan
+         x="31.467077"
+         y="85.834221"
+         id="tspan2447"><tspan
+           style="line-height:1.1"
+           id="tspan2445">- Create height map
+</tspan></tspan><tspan
+         x="31.467077"
+         y="90.490883"
+         id="tspan2451"><tspan
+           style="line-height:1.1"
+           id="tspan2449">- Pauses
+</tspan></tspan><tspan
+         x="31.467077"
+         y="95.147545"
+         id="tspan2455"><tspan
+           style="line-height:1.1"
+           id="tspan2453">
+</tspan></tspan><tspan
+         x="31.467077"
+         y="99.804207"
+         id="tspan2459"><tspan
+           style="line-height:1.1"
+           id="tspan2457">
+</tspan></tspan><tspan
+         x="31.467077"
+         y="104.46087"
+         id="tspan2463"><tspan
+           style="line-height:1.1"
+           id="tspan2461">
+</tspan></tspan><tspan
+         x="31.467077"
+         y="109.11753"
+         id="tspan2467"><tspan
+           style="line-height:1.1"
+           id="tspan2465">
+</tspan></tspan><tspan
+         x="31.467077"
+         y="113.77419"
+         id="tspan2471"><tspan
+           style="line-height:1.1"
+           id="tspan2469">
+</tspan></tspan><tspan
+         x="31.467077"
+         y="118.43086"
+         id="tspan2475"><tspan
+           style="line-height:1.1"
+           id="tspan2473">
+</tspan></tspan><tspan
+         x="31.467077"
+         y="123.08752"
+         id="tspan2479"><tspan
+           style="line-height:1.1"
+           id="tspan2477">Required
+</tspan></tspan><tspan
+         x="31.467077"
+         y="128.06168"
+         id="tspan2485"><tspan
+           style="line-height:1.1"
+           id="tspan2481">- M0 at end of job </tspan><tspan
+           style="line-height:1.25"
+           id="tspan2483">
+</tspan></tspan><tspan
+         x="31.467077"
+         y="133.35334"
+         id="tspan2489"><tspan
+           style="line-height:1.25"
+           id="tspan2487"> </tspan></tspan></text>
+    <g
+       id="g11010"
+       transform="translate(988.25473,88.736496)">
+      <g
+         id="g11004"
+         transform="translate(0,15.781339)" />
+      <text
+         xml:space="preserve"
+         style="font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="38.1507"
+         y="71.624023"
+         id="text11008"><tspan
+           sodipodi:role="line"
+           id="tspan11006"
+           style="stroke-width:0.264583"
+           x="38.1507"
+           y="71.624023" /></text>
+    </g>
+    <g
+       id="g11024"
+       transform="translate(1065.8055,111.70428)">
+      <g
+         id="g11018"
+         transform="translate(-86.265148,-22.986293)">
+        <rect
+           style="fill:#aaeeff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+           id="rect11012"
+           width="105.26364"
+           height="24.977177"
+           x="23.424465"
+           y="45.708679"
+           ry="7.953218"
+           rx="7.953218" />
+        <text
+           xml:space="preserve"
+           style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+           x="67.029053"
+           y="44.523346"
+           id="text11016"><tspan
+             sodipodi:role="line"
+             id="tspan11014"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+             x="67.029053"
+             y="44.523346">sys/resume.g</tspan></text>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.1;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:99.7864;display:inline;stroke-width:0.264583"
+         x="31.467077"
+         y="53.237587"
+         id="text11022"
+         transform="translate(-90.511927,-22.986293)"><tspan
+           x="31.467077"
+           y="53.237587"
+           id="tspan2493"><tspan
+             style="font-size:3.88056px"
+             id="tspan2491">If present, run when a print is resumed after a pause.
+</tspan></tspan><tspan
+           x="31.467077"
+           y="57.894249"
+           id="tspan2497"><tspan
+             style="font-size:3.88056px"
+             id="tspan2495">The default has:
+</tspan></tspan><tspan
+           x="31.467077"
+           y="62.550911"
+           id="tspan2501"><tspan
+             style="font-size:3.88056px"
+             id="tspan2499">- Go back to the print location, return to the
+</tspan></tspan><tspan
+           x="31.467077"
+           y="67.207573"
+           id="tspan2505"><tspan
+   style="font-size:3.88056px"
+   id="tspan2503">  previous print move, unretract the filament.</tspan>
+</tspan></text>
+    </g>
+    <g
+       id="g11052"
+       transform="translate(1065.6635,153.01709)">
+      <g
+         id="g11046"
+         transform="translate(-86.265148,-22.986293)">
+        <rect
+           style="fill:#aaeeff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+           id="rect11040"
+           width="105.26364"
+           height="15.829098"
+           x="23.566465"
+           y="46.748234"
+           ry="7.7066383"
+           rx="7.953218" />
+        <text
+           xml:space="preserve"
+           style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+           x="67.029053"
+           y="44.523346"
+           id="text11044"><tspan
+             sodipodi:role="line"
+             id="tspan11042"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+             x="67.029053"
+             y="44.523346">sys/cancel.g</tspan></text>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:0;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:94.5886;display:inline;stroke-width:0.264583"
+         x="31.467077"
+         y="53.237587"
+         id="text11050"
+         transform="translate(-86.807758,-22.986293)"><tspan
+           x="31.467077"
+           y="53.237587"
+           id="tspan2509"><tspan
+             style="font-size:3.88056px;line-height:1.1"
+             id="tspan2507">If present, run when a print is cancelled.
+</tspan></tspan><tspan
+           x="31.467077"
+           y="57.80072"
+           id="tspan2515"><tspan
+             style="font-size:3.88056px;line-height:1.1"
+             id="tspan2511">We do not have this file at present.</tspan><tspan
+             style="line-height:1.1"
+             id="tspan2513">
+</tspan></tspan></text>
+    </g>
+    <g
+       id="g11074"
+       transform="translate(988.25473,88.736496)">
+      <g
+         id="g11068"
+         transform="translate(0,15.781339)">
+        <g
+           id="g11066"
+           transform="translate(77.550742,-38.553935)">
+          <g
+             id="g11060"
+             transform="translate(-86.265148,-22.986293)">
+            <rect
+               style="fill:#aaeeff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+               id="rect11054"
+               width="105.26364"
+               height="25.436485"
+               x="23.424494"
+               y="48.575943"
+               ry="7.953218"
+               rx="7.953218" />
+            <text
+               xml:space="preserve"
+               style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+               x="62.843826"
+               y="46.158497"
+               id="text11058"><tspan
+                 sodipodi:role="line"
+                 id="tspan11056"
+                 style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+                 x="62.843826"
+                 y="46.158497">sys/pause.g</tspan></text>
+          </g>
+          <text
+             xml:space="preserve"
+             style="font-size:4.23333px;line-height:0;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:98.0225;display:inline;stroke-width:0.264583"
+             x="31.467077"
+             y="53.237587"
+             id="text11064"
+             transform="translate(-89.982758,-21.927959)"><tspan
+               x="31.467077"
+               y="53.237587"
+               id="tspan2519"><tspan
+                 style="font-size:3.88056px;line-height:1.1"
+                 id="tspan2517">If present, run when file has a pause or the print is </tspan></tspan><tspan
+               x="31.467077"
+               y="57.506202"
+               id="tspan2523"><tspan
+                 style="font-size:3.88056px;line-height:1.1"
+                 id="tspan2521">paused form the printer interface.
+</tspan></tspan><tspan
+               x="31.467077"
+               y="61.774817"
+               id="tspan2527"><tspan
+                 style="font-size:3.88056px;line-height:1.1"
+                 id="tspan2525">The default has:
+</tspan></tspan><tspan
+               x="31.467077"
+               y="66.043433"
+               id="tspan2531"><tspan
+                 style="font-size:3.88056px;line-height:1.1"
+                 id="tspan2529">- Drop the bed, retract a bit of filament, move
+</tspan></tspan><tspan
+               x="31.467077"
+               y="70.606568"
+               id="tspan2537"><tspan
+                 style="font-size:3.88056px;line-height:1.1"
+                 id="tspan2533">  the print head to a known location</tspan><tspan
+                 style="line-height:1.1"
+                 id="tspan2535"> 
+</tspan></tspan></text>
+        </g>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="38.1507"
+         y="71.624023"
+         id="text11072"><tspan
+           sodipodi:role="line"
+           id="tspan11070"
+           style="stroke-width:0.264583"
+           x="38.1507"
+           y="71.624023" /></text>
+    </g>
+    <g
+       id="g11096"
+       transform="translate(988.18376,208.49314)">
+      <g
+         id="g11090"
+         transform="translate(-0.41069316,15.781339)">
+        <g
+           id="g11088"
+           transform="translate(77.550742,-38.553935)">
+          <g
+             id="g11082"
+             transform="translate(-86.265148,-22.986293)">
+            <rect
+               style="fill:#aaeeff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+               id="rect11076"
+               width="104.30027"
+               height="34.956898"
+               x="24.387842"
+               y="46.956142"
+               ry="7.953218"
+               rx="7.953218" />
+            <text
+               xml:space="preserve"
+               style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+               x="67.029053"
+               y="44.523346"
+               id="text11080"><tspan
+                 sodipodi:role="line"
+                 id="tspan11078"
+                 style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+                 x="67.029053"
+                 y="44.523346">sys/stop.g</tspan></text>
+          </g>
+          <text
+             xml:space="preserve"
+             style="font-size:4.23333px;line-height:1.1;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:99.6961;display:inline;stroke-width:0.264583"
+             x="31.467077"
+             y="53.237587"
+             id="text11086"
+             transform="translate(-88.924426,-22.986293)"><tspan
+               x="31.467077"
+               y="53.237587"
+               id="tspan2541"><tspan
+                 style="font-size:3.88056px"
+                 id="tspan2539">If present, run when file has M0 at end of job.
+</tspan></tspan><tspan
+               x="31.467077"
+               y="57.894249"
+               id="tspan2545"><tspan
+                 style="font-size:3.88056px"
+                 id="tspan2543">We added:
+</tspan></tspan><tspan
+               x="31.467077"
+               y="62.550911"
+               id="tspan2549"><tspan
+                 style="font-size:3.88056px"
+                 id="tspan2547">- Capture print end time.
+</tspan></tspan><tspan
+               x="31.467077"
+               y="67.207573"
+               id="tspan2553"><tspan
+                 style="font-size:3.88056px"
+                 id="tspan2551">- Log start, end times and print name to file.
+</tspan></tspan><tspan
+               x="31.467077"
+               y="71.864235"
+               id="tspan2557"><tspan
+                 style="font-size:3.88056px"
+                 id="tspan2555">- Drop the bed, retract the filament, move print head
+</tspan></tspan><tspan
+               x="31.467077"
+               y="76.520897"
+               id="tspan2561"><tspan
+   style="font-size:3.88056px"
+   id="tspan2559">   out of the way, turn off heaters and fans.</tspan>
+</tspan></text>
+        </g>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="38.1507"
+         y="71.624023"
+         id="text11094"><tspan
+           sodipodi:role="line"
+           id="tspan11092"
+           style="stroke-width:0.264583"
+           x="38.1507"
+           y="71.624023" /></text>
+    </g>
+    <g
+       id="g6675"
+       transform="translate(1290.0663,13.730721)">
+      <rect
+         style="fill:#c6f7a5;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+         id="rect732"
+         width="96.389389"
+         height="18.291119"
+         x="-54.174339"
+         y="23.573002"
+         ry="7.953218"
+         rx="7.953218" />
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="-30.822254"
+         y="21.537052"
+         id="text736"><tspan
+           sodipodi:role="line"
+           id="tspan734"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+           x="-30.822254"
+           y="21.537052">allow cold extrude.g</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.88056px;line-height:1.1;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:94.5886;display:inline;stroke-width:0.264583"
+         x="31.467077"
+         y="53.237587"
+         id="text750"
+         transform="translate(-83.632756,-22.986293)"><tspan
+           x="31.467077"
+           y="53.237587"
+           id="tspan2563">Runs  M302 P1 to allow the extruder motor to turn </tspan><tspan
+           x="31.467077"
+           y="57.506202"
+           id="tspan2565">even if the hot end is not hot</tspan></text>
+    </g>
+    <g
+       id="g6685"
+       transform="translate(1290.0663,42.83366)">
+      <g
+         id="g8488">
+        <rect
+           style="fill:#c6f7a5;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+           id="rect6677"
+           width="96.389389"
+           height="18.291119"
+           x="-54.174339"
+           y="23.573002"
+           ry="7.953218"
+           rx="7.953218" />
+        <text
+           xml:space="preserve"
+           style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+           x="-37.887348"
+           y="21.537052"
+           id="text6681"><tspan
+             sodipodi:role="line"
+             id="tspan6679"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+             x="-37.887348"
+             y="21.537052">clear heater fault _M562.g</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:3.88056px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:94.5886;display:inline;stroke-width:0.264583"
+           x="31.467077"
+           y="53.237587"
+           id="text6683"
+           transform="translate(-83.632756,-22.986293)"><tspan
+             x="31.467077"
+             y="53.237587"
+             id="tspan2567">Runs  M562 to clear all heater faults.</tspan></text>
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="1253.3691"
+       y="81.045586"
+       id="text758"><tspan
+         sodipodi:role="line"
+         id="tspan756"
+         style="stroke-width:0.264583"
+         x="1253.3691"
+         y="81.045586" /></text>
+    <g
+       id="g778"
+       transform="matrix(0.76923067,0,0,0.76923067,1145.3935,76.009995)"
+       style="stroke-width:1.3">
+      <g
+         id="g768"
+         transform="translate(102.35445,226.81216)"
+         style="stroke-width:1.3">
+        <rect
+           style="fill:#aaeeff;fill-rule:evenodd;stroke:#000000;stroke-width:0.65;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+           id="rect762"
+           width="68.382927"
+           height="13"
+           x="-64.69381"
+           y="18.085449"
+           ry="6.9455066"
+           rx="7.953218" />
+        <text
+           xml:space="preserve"
+           style="font-size:4.93889px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.343958"
+           x="-56.728954"
+           y="23.53429"
+           id="text766"><tspan
+             sodipodi:role="line"
+             id="tspan764"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.343958"
+             x="-56.728954"
+             y="23.53429">Files required by Duet</tspan></text>
+      </g>
+      <g
+         id="g776"
+         transform="translate(175.46327,192.09147)"
+         style="stroke-width:1.3">
+        <rect
+           style="fill:#ccffaa;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.65;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+           id="rect770"
+           width="71.225197"
+           height="13"
+           x="-64.69381"
+           y="52.806141"
+           ry="6.473299"
+           rx="7.953218" />
+        <text
+           xml:space="preserve"
+           style="font-size:4.93889px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.343958"
+           x="-56.728954"
+           y="58.254986"
+           id="text774"><tspan
+             sodipodi:role="line"
+             id="tspan772"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.343958"
+             x="-56.728954"
+             y="58.254986">Files invented by BARN</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g4505"
+       transform="translate(4.2333335,-2.1166667)">
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="48.988403"
+         y="33.643044"
+         id="text5242"
+         transform="translate(318.19231,51.606154)"><tspan
+           sodipodi:role="line"
+           id="tspan5240"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+           x="48.988403"
+           y="33.643044">sys/homex.g</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="367.09686"
+         y="89.651863"
+         id="text1114"><tspan
+           sodipodi:role="line"
+           style="font-size:4.23333px;stroke-width:0.264583"
+           x="367.09686"
+           y="89.651863"
+           id="tspan1112">- gcode: G28 X</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="356.28281"
+       y="170.13443"
+       id="text5281"><tspan
+         sodipodi:role="line"
+         id="tspan5279"
+         style="stroke-width:0.264583"
+         x="356.28281"
+         y="170.13443" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="250.7141"
+       y="219.49199"
+       id="text1152"><tspan
+         sodipodi:role="line"
+         id="tspan1150"
+         style="stroke-width:0.264583"
+         x="250.7141"
+         y="219.49199" /></text>
+    <g
+       id="g4641"
+       transform="translate(-2.1166667,6.3500003)">
+      <rect
+         style="fill:#aaeeff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+         id="rect1120"
+         width="87.183441"
+         height="29.764572"
+         x="244.32349"
+         y="194.12849"
+         ry="7.953218"
+         rx="7.953218" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.88056px;line-height:1.1;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:84.7839;display:inline;stroke-width:0.264583"
+         x="31.467077"
+         y="53.237587"
+         id="text1146"
+         transform="translate(215.25597,146.67835)"><tspan
+           x="31.467077"
+           y="53.237587"
+           id="tspan2569">Adjust the Z axis lead screws to make the bed </tspan><tspan
+           x="31.467077"
+           y="57.506202"
+           id="tspan2571">as level as possible. 
+</tspan><tspan
+           x="31.467077"
+           y="61.774817"
+           id="tspan2573">
+</tspan><tspan
+           x="31.467077"
+           y="66.043433"
+           id="tspan2575">- Disable bed compensation mesh 
+</tspan><tspan
+           x="31.467077"
+           y="70.312049"
+           id="tspan2577">- After leveling, re-home Z axis </tspan></text>
+      <g
+         id="g4631"
+         transform="translate(5.2916669)">
+        <text
+           xml:space="preserve"
+           style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+           x="270.78799"
+           y="187.49753"
+           id="text1124"><tspan
+             sodipodi:role="line"
+             id="tspan1122"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+             x="270.78799"
+             y="187.49753">sys/bed.g</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+           x="272.13647"
+           y="192.10278"
+           id="text1257"><tspan
+             sodipodi:role="line"
+             style="font-size:4.23333px;stroke-width:0.264583"
+             x="272.13647"
+             y="192.10278"
+             id="tspan1255">- gcode: G32</tspan></text>
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="345.92358"
+       y="245.41161"
+       id="text1275"><tspan
+         sodipodi:role="line"
+         id="tspan1273"
+         style="stroke-width:0.264583"
+         x="345.92358"
+         y="245.41161" /></text>
+    <g
+       id="g4607"
+       transform="translate(10.054167,-19.050006)">
+      <rect
+         style="fill:#ccffaa;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+         id="rect1259"
+         width="87.839462"
+         height="30.652744"
+         x="330.6615"
+         y="220.10916"
+         ry="7.953218"
+         rx="7.953218" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.88056px;line-height:1.1;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:88.3616;display:inline;stroke-width:0.264583"
+         x="31.467077"
+         y="53.237587"
+         id="text1269"
+         transform="translate(303.29052,173.20423)"><tspan
+           x="31.467077"
+           y="53.237587"
+           id="tspan2579">Runs G29 S0 to create and enable a new bed </tspan><tspan
+           x="31.467077"
+           y="57.506202"
+           id="tspan2581">mesh.
+</tspan><tspan
+           x="31.467077"
+           y="61.774817"
+           id="tspan2583">
+</tspan><tspan
+           x="31.467077"
+           y="66.043433"
+           id="tspan2585">We wrote this macro because there is not a </tspan><tspan
+           x="31.467077"
+           y="70.312049"
+           id="tspan2587">button on the control panel for it. </tspan></text>
+      <g
+         id="g4597"
+         transform="translate(0,6.879167)">
+        <text
+           xml:space="preserve"
+           style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+           x="334.15894"
+           y="206.13753"
+           id="text1263"><tspan
+             sodipodi:role="line"
+             id="tspan1261"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+             x="334.15894"
+             y="206.13753">macros/prepare/create mesh_G29_S0.g</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+           x="337.56253"
+           y="210.77795"
+           id="text2660"><tspan
+             sodipodi:role="line"
+             style="font-size:4.23333px;stroke-width:0.264583"
+             x="337.56253"
+             y="210.77795"
+             id="tspan2658">- gcode: G29 S02</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g2696"
+       transform="translate(3.1706772)">
+      <text
+         xml:space="preserve"
+         style="font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="498.40436"
+         y="13.860949"
+         id="text10297"><tspan
+           sodipodi:role="line"
+           style="font-size:10px;stroke-width:0.264583"
+           x="498.40436"
+           y="13.860949"
+           id="tspan2667">Filament Change Macros</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="482.98026"
+         y="20.818056"
+         id="text2683"><tspan
+           sodipodi:role="line"
+           style="font-size:4.93889px;stroke-width:0.264583"
+           x="482.98026"
+           y="20.818056"
+           id="tspan2681">All are located in the <tspan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold'"
+   id="tspan4216">Macros/load_unload_filaments directory</tspan></tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="-42.664227"
+       y="-45.644554"
+       id="text4391"
+       transform="translate(97.645167,56.7099)"><tspan
+         sodipodi:role="line"
+         id="tspan4389"
+         style="stroke-width:0.264583"
+         x="-42.664227"
+         y="-45.644554">Automatic at power-on</tspan></text>
+    <g
+       id="g2699"
+       transform="translate(96.711478,124.90689)">
+      <rect
+         style="fill:#ccffaa;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+         id="rect2687"
+         width="90.429573"
+         height="13.570877"
+         x="19.924652"
+         y="38.780476"
+         ry="6.7854385"
+         rx="7.953218" />
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="45.35498"
+         y="36.784389"
+         id="text2691"><tspan
+           sodipodi:role="line"
+           id="tspan2689"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+           x="45.35498"
+           y="36.784389">sys/tool_1_config.g</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:87.8359;display:inline;stroke-width:0.264583"
+         x="31.467077"
+         y="53.237587"
+         id="text2697"
+         transform="translate(-3.8263701,-12.222656)"><tspan
+           x="31.467077"
+           y="53.237587"
+           id="tspan2591"><tspan
+             style="font-size:3.88056px"
+             id="tspan2589">
+</tspan></tspan><tspan
+           x="31.467077"
+           y="58.529246"
+           id="tspan2595"><tspan
+   style="font-size:3.88056px"
+   id="tspan2593">Same as tool_0_config.g, but for tool #1</tspan>
+</tspan><tspan
+           x="31.467077"
+           y="63.82091"
+           id="tspan2597">
+</tspan></text>
+    </g>
+    <path
+       style="fill:none;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:1.06, 0.265;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Arrow2-0)"
+       d="m 370.71283,133.59063 c 40.68482,-9.21414 70.16228,-37.281826 54.95229,-40.526431"
+       id="path6665"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:1.06, 0.265;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Arrow2)"
+       d="m 391.71996,140.65166 c 13.16887,-5.08185 36.96012,-14.0817 35.67461,-31.24269"
+       id="path6667"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:1.06, 0.265;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Arrow2-0)"
+       d="m 359.30982,133.59063 c -8.36319,-17.58221 -19.09111,-43.5967 -9.66416,-70.276139"
+       id="path6673"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:1.06, 0.265;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Arrow2)"
+       d="M 362.63639,132.08007 C 354.33101,114.25148 348.74274,85.505878 355.7753,67.711184"
+       id="path6675"
+       sodipodi:nodetypes="cc" />
+    <g
+       id="g4661"
+       transform="translate(546.05692,120.49213)">
+      <g
+         id="g4655"
+         transform="translate(-8.7322551,11.35148)">
+        <g
+           id="g4649"
+           transform="translate(0.0601876,-10.719554)">
+          <rect
+             style="fill:#c6f7a5;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+             id="rect4643"
+             width="93.434402"
+             height="25.166107"
+             x="30.03989"
+             y="46.975117"
+             ry="7.953218"
+             rx="7.953218" />
+          <text
+             xml:space="preserve"
+             style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+             x="38.991566"
+             y="44.523346"
+             id="text4647"><tspan
+               sodipodi:role="line"
+               id="tspan4645"
+               style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+               x="38.991566"
+               y="44.523346">sys/extruder_&lt;EXT&gt;_load_filament.g</tspan></text>
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-size:4.23333px;line-height:0;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:90.2225;display:inline;stroke-width:0.264583"
+           x="31.467077"
+           y="53.237587"
+           id="text4653"
+           transform="translate(2.6925802,-10.719554)"><tspan
+             x="31.467077"
+             y="53.237587"
+             id="tspan2601"><tspan
+               style="font-size:3.88056px;line-height:1.1"
+               id="tspan2599">Generic loader for this extruder. May be different </tspan></tspan><tspan
+             x="31.467077"
+             y="57.506202"
+             id="tspan2605"><tspan
+               style="font-size:3.88056px;line-height:1.1"
+               id="tspan2603">for other tools/extruders.
+</tspan></tspan><tspan
+             x="31.467077"
+             y="61.774817"
+             id="tspan2609"><tspan
+               style="font-size:3.88056px;line-height:1.1"
+               id="tspan2607">Performs the steps to load the filament.
+</tspan></tspan><tspan
+             x="31.467077"
+             y="66.337952"
+             id="tspan2615"><tspan
+               style="font-size:3.88056px;line-height:1.1"
+               id="tspan2611">Requires temperature as an input.</tspan><tspan
+               style="line-height:1.1"
+               id="tspan2613">
+</tspan></tspan></text>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="38.1507"
+         y="71.624023"
+         id="text4659"><tspan
+           sodipodi:role="line"
+           id="tspan4657"
+           style="stroke-width:0.264583"
+           x="38.1507"
+           y="71.624023" /></text>
+    </g>
+    <g
+       id="g4681"
+       transform="translate(442.47282,133.25476)">
+      <g
+         id="g4675"
+         transform="translate(-9.7905885,11.35148)">
+        <g
+           id="g4669"
+           transform="translate(0.0601876,-10.719554)">
+          <rect
+             style="fill:#aaeeff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+             id="rect4663"
+             width="93.905846"
+             height="24.297886"
+             x="30.843346"
+             y="44.013779"
+             ry="7.953218"
+             rx="7.953218" />
+          <text
+             xml:space="preserve"
+             style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+             x="51.153809"
+             y="42.186657"
+             id="text4667"><tspan
+               sodipodi:role="line"
+               id="tspan4665"
+               style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+               x="51.153809"
+               y="42.186657">filaments/&lt;name&gt;/load.g</tspan></text>
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-size:3.88056px;line-height:1.1;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:90.2225;display:inline;stroke-width:0.264583"
+           x="31.467077"
+           y="53.237587"
+           id="text4673"
+           transform="translate(2.6925802,-14.95289)"><tspan
+             x="31.467077"
+             y="53.237587"
+             id="tspan2617">- Looks up extruder number &lt;EXT&gt;
+</tspan><tspan
+             x="31.467077"
+             y="57.506202"
+             id="tspan2619">- Calls sys_extruder_&lt;EXT&gt;_load_filament.g and
+</tspan><tspan
+             x="31.467077"
+             y="61.774817"
+             id="tspan2621">  passes hotend load Temp for this filament.
+</tspan><tspan
+             x="31.467077"
+             y="66.043433"
+             id="tspan2623">- Runs M703, which calls filaments/&lt;filament
+</tspan><tspan
+             x="31.467077"
+             y="70.312049"
+             id="tspan2625">  name&gt;/config.g</tspan></text>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="38.1507"
+         y="71.624023"
+         id="text4679"><tspan
+           sodipodi:role="line"
+           id="tspan4677"
+           style="stroke-width:0.264583"
+           x="38.1507"
+           y="71.624023" /></text>
+    </g>
+    <g
+       id="g4699"
+       transform="translate(440.40821,96.529655)">
+      <g
+         id="g4689"
+         transform="translate(0.30469952,-10.719554)">
+        <rect
+           style="fill:#c6f7a5;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+           id="rect4683"
+           width="86.025452"
+           height="25.891619"
+           x="26.581171"
+           y="46.559296"
+           ry="7.953218"
+           rx="7.953218" />
+        <text
+           xml:space="preserve"
+           style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+           x="44.440617"
+           y="44.003571"
+           id="text4687"><tspan
+             sodipodi:role="line"
+             id="tspan4685"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+             x="44.440617"
+             y="44.003571">load_&lt;filament name&gt;.g</tspan></text>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:3.88056px;line-height:1.1;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:82.2091;display:inline;stroke-width:0.264583"
+         x="31.467077"
+         y="53.237587"
+         id="text4693"
+         transform="translate(-1.4656365,-12.938112)"><tspan
+           x="31.467077"
+           y="53.237587"
+           id="tspan2627">      Initiated from user interface panel
+</tspan><tspan
+           x="31.467077"
+           y="57.506202"
+           id="tspan2629">      macros screen
+</tspan><tspan
+           x="31.467077"
+           y="61.774817"
+           id="tspan2631">
+</tspan><tspan
+           x="31.467077"
+           y="66.043433"
+           id="tspan2633">- Runs M701 S &lt;filament name&gt;, which
+</tspan><tspan
+           x="31.467077"
+           y="70.312049"
+           id="tspan2635">  calls filaments/&lt;filament name&gt;/load.g </tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="38.1507"
+         y="71.624023"
+         id="text4697"><tspan
+           sodipodi:role="line"
+           id="tspan4695"
+           style="stroke-width:0.264583"
+           x="38.1507"
+           y="71.624023" /></text>
+    </g>
+    <path
+       style="fill:#0000ff;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2-0)"
+       d="M 537.09648,197.20849 493.81687,160.13278"
+       id="path4701"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#0000ff;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2-0)"
+       d="m 518.68325,154.83493 0.23772,14.72148"
+       id="path4703"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#0000ff;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2-0)"
+       d="m 537.09648,184.31801 30.32826,-9.35592"
+       id="path4985"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#0000ff;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2-0)"
+       d="m 571.06169,187.12746 -20.43114,2.92195"
+       id="path4987"
+       sodipodi:nodetypes="cc" />
+    <g
+       id="g5640"
+       transform="translate(546.6929,164.23347)">
+      <g
+         id="g5634"
+         transform="translate(-9.7905885,11.35148)">
+        <g
+           id="g5628"
+           transform="translate(0.0601876,-10.719554)">
+          <rect
+             style="fill:#aaeeff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+             id="rect5622"
+             width="93.053299"
+             height="26.270391"
+             x="30.843346"
+             y="44.013779"
+             ry="7.953218"
+             rx="7.953218" />
+          <text
+             xml:space="preserve"
+             style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+             x="49.134514"
+             y="42.186657"
+             id="text5626"><tspan
+               sodipodi:role="line"
+               id="tspan5624"
+               style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+               x="49.134514"
+               y="42.186657">filaments/&lt;name&gt;/config.g</tspan></text>
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-size:3.88056px;line-height:1.1;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:90.2225;display:inline;stroke-width:0.264583"
+           x="31.467077"
+           y="53.237587"
+           id="text5632"
+           transform="translate(2.6925802,-14.95289)"><tspan
+             x="31.467077"
+             y="53.237587"
+             id="tspan2637">   Sets filament-specific paramters.
+</tspan><tspan
+             x="31.467077"
+             y="57.506202"
+             id="tspan2639">- Pressure Advance (may ned to be unique per
+</tspan><tspan
+             x="31.467077"
+             y="61.774817"
+             id="tspan2641">  extruder)
+</tspan><tspan
+             x="31.467077"
+             y="66.043433"
+             id="tspan2643">- Scaling factor to account for shrinkage.
+</tspan><tspan
+             x="31.467077"
+             y="70.312049"
+             id="tspan2645">- May need to add Input Shaping.</tspan></text>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="38.1507"
+         y="71.624023"
+         id="text5638"><tspan
+           sodipodi:role="line"
+           id="tspan5636"
+           style="stroke-width:0.264583"
+           x="38.1507"
+           y="71.624023" /></text>
+    </g>
+    <path
+       style="fill:#0000ff;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2-0)"
+       d="M 571.06169,231.87544 540.25038,200.89673"
+       id="path6652"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#0000ff;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2-0)"
+       d="m 548.75935,197.20849 19.04649,11.67068"
+       id="path6654"
+       sodipodi:nodetypes="cc" />
+    <g
+       id="g6666"
+       transform="translate(678.46887)">
+      <text
+         xml:space="preserve"
+         style="font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="521.15869"
+         y="13.860949"
+         id="text6658"><tspan
+           sodipodi:role="line"
+           style="font-size:10px;stroke-width:0.264583"
+           x="521.15869"
+           y="13.860949"
+           id="tspan6656">Debug Macros</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="498.32614"
+         y="20.818056"
+         id="text6664"><tspan
+           sodipodi:role="line"
+           style="font-size:4.93889px;stroke-width:0.264583"
+           x="498.32614"
+           y="20.818056"
+           id="tspan6662">All are located in the <tspan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold'"
+   id="tspan6660">Macros/debug directory</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="748.90833"
+         y="13.860949"
+         id="text8442"><tspan
+           sodipodi:role="line"
+           style="font-size:10px;stroke-width:0.264583"
+           x="748.90833"
+           y="13.860949"
+           id="tspan8440">Print Prep Macros</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="726.07574"
+         y="20.818056"
+         id="text8448"><tspan
+           sodipodi:role="line"
+           style="font-size:4.93889px;stroke-width:0.264583"
+           x="726.07574"
+           y="20.818056"
+           id="tspan8446">All are located in the <tspan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold'"
+   id="tspan8444">Macros/prepare directory</tspan></tspan></text>
+    </g>
+    <g
+       id="g6736"
+       transform="translate(1290.6943,71.317445)">
+      <rect
+         style="fill:#c6f7a5;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+         id="rect6728"
+         width="96.389389"
+         height="18.291119"
+         x="-54.174339"
+         y="23.573002"
+         ry="7.953218"
+         rx="7.953218" />
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="-23.041035"
+         y="21.537052"
+         id="text6732"><tspan
+           sodipodi:role="line"
+           id="tspan6730"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+           x="-23.041035"
+           y="21.537052">clear_logfile.g</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.88056px;line-height:1.1;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:94.5886;display:inline;stroke-width:0.264583"
+         x="31.467077"
+         y="53.237587"
+         id="text6734"
+         transform="translate(-83.632756,-22.986293)"><tspan
+           x="31.467077"
+           y="53.237587"
+           id="tspan2647">Pauses logging, deletes the file: m sys/eventlog.g </tspan><tspan
+           x="31.467077"
+           y="57.506202"
+           id="tspan2649">and restarts logging.</tspan></text>
+    </g>
+    <g
+       id="g6751"
+       transform="translate(1188.6807,43.33276)">
+      <rect
+         style="fill:#c6f7a5;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+         id="rect6743"
+         width="96.389389"
+         height="18.291119"
+         x="-54.174339"
+         y="23.573002"
+         ry="7.953218"
+         rx="7.953218" />
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="-36.343933"
+         y="21.537052"
+         id="text6747"><tspan
+           sodipodi:role="line"
+           id="tspan6745"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+           x="-36.343933"
+           y="21.537052">move_without_homing.g</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.88056px;line-height:1.1;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:91.5874;display:inline;stroke-width:0.264583"
+         x="31.467077"
+         y="53.237587"
+         id="text6749"
+         transform="translate(-83.632756,-22.986293)"><tspan
+           x="31.467077"
+           y="53.237587"
+           id="tspan2651">Runs M564 S0 H0 to allow axes to me moved even </tspan><tspan
+           x="31.467077"
+           y="57.506202"
+           id="tspan2653">if the system has not been homed. </tspan></text>
+    </g>
+    <g
+       id="g6761"
+       transform="translate(1190.0612,71.400723)">
+      <rect
+         style="fill:#c6f7a5;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+         id="rect6753"
+         width="96.389389"
+         height="18.291119"
+         x="-54.174339"
+         y="23.573002"
+         ry="7.953218"
+         rx="7.953218" />
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="-30.419731"
+         y="21.537052"
+         id="text6757"><tspan
+           sodipodi:role="line"
+           id="tspan6755"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+           x="-30.419731"
+           y="21.537052">report_IP_Address.g</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.88056px;line-height:1.1;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:94.5886;display:inline;stroke-width:0.264583"
+         x="31.467077"
+         y="53.237587"
+         id="text6759"
+         transform="translate(-83.632756,-22.986293)"><tspan
+           x="31.467077"
+           y="53.237587"
+           id="tspan2655">Print a messagfe showing the IP Address of the </tspan><tspan
+           x="31.467077"
+           y="57.506202"
+           id="tspan2657">machine </tspan></text>
+    </g>
+    <g
+       id="g8438"
+       transform="matrix(0.76923067,0,0,0.76923067,1373.1431,76.009995)"
+       style="stroke-width:1.3">
+      <g
+         id="g8428"
+         transform="translate(102.35445,226.81216)"
+         style="stroke-width:1.3">
+        <rect
+           style="fill:#aaeeff;fill-rule:evenodd;stroke:#000000;stroke-width:0.65;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+           id="rect8422"
+           width="68.382927"
+           height="13"
+           x="-64.69381"
+           y="18.085449"
+           ry="6.9455066"
+           rx="7.953218" />
+        <text
+           xml:space="preserve"
+           style="font-size:4.93889px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.343958"
+           x="-56.728954"
+           y="23.53429"
+           id="text8426"><tspan
+             sodipodi:role="line"
+             id="tspan8424"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.343958"
+             x="-56.728954"
+             y="23.53429">Files required by Duet</tspan></text>
+      </g>
+      <g
+         id="g8436"
+         transform="translate(175.46327,192.09147)"
+         style="stroke-width:1.3">
+        <rect
+           style="fill:#ccffaa;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.65;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+           id="rect8430"
+           width="71.225197"
+           height="13"
+           x="-64.69381"
+           y="52.806141"
+           ry="6.473299"
+           rx="7.953218" />
+        <text
+           xml:space="preserve"
+           style="font-size:4.93889px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.343958"
+           x="-56.728954"
+           y="58.254986"
+           id="text8434"><tspan
+             sodipodi:role="line"
+             id="tspan8432"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.343958"
+             x="-56.728954"
+             y="58.254986">Files invented by BARN</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g8468"
+       transform="translate(1416.4303,43.33276)">
+      <rect
+         style="fill:#c6f7a5;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+         id="rect8460"
+         width="95.213264"
+         height="16.232906"
+         x="-54.174339"
+         y="23.573002"
+         ry="7.953218"
+         rx="7.953218" />
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="-23.364534"
+         y="21.537052"
+         id="text8464"><tspan
+           sodipodi:role="line"
+           id="tspan8462"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+           x="-23.364534"
+           y="21.537052">create mesh.g</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.88056px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:94.5886;display:inline;stroke-width:0.264583"
+         x="31.467077"
+         y="53.237587"
+         id="text8466"
+         transform="translate(-83.632756,-22.986293)"><tspan
+           x="31.467077"
+           y="53.237587"
+           id="tspan2659">Runs M29 S0 which is the bed mesh creation and </tspan><tspan
+           x="31.467077"
+           y="58.088286"
+           id="tspan2661">loading command. </tspan></text>
+    </g>
+    <path
+       style="fill:#0000ff;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2)"
+       d="m 101.49523,127.26318 23.09412,36.42419"
+       id="path4706"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#0000ff;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2)"
+       d="M 119.68412,175.82179 98.051584,145.47527"
+       id="path4720"
+       sodipodi:nodetypes="cc" />
+    <g
+       id="g1215"
+       transform="translate(83.058123,84.965728)">
+      <rect
+         style="fill:#ccffaa;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+         id="rect1203"
+         width="94.758881"
+         height="20.650305"
+         x="32.09111"
+         y="44.997391"
+         ry="7.9532175"
+         rx="7.953218" />
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="58.20612"
+         y="43.548256"
+         id="text1207"><tspan
+           sodipodi:role="line"
+           id="tspan1205"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+           x="58.20612"
+           y="43.548256">sys/tool0_Z_offset.g</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:0;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:92.6272;display:inline;stroke-width:0.264583"
+         x="31.467077"
+         y="53.237587"
+         id="text1213"
+         transform="translate(3.805891,-3.1597889)"><tspan
+           x="31.467077"
+           y="53.237587"
+           id="tspan2665"><tspan
+             style="font-size:3.88056px;line-height:1.1"
+             id="tspan2663">Contains only a G10 command to set the Z offset </tspan></tspan><tspan
+           x="31.467077"
+           y="57.506202"
+           id="tspan2670"><tspan
+             style="font-size:3.88056px;line-height:1.1"
+             id="tspan2668">for this tool. It is a separate file to enable macros </tspan></tspan><tspan
+           x="31.467077"
+           y="61.774817"
+           id="tspan2674"><tspan
+             style="font-size:3.88056px;line-height:1.1"
+             id="tspan2672">for easily adjusting the offset. 
+</tspan></tspan><tspan
+           x="31.467077"
+           y="66.655452"
+           id="tspan2680"><tspan
+             style="font-size:3.88056px;line-height:1.1"
+             id="tspan2676">See macros/prepare.</tspan><tspan
+             style="line-height:1.25"
+             id="tspan2678">
+</tspan></tspan><tspan
+           x="31.467077"
+           y="71.947116"
+           id="tspan2684"><tspan
+             style="line-height:1.25"
+             id="tspan2682">
+</tspan></tspan></text>
+    </g>
+    <path
+       style="fill:#0000ff;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2)"
+       d="m 135.85856,129.52998 -11.08328,-9.76601"
+       id="path1228"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#0000ff;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2)"
+       d="m 154.77303,113.80757 v 7.79834"
+       id="path1230"
+       sodipodi:nodetypes="cc" />
+    <g
+       id="g1276"
+       transform="translate(96.711478,144.69244)">
+      <rect
+         style="fill:#ccffaa;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+         id="rect1262"
+         width="90.429573"
+         height="13.570877"
+         x="19.924652"
+         y="38.780476"
+         ry="6.7854385"
+         rx="7.953218" />
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="45.35498"
+         y="36.784389"
+         id="text1266"><tspan
+           sodipodi:role="line"
+           id="tspan1264"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+           x="45.35498"
+           y="36.784389">sys/tool1_Z_offset.g</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:87.8359;display:inline;stroke-width:0.264583"
+         x="31.467077"
+         y="53.237587"
+         id="text1274"
+         transform="translate(-4.8847035,-13.28099)"><tspan
+           x="31.467077"
+           y="53.237587"
+           id="tspan2688"><tspan
+             style="font-size:3.88056px"
+             id="tspan2686">
+</tspan></tspan><tspan
+           x="31.467077"
+           y="58.529246"
+           id="tspan2692"><tspan
+   style="font-size:3.88056px"
+   id="tspan2690">Same as tool0_Z_offset, but for tool #1</tspan>
+</tspan><tspan
+           x="31.467077"
+           y="63.82091"
+           id="tspan2694">
+</tspan></text>
+    </g>
+    <path
+       style="fill:#0000ff;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2)"
+       d="m 188.73956,174.69449 v 7.79834"
+       id="path1278"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#0000ff;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2)"
+       d="m 132.8738,186.97207 -8.28445,-9.71383"
+       id="path1282"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#0000ff;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2-0)"
+       d="m 960.66822,159.40384 42.77828,50.28655"
+       id="path11896"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#0000ff;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2-0)"
+       d="m 941.79983,121.09636 61.16497,-16.82457"
+       id="path12653"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#0000ff;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2-0)"
+       d="M 1004.7151,137.39064 944.39872,123.71866"
+       id="path13405"
+       sodipodi:nodetypes="cc" />
+    <g
+       id="g14917"
+       transform="translate(1414.8665,78.322368)">
+      <rect
+         style="fill:#c6f7a5;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+         id="rect14907"
+         width="96.777061"
+         height="38.873241"
+         x="-54.174339"
+         y="23.573002"
+         ry="7.953218"
+         rx="7.953218" />
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="-39.825996"
+         y="21.537052"
+         id="text14911"><tspan
+           sodipodi:role="line"
+           id="tspan14909"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+           x="-39.825996"
+           y="21.537052">fold baby steps into tool offset.g</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.88056px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:94.5886;display:inline;stroke-width:0.264583"
+         x="31.467077"
+         y="53.237587"
+         id="text14915"
+         transform="translate(-83.632756,-24.573794)"><tspan
+           x="31.467077"
+           y="53.237587"
+           id="tspan2696">   Used to adjust the Z-offset for the current tool,
+</tspan><tspan
+           x="31.467077"
+           y="58.088286"
+           id="tspan2698">   based on the current baby steps setting.
+</tspan><tspan
+           x="31.467077"
+           y="62.938986"
+           id="tspan2700">- Looks up the current tool tool, it's Z offset and
+</tspan><tspan
+           x="31.467077"
+           y="67.789683"
+           id="tspan2702">   current baby steps setting.
+</tspan><tspan
+           x="31.467077"
+           y="72.640383"
+           id="tspan2704">- Calculates a new z-offset requiring no baby steps.
+</tspan><tspan
+           x="31.467077"
+           y="77.491084"
+           id="tspan2706">- Creates a new sys/tool&lt;N&gt;_Z_offset.g file
+</tspan><tspan
+           x="31.467077"
+           y="82.341784"
+           id="tspan2708">- changes the z offset amd zeros out the babysteps.</tspan></text>
+    </g>
+    <g
+       id="g1293"
+       transform="translate(1414.8665,132.95269)">
+      <rect
+         style="fill:#c6f7a5;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
+         id="rect1279"
+         width="96.777061"
+         height="33.580696"
+         x="-54.174339"
+         y="23.573002"
+         ry="7.953218"
+         rx="7.953218" />
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         x="-24.27487"
+         y="21.537052"
+         id="text1283"><tspan
+           sodipodi:role="line"
+           id="tspan1281"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+           x="-24.27487"
+           y="21.537052">adj tool z_offset.g</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.88056px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:94.5886;display:inline;stroke-width:0.264583"
+         x="31.467077"
+         y="53.237587"
+         id="text1291"
+         transform="translate(-83.632756,-24.573794)"><tspan
+           x="31.467077"
+           y="53.237587"
+           id="tspan2710">   Used to set the Z-offset for the current tool.
+</tspan><tspan
+           x="31.467077"
+           y="58.088286"
+           id="tspan2712">- User makes Z moves until the nozzle measures
+</tspan><tspan
+           x="31.467077"
+           y="62.938986"
+           id="tspan2714">   0.2mm above the build plate (using feeler gauges)
+</tspan><tspan
+           x="31.467077"
+           y="67.789683"
+           id="tspan2716">- Calculates the Z-offset requiring to make this
+</tspan><tspan
+           x="31.467077"
+           y="72.640383"
+           id="tspan2718">   location 0.2mm after the offset is applied.
+</tspan><tspan
+           x="31.467077"
+           y="77.491084"
+           id="tspan2720">- Creates a new sys/tool&lt;N&gt;_Z_offset.g file</tspan></text>
+    </g>
+  </g>
+</svg>

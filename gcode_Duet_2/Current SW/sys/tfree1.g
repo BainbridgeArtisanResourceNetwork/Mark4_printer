@@ -1,5 +1,5 @@
 ; tfree1.g
-;!<summary> Actions to do with the old tool before it is released.  tfreeN.g is called when tool N has already been "selected" (is in use) and another tool is requested. Executing this command "frees" up the tool holder frm tool N. Further reading [HERE](https://duet3d.dozuki.com/Wiki/ConfiguringRepRapFirmwareCartesianPrinter#Section_Tool_change_files)]  I assume this means the steps to take when the tool is no longer needed. I think those steps are:
+;!<summary> tfreeN.g is called when tool N has already been "selected" (is in use) and another tool is requested. Executing this command "frees" up the tool holder frm tool N. Further reading [HERE](https://duet3d.dozuki.com/Wiki/ConfiguringRepRapFirmwareCartesianPrinter#Section_Tool_change_files)]  I assume this means the steps to take when the tool is no longer needed. I think those steps are:
 ;!
 ;!0. Remember the tool location. 
 ;!1. Lower the bed a bit.

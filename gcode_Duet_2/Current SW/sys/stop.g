@@ -24,14 +24,14 @@ echo global.this_print_start_time, ",", global.this_print_end_time, ",", global.
 
 G91    ;  Switch G0/G1 to "relative movements"
 G1 E-1 F300  ;retract the filament a bit before lifting the nozzle, to release some of the pressure
-G1 Z+0.5 E-5 F9000 ;move Z up a bit and retract filament even more
+G1 Z+0.5 E-1 F9000 ;move Z up a bit and retract filament even more Updated "E-5" to "E-1" 4 Oct 2022
 G1 Z+10  ; now lift the nozzle off the part (drop the bed)
-G90  : switch back to absolute move mode
-g0 X175 Y300 ; Move the nozzle to the center of the platform
+G90  ; switch back to absolute move mode
+g0 X300 Y175 ; Move the nozzle to the resr center of the platform
 
 ;M84     ; disable motors
-M104 S0 ; turn off temperature
-M140 S0 ;  turn off heated bed
+;M104 S0 ; turn off temperature
+;M140 S0 ;  turn off heated bed
 
 
 

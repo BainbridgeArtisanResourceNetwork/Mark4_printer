@@ -42,6 +42,13 @@ M586 P0 S1     ;! Enable HTTP
 M586 P1 S0	   ;! Netmask
 M586 P2 S0     ;! Disable Telnet
 
+
+;if network.interfaces[0].state != "active"
+;  G4 S10
+;  if network.interfaces[0].state != "active"
+;    m552 s0
+;  m291 P "Target WIFI network not found." S0
+  
 ;END OF NETWORKING SETUP
 ;###############################################
 
@@ -77,7 +84,7 @@ M18 A Y Z A B C D U V W                 ; clear all axes assignments
 M584 X0				;!Assign the X-axis motor to use driver0 (marked as "X" on the Duet 2 board)
 M569 P0 S1      	;!Set the direction of the  driver0 (X) stepper.
 M92 X160            ;!Set Steps/mm for X motor...Modified/corrected Jubilee-defined from 200 to 160 on 10/29/2020
-M203 X16000			;!Set max X speed (mm/min) conservative. 18000+ possible on XY. Depends on tool.
+M203 X10000			;!Set max X speed (mm/min) conservative. 16000+ possible on XY. Depends on tool and job.  Set to 10000 from 16000 due to observed out of step on 9/6/22.
 M201 X1000      	;!Set max X acceleration (in mm/sec^2) for print moves.
 M566 X1000			;!Set Maximum instantaneous speed change in (mm/minute). Too low and curves are super slow, too fast and there may be ringing
 
@@ -87,7 +94,7 @@ M584 Y1				;!Assign the Y-axis motor to use driver1 (marked as "Y" on the Duet 2
 ;M584 Y9 			;!Assign the Y-axis motor to use driver1 (marked as "Y" on the Duet 2 board)
 M569 P1 S1      	;!Set the direction of the  driver1 (Y) stepper.
 M92 Y160            ;!Set Steps/mm for Y motor...Modified/corrected Jubilee-defined from 200 to 160 on 10/29/2020
-M203 Y16000			;!Set max Y speed (mm/min) conservative. 18000+ possible on XY. Depends on tool.
+M203 Y10000			;!Set max Y speed (mm/min) conservative. 16000+ possible on XY. Depends on tool and job.  Set to 10000 from 16000 due to observed out of step on 9/6/22.
 M201 Y1000      	;!Set max Y acceleration (in mm/sec^2) for print moves.
 M566 Y1000         ;!Set Maximum instantaneous speed change in (mm/minute). Too low and curves are super slow, too fast and there may be ringing
 
@@ -211,7 +218,7 @@ M669 K1         ; CoreXY mode
 				;!####Extruder driver assignments
 M584 E3:4    			;!Assign Duet connector "E0 motor" (driver #3) to Extruder 0, and connector "E1 Motor" (driver 4) to Extruder 1. 
 						;!Add more exrtuders here as new tools are defined.
-M92  E420:420			;! Set steps per mm Extruder: This works for our L3D Dual Drive Extruder with 17HS4023 Usongshine Stepper Motor. 
+M92  E420:427.394		;! Set steps per mm Extruder: This works for our L3D Dual Drive Extruder with 17HS4023 Usongshine Stepper Motor. Updated from 420.000 on 9/6/22 after running extruder verification test. 
 M203 E8000:8000  	;!Set Maximum speed of the extruders (mm/min). Depends on hot end and material.			
 M201 E1300:1300		;!Set Max Acceleration (in mm/sec^2) of the extruder motors. The value for each extruder is separated by a colon.
 M566 E3000:3000		;!Set Max instantaneous soeep change on extruders. Not sure this matters much for extruders. 
@@ -319,7 +326,9 @@ M950 H0 C"bedheat" T0   ;!Define Heater (H) with ID 0, map output to pin (C) nam
 							;!named "Bed" P0 S"Bed" T10000 B3984 H0 L160BOM-specified Terminal Lug Thermistor values. (Not for L3D)
 M140 H0					    ;!Map Heated bed to Heater H0...added for L3D. Not clear is this command is really needed with RR3 fw and M308
 M143 H0 S100                ;! Set Maximum H0 (Bed) heater temperature
-;M307 H0 A270.7 C90.4 D6.7 B0 S1.0           ; Default Bed Heater Parameters, before tuning / if config-override.g is missing
+;M307 H0 A270.7 C90.4 D6.7 B0 S1.0           ; Default Bed Heater Parameters, before tuning / if config-override.g is missing        ;Results from Bed tuning (M303 H0 S60) on 4 October 2022
+;M307 H0 R0.645 K0.387:0.000 D6.17 E1.35 S1.00 B0        ; Results from Bed tuning (M303 H0 S60) on 4 October 2022
+M307 H0 R0.590 K0.397:0.000 D6.80 E1.35 S1.00 B0		;Result from Bed Tuning (M303 H0 S60) on 1 January 2023
 M304 P25 I0.400 D66.3	    ;! Set the PID parameters for the bed heater. These are TEST values. Try M303 for heater tuning.
 
 ;END OF HEATED BED CONFIG SECTION
@@ -379,4 +388,5 @@ M98 P"config-user.g"                    ; Load custom user config
 
 M501                                    ; Load saved parameters from non-volatile memory
 
+global daemon_network_check = 1              ; set a global variable used by daemon.g to start a network check.
 M118 S"config.g completed loading" P0 L2    ; log and print a message that this file has finished loading.
