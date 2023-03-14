@@ -13,3 +13,6 @@ global Z_probe_Xoffset          = null  ; used to capture the X offset of the z 
 global Z_probe_Yoffset          = null  ; used to capture the Y offset of the z Probe. 
 
 global homeall_running = false   ; will be set to true at the beginning of  homeall.g and used in homeX, Y, and Z to skip dropping the bed.
+
+global bed_leveled = false
+global mesh_created = false

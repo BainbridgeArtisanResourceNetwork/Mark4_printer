@@ -389,4 +389,8 @@ M98 P"config-user.g"                    ; Load custom user config
 M501                                    ; Load saved parameters from non-volatile memory
 
 global daemon_network_check = 1              ; set a global variable used by daemon.g to start a network check.
+
+;if true    ; needed to keep Cancel from cancelling the whole macro
+;  M291  S3 T10 R"Running config.g file" P"Calling bed.g to heat, level and create compensation mesh for the bed.  Press cancel to skip"
+
 M118 S"config.g completed loading" P0 L2    ; log and print a message that this file has finished loading.
