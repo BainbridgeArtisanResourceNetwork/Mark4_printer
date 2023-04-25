@@ -24,15 +24,15 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.28149893"
-     inkscape:cx="5298.4216"
-     inkscape:cy="472.47072"
+     inkscape:zoom="1.5923984"
+     inkscape:cx="510.23663"
+     inkscape:cy="775.55968"
      inkscape:window-width="1920"
      inkscape:window-height="996"
      inkscape:window-x="1593"
      inkscape:window-y="114"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g3710">
+     inkscape:current-layer="g2227">
     <inkscape:page
        x="0"
        y="0"
@@ -178,27 +178,27 @@
          transform="translate(317.12053,97.320786)"><tspan
            x="31.467077"
            y="53.237587"
-           id="tspan6485"> - If Y and X axes not homed, call homey.g
+           id="tspan2311"> - If Y and X axes not homed, call homey.g
 </tspan><tspan
            x="31.467077"
            y="57.506202"
-           id="tspan6487">   then homex.g
+           id="tspan2313">   then homex.g
 </tspan><tspan
            x="31.467077"
            y="61.774817"
-           id="tspan6489">- Home Z axis using BLTouch probe
+           id="tspan2315">- Home Z axis using BLTouch probe
 </tspan><tspan
            x="31.467077"
            y="66.043433"
-           id="tspan6491">    (Sets probe trigger point to Z=0)
+           id="tspan2317">    (Sets probe trigger point to Z=0)
 </tspan><tspan
            x="31.467077"
            y="70.312049"
-           id="tspan6493">- Load the saved heightmap.csv file to be
+           id="tspan2319">- Load the saved heightmap.csv file to be
 </tspan><tspan
            x="31.467077"
            y="74.580665"
-           id="tspan6495">   used for bed mesh compensation.</tspan></text>
+           id="tspan2321">   used for bed mesh compensation.</tspan></text>
       <g
          id="g4563">
         <text
@@ -264,28 +264,28 @@
            transform="translate(2.6925802,-10.719554)"><tspan
              x="31.467077"
              y="53.237587"
-             id="tspan6499"><tspan
+             id="tspan2325"><tspan
                style="font-size:3.88056px;line-height:1.1"
-               id="tspan6497">Generic unloader for this extruder. May be </tspan></tspan><tspan
+               id="tspan2323">Generic unloader for this extruder. May be </tspan></tspan><tspan
              x="31.467077"
              y="57.506202"
-             id="tspan6503"><tspan
+             id="tspan2329"><tspan
                style="font-size:3.88056px;line-height:1.1"
-               id="tspan6501">different for other tools/extruders.
+               id="tspan2327">different for other tools/extruders.
 </tspan></tspan><tspan
              x="31.467077"
              y="61.774817"
-             id="tspan6507"><tspan
+             id="tspan2333"><tspan
                style="font-size:3.88056px;line-height:1.1"
-               id="tspan6505">Performs the steps to unload the filament.
+               id="tspan2331">Performs the steps to unload the filament.
 </tspan></tspan><tspan
              x="31.467077"
              y="66.337952"
-             id="tspan6513"><tspan
+             id="tspan2339"><tspan
                style="font-size:3.88056px;line-height:1.1"
-               id="tspan6509">Requires temperature as an input.</tspan><tspan
+               id="tspan2335">Requires temperature as an input.</tspan><tspan
                style="line-height:1.1"
-               id="tspan6511">
+               id="tspan2337">
 </tspan></tspan></text>
       </g>
       <text
@@ -328,17 +328,17 @@
            transform="translate(-5.6855669,-11.160599)"><tspan
              x="31.467077"
              y="53.237587"
-             id="tspan6519"><tspan
+             id="tspan2345"><tspan
                style="line-height:1.1"
-               id="tspan6515"> </tspan><tspan
+               id="tspan2341"> </tspan><tspan
                style="font-size:3.88056px;line-height:1.1"
-               id="tspan6517">- Home Y axis using end stop.
+               id="tspan2343">- Home Y axis using end stop.
 </tspan></tspan><tspan
              x="31.467077"
              y="57.59973"
-             id="tspan6523"><tspan
+             id="tspan2349"><tspan
                style="font-size:3.88056px;line-height:1.1"
-               id="tspan6521">    (Sets Y = min Y value from 208 in config.g)</tspan></tspan></text>
+               id="tspan2347">    (Sets Y = min Y value from 208 in config.g)</tspan></tspan></text>
       </g>
       <g
          id="g4480"
@@ -396,51 +396,51 @@
          transform="translate(-0.97627243,118.81484)"><tspan
            x="31.467077"
            y="53.237587"
-           id="tspan6525">- Attempt to connect to network
+           id="tspan2351">- Attempt to connect to network
 </tspan><tspan
            x="31.467077"
            y="58.529246"
-           id="tspan6527">
+           id="tspan2353">
 </tspan><tspan
            x="31.467077"
            y="63.82091"
-           id="tspan6529">
+           id="tspan2355">
 </tspan><tspan
            x="31.467077"
            y="69.112574"
-           id="tspan6531">- If sys/runonce.g is present, run
+           id="tspan2357">- If sys/runonce.g is present, run
 </tspan><tspan
            x="31.467077"
            y="74.404239"
-           id="tspan6533">   it, then delete it.
+           id="tspan2359">   it, then deleted.
 </tspan><tspan
            x="31.467077"
            y="79.695903"
-           id="tspan6535">
+           id="tspan2361">
 </tspan><tspan
            x="31.467077"
            y="84.987567"
-           id="tspan6537">- If sys.daemon.g is present, run
+           id="tspan2363">- If sys.daemon.g is present, run
 </tspan><tspan
            x="31.467077"
            y="90.279231"
-           id="tspan6539">   every 10 seconds in an
+           id="tspan2365">   every 10 seconds in an
 </tspan><tspan
            x="31.467077"
            y="95.570895"
-           id="tspan6541">   asynchronous thread.
+           id="tspan2367">   asynchronous thread.
 </tspan><tspan
            x="31.467077"
            y="100.86256"
-           id="tspan6543">
+           id="tspan2369">
 </tspan><tspan
            x="31.467077"
            y="106.15422"
-           id="tspan6545">
+           id="tspan2371">
 </tspan><tspan
            x="31.467077"
            y="111.44589"
-           id="tspan6547">- Idle and wait for commands.
+           id="tspan2373">- Idle and wait for commands.
 </tspan></text>
       <text
          xml:space="preserve"
@@ -451,7 +451,7 @@
          transform="translate(-3.7411239,-27.412512)"><tspan
            x="31.467077"
            y="53.237587"
-           id="tspan6549">- Run sys/config.g</tspan></text>
+           id="tspan2375">- Run sys/config.g</tspan></text>
     </g>
     <g
        id="g2500-0-1"
@@ -478,10 +478,10 @@
            style="fill:#aaeeff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
            id="rect231"
            width="70.473732"
-           height="115.13515"
+           height="122.66293"
            x="30.843346"
-           y="47.305641"
-           ry="7.953218"
+           y="47.305645"
+           ry="8.473217"
            rx="7.953218" />
         <text
            xml:space="preserve"
@@ -504,89 +504,96 @@
          transform="translate(2.6925802,5.1554468)"><tspan
            x="31.467077"
            y="53.237587"
-           id="tspan6551">Main file for configuring the FW to </tspan><tspan
+           id="tspan2377">Main file for configuring the FW to </tspan><tspan
            x="31.467077"
            y="58.088286"
-           id="tspan6553">run our machine.
+           id="tspan2379">run our machine.
 </tspan><tspan
            x="31.467077"
            y="62.938986"
-           id="tspan6555">
+           id="tspan2381">
 </tspan><tspan
            x="31.467077"
            y="67.789683"
-           id="tspan6557">- Configures Duet board fw for
+           id="tspan2383">- Configures Duet board fw for
 </tspan><tspan
            x="31.467077"
            y="72.640383"
-           id="tspan6559">  our machine configuration.
+           id="tspan2385">  our machine configuration.
 </tspan><tspan
            x="31.467077"
            y="77.491084"
-           id="tspan6561">    - motor parameters
+           id="tspan2387">    - motor parameters
 </tspan><tspan
            x="31.467077"
            y="82.341784"
-           id="tspan6563">    - limit switches
+           id="tspan2389">    - limit switches
 </tspan><tspan
            x="31.467077"
            y="87.192484"
-           id="tspan6565">    - network parameters
+           id="tspan2391">    - network parameters
 </tspan><tspan
            x="31.467077"
            y="92.043185"
-           id="tspan6567">    - BLTouch Z probe
+           id="tspan2393">    - BLTouch Z probe
 </tspan><tspan
            x="31.467077"
            y="96.893885"
-           id="tspan6569">    - bed heater parameters
+           id="tspan2395">    - bed heater parameters
 </tspan><tspan
            x="31.467077"
            y="101.74459"
-           id="tspan6571">
+           id="tspan2397">
 </tspan><tspan
            x="31.467077"
            y="106.59529"
-           id="tspan6573">
+           id="tspan2399">
 </tspan><tspan
            x="31.467077"
            y="111.44599"
-           id="tspan6575">- Runs other macro files to configure
+           id="tspan2401">- Runs other macro files to configure
 </tspan><tspan
            x="31.467077"
            y="116.29669"
-           id="tspan6577">  each tool.  
+           id="tspan2403">  each tool.  
 </tspan><tspan
            x="31.467077"
            y="121.14739"
-           id="tspan6579">  -  There are some parameters that
+           id="tspan2405">  -  There are some parameters that
 </tspan><tspan
            x="31.467077"
            y="125.99809"
-           id="tspan6581">      need to be set for all tools with a
+           id="tspan2407">      need to be set for all tools with a
 </tspan><tspan
            x="31.467077"
            y="130.84879"
-           id="tspan6583">      single command and they are in
+           id="tspan2409">      single command and they are in
 </tspan><tspan
            x="31.467077"
            y="135.69948"
-           id="tspan6585">      config.g.
+           id="tspan2411">      config.g. 
 </tspan><tspan
            x="31.467077"
            y="140.55017"
-           id="tspan6587">
+           id="tspan2413">
 </tspan><tspan
            x="31.467077"
            y="145.40087"
-           id="tspan6589">
-</tspan><tspan
+           id="tspan2415">Creates a global variable used by </tspan><tspan
            x="31.467077"
            y="150.25156"
-           id="tspan6591">Creates a global variable used by </tspan><tspan
+           id="tspan2417">daemon.g for setting wifi.
+</tspan><tspan
            x="31.467077"
            y="155.10225"
-           id="tspan6593">daemon.g for setting wifi. </tspan></text>
+           id="tspan2419">
+</tspan><tspan
+           x="31.467077"
+           y="159.95294"
+           id="tspan2421">Calls prep_printer  with parameter C </tspan><tspan
+           x="31.467077"
+           y="164.80364"
+           id="tspan2423">to cause it to create runonce.g. </tspan></text>
     </g>
     <g
        id="g2562"
@@ -683,63 +690,63 @@
            transform="translate(2.3878807)"><tspan
              x="31.467077"
              y="53.237587"
-             id="tspan6597"><tspan
+             id="tspan2427"><tspan
                style="font-size:3.88056px;line-height:1.1"
-               id="tspan6595">We made this macro because ther are a lot of </tspan></tspan><tspan
+               id="tspan2425">We made this macro because ther are a lot of </tspan></tspan><tspan
              x="31.467077"
              y="57.506202"
-             id="tspan6601"><tspan
+             id="tspan2431"><tspan
                style="font-size:3.88056px;line-height:1.1"
-               id="tspan6599">commands to set up a tool and we wanted to </tspan></tspan><tspan
+               id="tspan2429">commands to set up a tool and we wanted to </tspan></tspan><tspan
              x="31.467077"
              y="61.774817"
-             id="tspan6605"><tspan
+             id="tspan2435"><tspan
                style="font-size:3.88056px;line-height:1.1"
-               id="tspan6603">reduce the clutter in config.g
+               id="tspan2433">reduce the clutter in config.g
 </tspan></tspan><tspan
              x="31.467077"
              y="66.043433"
-             id="tspan6609"><tspan
+             id="tspan2439"><tspan
                style="font-size:3.88056px;line-height:1.1"
-               id="tspan6607">
+               id="tspan2437">
 </tspan></tspan><tspan
              x="31.467077"
              y="70.312049"
-             id="tspan6613"><tspan
+             id="tspan2443"><tspan
                style="font-size:3.88056px;line-height:1.1"
-               id="tspan6611">- Configures duet board for tool0
+               id="tspan2441">- Configures duet board for tool0
 </tspan></tspan><tspan
              x="31.467077"
              y="74.580665"
-             id="tspan6617"><tspan
+             id="tspan2447"><tspan
                style="font-size:3.88056px;line-height:1.1"
-               id="tspan6615">    - motor, extruder, heater parameters
+               id="tspan2445">    - motor, extruder, heater parameters
 </tspan></tspan><tspan
              x="31.467077"
              y="78.84928"
-             id="tspan6621"><tspan
+             id="tspan2451"><tspan
                style="font-size:3.88056px;line-height:1.1"
-               id="tspan6619">    - fans (part/extruder)
+               id="tspan2449">    - fans (part/extruder)
 </tspan></tspan><tspan
              x="31.467077"
              y="83.117896"
-             id="tspan6625"><tspan
+             id="tspan2455"><tspan
                style="font-size:3.88056px;line-height:1.1"
-               id="tspan6623"> - Calls sys/tool0_Z_offset.g. to set the Z-offset for
+               id="tspan2453"> - Calls sys/tool0_Z_offset.g. to set the Z-offset for
 </tspan></tspan><tspan
              x="31.467077"
              y="87.99853"
-             id="tspan6631"><tspan
+             id="tspan2461"><tspan
                style="font-size:3.88056px;line-height:1.1"
-               id="tspan6627">    tool0. </tspan><tspan
+               id="tspan2457">    tool0. </tspan><tspan
                style="line-height:1.25"
-               id="tspan6629">
+               id="tspan2459">
 </tspan></tspan><tspan
              x="31.467077"
              y="93.290194"
-             id="tspan6635"><tspan
+             id="tspan2465"><tspan
                style="line-height:1.25"
-               id="tspan6633">
+               id="tspan2463">
 </tspan></tspan></text>
         <path
            style="fill:#0000ff;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2)"
@@ -785,27 +792,27 @@
          transform="translate(2.2183909,-2.6306222)"><tspan
            x="31.467077"
            y="53.237587"
-           id="tspan6639"><tspan
+           id="tspan2469"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan6637">Declares global variables we use elsewhere so we </tspan></tspan><tspan
+             id="tspan2467">Declares global variables we use elsewhere so we </tspan></tspan><tspan
            x="31.467077"
            y="57.506202"
-           id="tspan6643"><tspan
+           id="tspan2473"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan6641">don't need to test for their existence before using </tspan></tspan><tspan
+             id="tspan2471">don't need to test for their existence before using </tspan></tspan><tspan
            x="31.467077"
            y="62.386836"
-           id="tspan6649"><tspan
+           id="tspan2479"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan6645">them.</tspan><tspan
+             id="tspan2475">them.</tspan><tspan
              style="line-height:1.25"
-             id="tspan6647">
+             id="tspan2477">
 </tspan></tspan><tspan
            x="31.467077"
            y="67.6785"
-           id="tspan6653"><tspan
+           id="tspan2483"><tspan
              style="line-height:1.25"
-             id="tspan6651">
+             id="tspan2481">
 </tspan></tspan></text>
     </g>
     <path
@@ -874,111 +881,111 @@
          transform="translate(0.04674676,-12.836222)"><tspan
            x="31.467077"
            y="53.237587"
-           id="tspan6657">   <tspan
+           id="tspan2487">   <tspan
    style="font-size:3.88056px"
-   id="tspan6655">Button on CONTROL screen
+   id="tspan2485">Button on CONTROL screen
 </tspan></tspan><tspan
            x="31.467077"
            y="58.529246"
-           id="tspan6661"><tspan
+           id="tspan2491"><tspan
              style="font-size:3.88056px"
-             id="tspan6659">
+             id="tspan2489">
 </tspan></tspan><tspan
            x="31.467077"
            y="63.82091"
-           id="tspan6665"><tspan
+           id="tspan2495"><tspan
              style="font-size:3.88056px"
-             id="tspan6663">- If Y not homed, call macro homey.g
+             id="tspan2493">- If Y not homed, call macro homey.g
 </tspan></tspan><tspan
            x="31.467077"
            y="69.112574"
-           id="tspan6669"><tspan
+           id="tspan2499"><tspan
              style="font-size:3.88056px"
-             id="tspan6667">
+             id="tspan2497">
 </tspan></tspan><tspan
            x="31.467077"
            y="74.404239"
-           id="tspan6673"><tspan
+           id="tspan2503"><tspan
              style="font-size:3.88056px"
-             id="tspan6671">
+             id="tspan2501">
 </tspan></tspan><tspan
            x="31.467077"
            y="79.695903"
-           id="tspan6677"><tspan
+           id="tspan2507"><tspan
              style="font-size:3.88056px"
-             id="tspan6675">
+             id="tspan2505">
 </tspan></tspan><tspan
            x="31.467077"
            y="84.987567"
-           id="tspan6682"><tspan
+           id="tspan2511"><tspan
              style="font-size:3.88056px"
-             id="tspan6680">
+             id="tspan2509">
 </tspan></tspan><tspan
            x="31.467077"
            y="90.279231"
-           id="tspan6686"><tspan
+           id="tspan2515"><tspan
              style="font-size:3.88056px"
-             id="tspan6684">
+             id="tspan2513">
 </tspan></tspan><tspan
            x="31.467077"
            y="95.570895"
-           id="tspan6690"><tspan
+           id="tspan2519"><tspan
              style="font-size:3.88056px"
-             id="tspan6688">
+             id="tspan2517">
 </tspan></tspan><tspan
            x="31.467077"
            y="100.86256"
-           id="tspan6694"><tspan
+           id="tspan2523"><tspan
              style="font-size:3.88056px"
-             id="tspan6692">- If X not homed, call macro homey.g 
+             id="tspan2521">- If X not homed, call macro homey.g 
 </tspan></tspan><tspan
            x="31.467077"
            y="106.15422"
-           id="tspan6698"><tspan
+           id="tspan2527"><tspan
              style="font-size:3.88056px"
-             id="tspan6696">
+             id="tspan2525">
 </tspan></tspan><tspan
            x="31.467077"
            y="111.44589"
-           id="tspan6702"><tspan
+           id="tspan2531"><tspan
              style="font-size:3.88056px"
-             id="tspan6700">
+             id="tspan2529">
 </tspan></tspan><tspan
            x="31.467077"
            y="116.73755"
-           id="tspan6706"><tspan
+           id="tspan2535"><tspan
              style="font-size:3.88056px"
-             id="tspan6704">
+             id="tspan2533">
 </tspan></tspan><tspan
            x="31.467077"
            y="122.02922"
-           id="tspan6710"><tspan
+           id="tspan2539"><tspan
              style="font-size:3.88056px"
-             id="tspan6708">
+             id="tspan2537">
 </tspan></tspan><tspan
            x="31.467077"
            y="127.32088"
-           id="tspan6714"><tspan
+           id="tspan2543"><tspan
              style="font-size:3.88056px"
-             id="tspan6712">
+             id="tspan2541">
 </tspan></tspan><tspan
            x="31.467077"
            y="132.61254"
-           id="tspan6718"><tspan
+           id="tspan2547"><tspan
              style="font-size:3.88056px"
-             id="tspan6716">
+             id="tspan2545">
 </tspan></tspan><tspan
            x="31.467077"
            y="137.9042"
-           id="tspan6722"><tspan
+           id="tspan2551"><tspan
              style="font-size:3.88056px"
-             id="tspan6720">
+             id="tspan2549">
 </tspan></tspan><tspan
            x="31.467077"
            y="143.19586"
-           id="tspan6726"><tspan
+           id="tspan2555"><tspan
              style="font-size:3.88056px"
-             id="tspan6724">- If Z not homed, call macro homez.g</tspan></tspan></text>
+             id="tspan2553">- If Z not homed, call macro homez.g</tspan></tspan></text>
       <text
          xml:space="preserve"
          style="font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
@@ -1100,19 +1107,19 @@
            transform="translate(-3.4816171,-25.307413)"><tspan
              x="31.467077"
              y="53.237587"
-             id="tspan6728"> - If Y axis not homed, call homey.g
+             id="tspan2557"> - If Y axis not homed, call homey.g
 </tspan><tspan
              x="31.467077"
              y="57.506202"
-             id="tspan6731"> 
+             id="tspan2559"> 
 </tspan><tspan
              x="31.467077"
              y="61.774817"
-             id="tspan6733">- Home X axis using end stop.
+             id="tspan2561">- Home X axis using end stop.
 </tspan><tspan
              x="31.467077"
              y="66.043433"
-             id="tspan6735">    (Sets X= min X value from M208 in config.g)</tspan></text>
+             id="tspan2563">    (Sets X= min X value from M208 in config.g)</tspan></text>
       </g>
       <text
          xml:space="preserve"
@@ -1163,16 +1170,16 @@
        sodipodi:nodetypes="cc" />
     <g
        id="g7505"
-       transform="translate(98.102476,168.62852)">
+       transform="translate(98.102476,167.57018)">
       <rect
          style="fill:#aaeeff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
          id="rect7487"
          width="86.004059"
-         height="11.931598"
+         height="26.617674"
          x="21.973631"
          y="38.006351"
-         ry="5.8827219"
-         rx="7.953218" />
+         ry="8"
+         rx="8" />
       <text
          xml:space="preserve"
          style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
@@ -1193,19 +1200,31 @@
          transform="translate(-7.2893628,-8.6076718)"><tspan
            x="31.467077"
            y="53.237587"
-           id="tspan6737">Not used by us  </tspan></text>
+           id="tspan2565">macros/prep_printer copies most of itself to </tspan><tspan
+           x="31.467077"
+           y="57.506202"
+           id="tspan2567">runonce.g when called from config.sys. When </tspan><tspan
+           x="31.467077"
+           y="61.774817"
+           id="tspan2569">run. it asks the user if they want to heat the </tspan><tspan
+           x="31.467077"
+           y="66.043433"
+           id="tspan2571">bed, home the axes, level the bed and create </tspan><tspan
+           x="31.467077"
+           y="70.312049"
+           id="tspan2573">the mesh. </tspan></text>
     </g>
     <g
        id="g10128"
        transform="translate(98.102476,193.87153)">
       <g
          id="g1572"
-         transform="translate(0,-2.1166667)">
+         transform="translate(0,8.9958338)">
         <rect
            style="fill:#aaeeff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:square;stroke-dasharray:none;paint-order:stroke fill markers"
            id="rect10118"
            width="86.004059"
-           height="30.757992"
+           height="20.258001"
            x="21.973631"
            y="36.985512"
            ry="8"
@@ -1230,45 +1249,22 @@
            transform="translate(-6.4337238,-11.267876)"><tspan
              x="31.467077"
              y="53.237587"
-             id="tspan6741"><tspan
+             id="tspan2577"><tspan
                style="line-height:1.1"
-               id="tspan6739">We have code that :
+               id="tspan2575">We have code that :
 </tspan></tspan><tspan
              x="31.467077"
              y="57.506202"
-             id="tspan6748"><tspan
+             id="tspan2581"><tspan
                style="line-height:1.1"
-               id="tspan6743">- looks to see if wifi is </tspan><tspan
-               style="line-height:1.1"
-               id="tspan6746">connected, then stops
+               id="tspan2579">- looks to see if wifi is connected, then stops
 </tspan></tspan><tspan
              x="31.467077"
              y="61.774817"
-             id="tspan6756"><tspan
+             id="tspan2585"><tspan
                style="line-height:1.1"
-               id="tspan6750">   it fron trying after a </tspan><tspan
-               style="line-height:1.1"
-               id="tspan6752">few attempts</tspan><tspan
-               style="line-height:1.1"
-               id="tspan6754">.  
-</tspan></tspan><tspan
-             x="31.467077"
-             y="66.043433"
-             id="tspan6760"><tspan
-               style="line-height:1.1"
-               id="tspan6758">- asks the user if they want to heat the bed,
-</tspan></tspan><tspan
-             x="31.467077"
-             y="70.312049"
-             id="tspan6764"><tspan
-               style="line-height:1.1"
-               id="tspan6762">   home the axes, level the bed, create the
-</tspan></tspan><tspan
-             x="31.467077"
-             y="74.580665"
-             id="tspan6768"><tspan
-               style="line-height:1.1"
-               id="tspan6766">   mesh.</tspan></tspan></text>
+               id="tspan2583">   it fron trying after a few attempts.  
+</tspan></tspan></text>
       </g>
     </g>
     <path
@@ -1283,12 +1279,12 @@
        sodipodi:nodetypes="cc" />
     <path
        style="fill:#0000ff;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2)"
-       d="m 95.74735,213.61867 32.32876,15.12171"
+       d="m 95.74735,213.61867 24.32876,26.23421"
        id="path10193"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:#0000ff;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2)"
-       d="M 120.07611,237.91985 86.606933,222.46417"
+       d="M 120.07611,246.66926 86.606933,222.46417"
        id="path10195"
        sodipodi:nodetypes="cc" />
     <g
@@ -1330,23 +1326,23 @@
            transform="translate(2.6925802,-14.95289)"><tspan
              x="31.467077"
              y="53.237587"
-             id="tspan6770">- Looks up extruder number &lt;EXT&gt;
+             id="tspan2587">- Looks up extruder number &lt;EXT&gt;
 </tspan><tspan
              x="31.467077"
              y="57.506202"
-             id="tspan6772">- Calls sys_extruder_&lt;EXT&gt;_unload_filament.g
+             id="tspan2589">- Calls sys_extruder_&lt;EXT&gt;_unload_filament.g
 </tspan><tspan
              x="31.467077"
              y="61.774817"
-             id="tspan6774">  and passed hotend unload Temp for this
+             id="tspan2591">  and passed hotend unload Temp for this
 </tspan><tspan
              x="31.467077"
              y="66.043433"
-             id="tspan6776">  filament
+             id="tspan2593">  filament
 </tspan><tspan
              x="31.467077"
              y="70.312049"
-             id="tspan6778">- calls M703 - WHY? </tspan></text>
+             id="tspan2595">- calls M703 - WHY? </tspan></text>
       </g>
       <text
          xml:space="preserve"
@@ -1396,60 +1392,60 @@
          transform="translate(-1.4656365,-12.938112)"><tspan
            x="31.467077"
            y="53.237587"
-           id="tspan6784"><tspan
+           id="tspan2601"><tspan
              style="line-height:1.1"
-             id="tspan6780"> </tspan><tspan
+             id="tspan2597"> </tspan><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan6782">   Initiated from user interface panel
+             id="tspan2599">   Initiated from user interface panel
 </tspan></tspan><tspan
            x="31.467077"
            y="57.59973"
-           id="tspan6788"><tspan
+           id="tspan2605"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan6786">    macros screen
+             id="tspan2603">    macros screen
 </tspan></tspan><tspan
            x="31.467077"
            y="61.868346"
-           id="tspan6792"><tspan
+           id="tspan2609"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan6790">
+             id="tspan2607">
 </tspan></tspan><tspan
            x="31.467077"
            y="66.136962"
-           id="tspan6796"><tspan
+           id="tspan2613"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan6794">- Display current tool and filament type if
+             id="tspan2611">- Display current tool and filament type if
 </tspan></tspan><tspan
            x="31.467077"
            y="70.405578"
-           id="tspan6800"><tspan
+           id="tspan2617"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan6798">  a tool is currently selected.
+             id="tspan2615">  a tool is currently selected.
 </tspan></tspan><tspan
            x="31.467077"
            y="74.674193"
-           id="tspan6804"><tspan
+           id="tspan2621"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan6802">
+             id="tspan2619">
 </tspan></tspan><tspan
            x="31.467077"
            y="78.942809"
-           id="tspan6808"><tspan
+           id="tspan2625"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan6806">- Run M702, which looks up the current
+             id="tspan2623">- Run M702, which looks up the current
 </tspan></tspan><tspan
            x="31.467077"
            y="83.211425"
-           id="tspan6812"><tspan
+           id="tspan2629"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan6810">  filament &lt;name&gt; and runs filaments/</tspan></tspan><tspan
+             id="tspan2627">  filament &lt;name&gt; and runs filaments/</tspan></tspan><tspan
            x="31.467077"
            y="87.774559"
-           id="tspan6818"><tspan
+           id="tspan2635"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan6814">&lt;name&gt;/unload.g</tspan><tspan
+             id="tspan2631">&lt;name&gt;/unload.g</tspan><tspan
              style="line-height:1.1"
-             id="tspan6816"> </tspan></tspan></text>
+             id="tspan2633"> </tspan></tspan></text>
       <text
          xml:space="preserve"
          style="font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
@@ -1581,15 +1577,15 @@
            transform="translate(-15.811484,-13.596406)"><tspan
              x="31.467077"
              y="53.237587"
-             id="tspan6820"> Actions to do with tool 0 before it is released. 
+             id="tspan2637"> Actions to do with tool 0 before it is released. 
 </tspan><tspan
              x="31.467077"
              y="57.506202"
-             id="tspan6822">- Park the tool, set temperatures to standby, turn
+             id="tspan2639">- Park the tool, set temperatures to standby, turn
 </tspan><tspan
              x="31.467077"
              y="61.774817"
-             id="tspan6824">  off fans?</tspan></text>
+             id="tspan2641">  off fans?</tspan></text>
       </g>
       <text
          xml:space="preserve"
@@ -1708,14 +1704,14 @@
            transform="translate(-12.957072,-13.345036)"><tspan
              x="31.467077"
              y="53.237587"
-             id="tspan6826">Actions to do with a new tool before tool 0 is </tspan><tspan
+             id="tspan2643">Actions to do with a new tool before tool 0 is </tspan><tspan
              x="31.467077"
              y="57.506202"
-             id="tspan6828">selected
+             id="tspan2645">selected
 </tspan><tspan
              x="31.467077"
              y="61.774817"
-             id="tspan6830">- ??</tspan></text>
+             id="tspan2647">- ??</tspan></text>
       </g>
       <text
          xml:space="preserve"
@@ -1768,35 +1764,35 @@
            transform="translate(-12.653255,-15.91263)"><tspan
              x="31.467077"
              y="53.237587"
-             id="tspan6834"><tspan
+             id="tspan2651"><tspan
                style="font-size:3.88056px;line-height:1.1"
-               id="tspan6832">Actions to take with a new tool after it is selected
+               id="tspan2649">Actions to take with a new tool after it is selected
 </tspan></tspan><tspan
              x="31.467077"
              y="57.506202"
-             id="tspan6838"><tspan
+             id="tspan2655"><tspan
                style="font-size:3.88056px;line-height:1.1"
-               id="tspan6836">- Grab tool with tool changer.
+               id="tspan2653">- Grab tool with tool changer.
 </tspan></tspan><tspan
              x="31.467077"
              y="61.774817"
-             id="tspan6842"><tspan
+             id="tspan2659"><tspan
                style="font-size:3.88056px;line-height:1.1"
-               id="tspan6840">- Turn on heaters and fans
+               id="tspan2657">- Turn on heaters and fans
 </tspan></tspan><tspan
              x="31.467077"
              y="66.043433"
-             id="tspan6846"><tspan
+             id="tspan2663"><tspan
                style="font-size:3.88056px;line-height:1.1"
-               id="tspan6844">- Unretract filament and wipe?
+               id="tspan2661">- Unretract filament and wipe?
 </tspan></tspan><tspan
              x="31.467077"
              y="70.606568"
-             id="tspan6852"><tspan
+             id="tspan2670"><tspan
                style="font-size:3.88056px;line-height:1.1"
-               id="tspan6848">- Return to starting location?</tspan><tspan
+               id="tspan2665">- Return to starting location?</tspan><tspan
                style="line-height:1.1"
-               id="tspan6850">
+               id="tspan2668">
 </tspan></tspan></text>
       </g>
       <text
@@ -1853,22 +1849,22 @@
              transform="translate(-89.98276,-22.986293)"><tspan
                x="31.467077"
                y="53.237587"
-               id="tspan6854">If present, run before sunning print file gcode. We </tspan><tspan
+               id="tspan2672">If present, run before sunning print file gcode. We </tspan><tspan
                x="31.467077"
                y="57.506202"
-               id="tspan6856">added:
+               id="tspan2674">added:
 </tspan><tspan
                x="31.467077"
                y="61.774817"
-               id="tspan6858">
+               id="tspan2676">
 </tspan><tspan
                x="31.467077"
                y="66.043433"
-               id="tspan6860">- Collect time for start of print.
+               id="tspan2678">- Collect time for start of print.
 </tspan><tspan
                x="31.467077"
                y="70.312049"
-               id="tspan6862">- Collect name of file to be printed</tspan></text>
+               id="tspan2680">- Collect name of file to be printed</tspan></text>
         </g>
       </g>
       <text
@@ -1978,113 +1974,113 @@
        transform="translate(1117.7443,32.031856)"><tspan
          x="31.467077"
          y="53.237587"
-         id="tspan6866"><tspan
+         id="tspan2684"><tspan
            style="line-height:1.1"
-           id="tspan6864">Required:
+           id="tspan2682">Required:
 </tspan></tspan><tspan
          x="31.467077"
          y="57.894249"
-         id="tspan6870"><tspan
+         id="tspan2688"><tspan
            style="line-height:1.1"
-           id="tspan6868">- Sliced for Mark4 printer.
+           id="tspan2686">- Sliced for Mark4 printer.
 </tspan></tspan><tspan
          x="31.467077"
          y="62.550911"
-         id="tspan6874"><tspan
+         id="tspan2692"><tspan
            style="line-height:1.1"
-           id="tspan6872">- Slicer must select a tool.
+           id="tspan2690">- Slicer must select a tool.
 </tspan></tspan><tspan
          x="31.467077"
          y="67.207573"
-         id="tspan6878"><tspan
+         id="tspan2696"><tspan
            style="line-height:1.1"
-           id="tspan6876">- M0 at end of job
+           id="tspan2694">- M0 at end of job
 </tspan></tspan><tspan
          x="31.467077"
          y="71.864235"
-         id="tspan6882"><tspan
+         id="tspan2700"><tspan
            style="line-height:1.1"
-           id="tspan6880">
+           id="tspan2698">
 </tspan></tspan><tspan
          x="31.467077"
          y="76.520897"
-         id="tspan6886"><tspan
+         id="tspan2704"><tspan
            style="line-height:1.1"
-           id="tspan6884">Optional:
+           id="tspan2702">Optional:
 </tspan></tspan><tspan
          x="31.467077"
          y="81.177559"
-         id="tspan6890"><tspan
+         id="tspan2708"><tspan
            style="line-height:1.1"
-           id="tspan6888">- Home all axes
+           id="tspan2706">- Home all axes
 </tspan></tspan><tspan
          x="31.467077"
          y="85.834221"
-         id="tspan6894"><tspan
+         id="tspan2712"><tspan
            style="line-height:1.1"
-           id="tspan6892">- Create height map
+           id="tspan2710">- Create height map
 </tspan></tspan><tspan
          x="31.467077"
          y="90.490883"
-         id="tspan6898"><tspan
+         id="tspan2716"><tspan
            style="line-height:1.1"
-           id="tspan6896">- Pauses
+           id="tspan2714">- Pauses
 </tspan></tspan><tspan
          x="31.467077"
          y="95.147545"
-         id="tspan6902"><tspan
+         id="tspan2720"><tspan
            style="line-height:1.1"
-           id="tspan6900">
+           id="tspan2718">
 </tspan></tspan><tspan
          x="31.467077"
          y="99.804207"
-         id="tspan6906"><tspan
+         id="tspan2724"><tspan
            style="line-height:1.1"
-           id="tspan6904">
+           id="tspan2722">
 </tspan></tspan><tspan
          x="31.467077"
          y="104.46087"
-         id="tspan6910"><tspan
+         id="tspan2728"><tspan
            style="line-height:1.1"
-           id="tspan6908">
+           id="tspan2726">
 </tspan></tspan><tspan
          x="31.467077"
          y="109.11753"
-         id="tspan6914"><tspan
+         id="tspan2732"><tspan
            style="line-height:1.1"
-           id="tspan6912">
+           id="tspan2730">
 </tspan></tspan><tspan
          x="31.467077"
          y="113.77419"
-         id="tspan6918"><tspan
+         id="tspan2736"><tspan
            style="line-height:1.1"
-           id="tspan6916">
+           id="tspan2734">
 </tspan></tspan><tspan
          x="31.467077"
          y="118.43086"
-         id="tspan6922"><tspan
+         id="tspan2740"><tspan
            style="line-height:1.1"
-           id="tspan6920">
+           id="tspan2738">
 </tspan></tspan><tspan
          x="31.467077"
          y="123.08752"
-         id="tspan6926"><tspan
+         id="tspan2744"><tspan
            style="line-height:1.1"
-           id="tspan6924">Required
+           id="tspan2742">Required
 </tspan></tspan><tspan
          x="31.467077"
          y="128.06168"
-         id="tspan6932"><tspan
+         id="tspan2750"><tspan
            style="line-height:1.1"
-           id="tspan6928">- M0 at end of job </tspan><tspan
+           id="tspan2746">- M0 at end of job </tspan><tspan
            style="line-height:1.25"
-           id="tspan6930">
+           id="tspan2748">
 </tspan></tspan><tspan
          x="31.467077"
          y="133.35334"
-         id="tspan6936"><tspan
+         id="tspan2754"><tspan
            style="line-height:1.25"
-           id="tspan6934"> </tspan></tspan></text>
+           id="tspan2752"> </tspan></tspan></text>
     <g
        id="g11010"
        transform="translate(988.25473,88.736496)">
@@ -2139,27 +2135,27 @@
          transform="translate(-90.511927,-22.986293)"><tspan
            x="31.467077"
            y="53.237587"
-           id="tspan6940"><tspan
+           id="tspan2758"><tspan
              style="font-size:3.88056px"
-             id="tspan6938">If present, run when a print is resumed after a pause.
+             id="tspan2756">If present, run when a print is resumed after a pause.
 </tspan></tspan><tspan
            x="31.467077"
            y="57.894249"
-           id="tspan6944"><tspan
+           id="tspan2762"><tspan
              style="font-size:3.88056px"
-             id="tspan6942">The default has:
+             id="tspan2760">The default has:
 </tspan></tspan><tspan
            x="31.467077"
            y="62.550911"
-           id="tspan6948"><tspan
+           id="tspan2766"><tspan
              style="font-size:3.88056px"
-             id="tspan6946">- Go back to the print location, return to the
+             id="tspan2764">- Go back to the print location, return to the
 </tspan></tspan><tspan
            x="31.467077"
            y="67.207573"
-           id="tspan6952"><tspan
+           id="tspan2770"><tspan
    style="font-size:3.88056px"
-   id="tspan6950">  previous print move, unretract the filament.</tspan>
+   id="tspan2768">  previous print move, unretract the filament.</tspan>
 </tspan></text>
     </g>
     <g
@@ -2198,17 +2194,17 @@
          transform="translate(-86.807758,-22.986293)"><tspan
            x="31.467077"
            y="53.237587"
-           id="tspan6956"><tspan
+           id="tspan2774"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan6954">If present, run when a print is cancelled.
+             id="tspan2772">If present, run when a print is cancelled.
 </tspan></tspan><tspan
            x="31.467077"
            y="57.80072"
-           id="tspan6962"><tspan
+           id="tspan2780"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan6958">We do not have this file at present.</tspan><tspan
+             id="tspan2776">We do not have this file at present.</tspan><tspan
              style="line-height:1.1"
-             id="tspan6960">
+             id="tspan2778">
 </tspan></tspan></text>
     </g>
     <g
@@ -2253,34 +2249,34 @@
              transform="translate(-89.982758,-21.927959)"><tspan
                x="31.467077"
                y="53.237587"
-               id="tspan6966"><tspan
+               id="tspan2784"><tspan
                  style="font-size:3.88056px;line-height:1.1"
-                 id="tspan6964">If present, run when file has a pause or the print is </tspan></tspan><tspan
+                 id="tspan2782">If present, run when file has a pause or the print is </tspan></tspan><tspan
                x="31.467077"
                y="57.506202"
-               id="tspan6970"><tspan
+               id="tspan2788"><tspan
                  style="font-size:3.88056px;line-height:1.1"
-                 id="tspan6968">paused form the printer interface.
+                 id="tspan2786">paused form the printer interface.
 </tspan></tspan><tspan
                x="31.467077"
                y="61.774817"
-               id="tspan6974"><tspan
+               id="tspan2792"><tspan
                  style="font-size:3.88056px;line-height:1.1"
-                 id="tspan6972">The default has:
+                 id="tspan2790">The default has:
 </tspan></tspan><tspan
                x="31.467077"
                y="66.043433"
-               id="tspan6978"><tspan
+               id="tspan2796"><tspan
                  style="font-size:3.88056px;line-height:1.1"
-                 id="tspan6976">- Drop the bed, retract a bit of filament, move
+                 id="tspan2794">- Drop the bed, retract a bit of filament, move
 </tspan></tspan><tspan
                x="31.467077"
                y="70.606568"
-               id="tspan6984"><tspan
+               id="tspan2802"><tspan
                  style="font-size:3.88056px;line-height:1.1"
-                 id="tspan6980">  the print head to a known location</tspan><tspan
+                 id="tspan2798">  the print head to a known location</tspan><tspan
                  style="line-height:1.1"
-                 id="tspan6982"> 
+                 id="tspan2800"> 
 </tspan></tspan></text>
         </g>
       </g>
@@ -2338,39 +2334,39 @@
              transform="translate(-88.924426,-22.986293)"><tspan
                x="31.467077"
                y="53.237587"
-               id="tspan6988"><tspan
+               id="tspan2806"><tspan
                  style="font-size:3.88056px"
-                 id="tspan6986">If present, run when file has M0 at end of job.
+                 id="tspan2804">If present, run when file has M0 at end of job.
 </tspan></tspan><tspan
                x="31.467077"
                y="57.894249"
-               id="tspan6992"><tspan
+               id="tspan2810"><tspan
                  style="font-size:3.88056px"
-                 id="tspan6990">We added:
+                 id="tspan2808">We added:
 </tspan></tspan><tspan
                x="31.467077"
                y="62.550911"
-               id="tspan6996"><tspan
+               id="tspan2814"><tspan
                  style="font-size:3.88056px"
-                 id="tspan6994">- Capture print end time.
+                 id="tspan2812">- Capture print end time.
 </tspan></tspan><tspan
                x="31.467077"
                y="67.207573"
-               id="tspan7000"><tspan
+               id="tspan2818"><tspan
                  style="font-size:3.88056px"
-                 id="tspan6998">- Log start, end times and print name to file.
+                 id="tspan2816">- Log start, end times and print name to file.
 </tspan></tspan><tspan
                x="31.467077"
                y="71.864235"
-               id="tspan7004"><tspan
+               id="tspan2822"><tspan
                  style="font-size:3.88056px"
-                 id="tspan7002">- Drop the bed, retract the filament, move print head
+                 id="tspan2820">- Drop the bed, retract the filament, move print head
 </tspan></tspan><tspan
                x="31.467077"
                y="76.520897"
-               id="tspan7008"><tspan
+               id="tspan2826"><tspan
    style="font-size:3.88056px"
-   id="tspan7006">   out of the way, turn off heaters and fans.</tspan>
+   id="tspan2824">   out of the way, turn off heaters and fans.</tspan>
 </tspan></text>
         </g>
       </g>
@@ -2418,10 +2414,10 @@
          transform="translate(-83.632756,-22.986293)"><tspan
            x="31.467077"
            y="53.237587"
-           id="tspan7010">Runs  M302 P1 to allow the extruder motor to turn </tspan><tspan
+           id="tspan2828">Runs  M302 P1 to allow the extruder motor to turn </tspan><tspan
            x="31.467077"
            y="57.506202"
-           id="tspan7012">even if the hot end is not hot</tspan></text>
+           id="tspan2830">even if the hot end is not hot</tspan></text>
     </g>
     <g
        id="g6685"
@@ -2457,7 +2453,7 @@
            transform="translate(-83.632756,-22.986293)"><tspan
              x="31.467077"
              y="53.237587"
-             id="tspan7014">Runs  M562 to clear all heater faults.</tspan></text>
+             id="tspan2832">Runs  M562 to clear all heater faults.</tspan></text>
       </g>
     </g>
     <text
@@ -2596,22 +2592,22 @@
          transform="translate(215.25597,146.67835)"><tspan
            x="31.467077"
            y="53.237587"
-           id="tspan7016">Adjust the Z axis lead screws to make the bed </tspan><tspan
+           id="tspan2834">Adjust the Z axis lead screws to make the bed </tspan><tspan
            x="31.467077"
            y="57.506202"
-           id="tspan7018">as level as possible. 
+           id="tspan2836">as level as possible. 
 </tspan><tspan
            x="31.467077"
            y="61.774817"
-           id="tspan7020">
+           id="tspan2838">
 </tspan><tspan
            x="31.467077"
            y="66.043433"
-           id="tspan7022">- Disable bed compensation mesh 
+           id="tspan2840">- Disable bed compensation mesh 
 </tspan><tspan
            x="31.467077"
            y="70.312049"
-           id="tspan7024">- After leveling, re-home Z axis </tspan></text>
+           id="tspan2842">- After leveling, re-home Z axis </tspan></text>
       <g
          id="g4631"
          transform="translate(5.2916669)">
@@ -2671,21 +2667,21 @@
          transform="translate(303.29052,173.20423)"><tspan
            x="31.467077"
            y="53.237587"
-           id="tspan7026">Runs G29 S0 to create and enable a new bed </tspan><tspan
+           id="tspan2844">Runs G29 S0 to create and enable a new bed </tspan><tspan
            x="31.467077"
            y="57.506202"
-           id="tspan7028">mesh.
+           id="tspan2846">mesh.
 </tspan><tspan
            x="31.467077"
            y="61.774817"
-           id="tspan7030">
+           id="tspan2848">
 </tspan><tspan
            x="31.467077"
            y="66.043433"
-           id="tspan7032">We wrote this macro because there is not a </tspan><tspan
+           id="tspan2850">We wrote this macro because there is not a </tspan><tspan
            x="31.467077"
            y="70.312049"
-           id="tspan7034">button on the control panel for it. </tspan></text>
+           id="tspan2852">button on the control panel for it. </tspan></text>
       <g
          id="g4597"
          transform="translate(0,6.879167)">
@@ -2785,19 +2781,19 @@
          transform="translate(-3.8263701,-12.222656)"><tspan
            x="31.467077"
            y="53.237587"
-           id="tspan7038"><tspan
+           id="tspan2856"><tspan
              style="font-size:3.88056px"
-             id="tspan7036">
+             id="tspan2854">
 </tspan></tspan><tspan
            x="31.467077"
            y="58.529246"
-           id="tspan7042"><tspan
+           id="tspan2860"><tspan
    style="font-size:3.88056px"
-   id="tspan7040">Same as tool_0_config.g, but for tool #1</tspan>
+   id="tspan2858">Same as tool_0_config.g, but for tool #1</tspan>
 </tspan><tspan
            x="31.467077"
            y="63.82091"
-           id="tspan7044">
+           id="tspan2862">
 </tspan></text>
     </g>
     <path
@@ -2859,28 +2855,28 @@
            transform="translate(2.6925802,-10.719554)"><tspan
              x="31.467077"
              y="53.237587"
-             id="tspan7048"><tspan
+             id="tspan2866"><tspan
                style="font-size:3.88056px;line-height:1.1"
-               id="tspan7046">Generic loader for this extruder. May be different </tspan></tspan><tspan
+               id="tspan2864">Generic loader for this extruder. May be different </tspan></tspan><tspan
              x="31.467077"
              y="57.506202"
-             id="tspan7052"><tspan
+             id="tspan2870"><tspan
                style="font-size:3.88056px;line-height:1.1"
-               id="tspan7050">for other tools/extruders.
+               id="tspan2868">for other tools/extruders.
 </tspan></tspan><tspan
              x="31.467077"
              y="61.774817"
-             id="tspan7056"><tspan
+             id="tspan2874"><tspan
                style="font-size:3.88056px;line-height:1.1"
-               id="tspan7054">Performs the steps to load the filament.
+               id="tspan2872">Performs the steps to load the filament.
 </tspan></tspan><tspan
              x="31.467077"
              y="66.337952"
-             id="tspan7062"><tspan
+             id="tspan2880"><tspan
                style="font-size:3.88056px;line-height:1.1"
-               id="tspan7058">Requires temperature as an input.</tspan><tspan
+               id="tspan2876">Requires temperature as an input.</tspan><tspan
                style="line-height:1.1"
-               id="tspan7060">
+               id="tspan2878">
 </tspan></tspan></text>
       </g>
       <text
@@ -2934,23 +2930,23 @@
            transform="translate(2.6925802,-14.95289)"><tspan
              x="31.467077"
              y="53.237587"
-             id="tspan7064">- Looks up extruder number &lt;EXT&gt;
+             id="tspan2882">- Looks up extruder number &lt;EXT&gt;
 </tspan><tspan
              x="31.467077"
              y="57.506202"
-             id="tspan7066">- Calls sys_extruder_&lt;EXT&gt;_load_filament.g and
+             id="tspan2884">- Calls sys_extruder_&lt;EXT&gt;_load_filament.g and
 </tspan><tspan
              x="31.467077"
              y="61.774817"
-             id="tspan7068">  passes hotend load Temp for this filament.
+             id="tspan2886">  passes hotend load Temp for this filament.
 </tspan><tspan
              x="31.467077"
              y="66.043433"
-             id="tspan7070">- Runs M703, which calls filaments/&lt;filament
+             id="tspan2888">- Runs M703, which calls filaments/&lt;filament
 </tspan><tspan
              x="31.467077"
              y="70.312049"
-             id="tspan7072">  name&gt;/config.g</tspan></text>
+             id="tspan2890">  name&gt;/config.g</tspan></text>
       </g>
       <text
          xml:space="preserve"
@@ -3000,23 +2996,23 @@
          transform="translate(-1.4656365,-12.938112)"><tspan
            x="31.467077"
            y="53.237587"
-           id="tspan7074">      Initiated from user interface panel
+           id="tspan2892">      Initiated from user interface panel
 </tspan><tspan
            x="31.467077"
            y="57.506202"
-           id="tspan7076">      macros screen
+           id="tspan2894">      macros screen
 </tspan><tspan
            x="31.467077"
            y="61.774817"
-           id="tspan7078">
+           id="tspan2896">
 </tspan><tspan
            x="31.467077"
            y="66.043433"
-           id="tspan7080">- Runs M701 S &lt;filament name&gt;, which
+           id="tspan2898">- Runs M701 S &lt;filament name&gt;, which
 </tspan><tspan
            x="31.467077"
            y="70.312049"
-           id="tspan7082">  calls filaments/&lt;filament name&gt;/load.g </tspan></text>
+           id="tspan2900">  calls filaments/&lt;filament name&gt;/load.g </tspan></text>
       <text
          xml:space="preserve"
          style="font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
@@ -3088,23 +3084,23 @@
            transform="translate(2.6925802,-14.95289)"><tspan
              x="31.467077"
              y="53.237587"
-             id="tspan7084">   Sets filament-specific paramters.
+             id="tspan2902">   Sets filament-specific paramters.
 </tspan><tspan
              x="31.467077"
              y="57.506202"
-             id="tspan7086">- Pressure Advance (may ned to be unique per
+             id="tspan2904">- Pressure Advance (may ned to be unique per
 </tspan><tspan
              x="31.467077"
              y="61.774817"
-             id="tspan7088">  extruder)
+             id="tspan2906">  extruder)
 </tspan><tspan
              x="31.467077"
              y="66.043433"
-             id="tspan7090">- Scaling factor to account for shrinkage.
+             id="tspan2908">- Scaling factor to account for shrinkage.
 </tspan><tspan
              x="31.467077"
              y="70.312049"
-             id="tspan7092">- May need to add Input Shaping.</tspan></text>
+             id="tspan2910">- May need to add Input Shaping.</tspan></text>
       </g>
       <text
          xml:space="preserve"
@@ -3212,10 +3208,10 @@
          transform="translate(-83.632756,-22.986293)"><tspan
            x="31.467077"
            y="53.237587"
-           id="tspan7094">Pauses logging, deletes the file: m sys/eventlog.g </tspan><tspan
+           id="tspan2912">Pauses logging, deletes the file: m sys/eventlog.g </tspan><tspan
            x="31.467077"
            y="57.506202"
-           id="tspan7096">and restarts logging.</tspan></text>
+           id="tspan2914">and restarts logging.</tspan></text>
     </g>
     <g
        id="g6751"
@@ -3249,10 +3245,10 @@
          transform="translate(-83.632756,-22.986293)"><tspan
            x="31.467077"
            y="53.237587"
-           id="tspan7098">Runs M564 S0 H0 to allow axes to me moved even </tspan><tspan
+           id="tspan2916">Runs M564 S0 H0 to allow axes to me moved even </tspan><tspan
            x="31.467077"
            y="57.506202"
-           id="tspan7100">if the system has not been homed. </tspan></text>
+           id="tspan2918">if the system has not been homed. </tspan></text>
     </g>
     <g
        id="g6761"
@@ -3286,10 +3282,10 @@
          transform="translate(-83.632756,-22.986293)"><tspan
            x="31.467077"
            y="53.237587"
-           id="tspan7102">Print a messagfe showing the IP Address of the </tspan><tspan
+           id="tspan2920">Print a messagfe showing the IP Address of the </tspan><tspan
            x="31.467077"
            y="57.506202"
-           id="tspan7104">machine </tspan></text>
+           id="tspan2922">machine </tspan></text>
     </g>
     <g
        id="g8438"
@@ -3378,10 +3374,10 @@
          transform="translate(-83.632756,-22.986293)"><tspan
            x="31.467077"
            y="53.237587"
-           id="tspan7106">Runs M29 S0 which is the bed mesh creation and </tspan><tspan
+           id="tspan2924">Runs M29 S0 which is the bed mesh creation and </tspan><tspan
            x="31.467077"
            y="58.088286"
-           id="tspan7108">loading command. </tspan></text>
+           id="tspan2926">loading command. </tspan></text>
     </g>
     <path
        style="fill:#0000ff;stroke:#0000ff;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2)"
@@ -3425,33 +3421,33 @@
          transform="translate(3.805891,-3.1597889)"><tspan
            x="31.467077"
            y="53.237587"
-           id="tspan7112"><tspan
+           id="tspan2930"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7110">Contains only a G10 command to set the Z offset </tspan></tspan><tspan
+             id="tspan2928">Contains only a G10 command to set the Z offset </tspan></tspan><tspan
            x="31.467077"
            y="57.506202"
-           id="tspan7116"><tspan
+           id="tspan2934"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7114">for this tool. It is a separate file to enable macros </tspan></tspan><tspan
+             id="tspan2932">for this tool. It is a separate file to enable macros </tspan></tspan><tspan
            x="31.467077"
            y="61.774817"
-           id="tspan7120"><tspan
+           id="tspan2938"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7118">for easily adjusting the offset. 
+             id="tspan2936">for easily adjusting the offset. 
 </tspan></tspan><tspan
            x="31.467077"
            y="66.655452"
-           id="tspan7126"><tspan
+           id="tspan2944"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7122">See macros/prepare.</tspan><tspan
+             id="tspan2940">See macros/prepare.</tspan><tspan
              style="line-height:1.25"
-             id="tspan7124">
+             id="tspan2942">
 </tspan></tspan><tspan
            x="31.467077"
            y="71.947116"
-           id="tspan7130"><tspan
+           id="tspan2948"><tspan
              style="line-height:1.25"
-             id="tspan7128">
+             id="tspan2946">
 </tspan></tspan></text>
     </g>
     <path
@@ -3496,19 +3492,19 @@
          transform="translate(-4.8847035,-13.28099)"><tspan
            x="31.467077"
            y="53.237587"
-           id="tspan7134"><tspan
+           id="tspan2952"><tspan
              style="font-size:3.88056px"
-             id="tspan7132">
+             id="tspan2950">
 </tspan></tspan><tspan
            x="31.467077"
            y="58.529246"
-           id="tspan7138"><tspan
+           id="tspan2956"><tspan
    style="font-size:3.88056px"
-   id="tspan7136">Same as tool0_Z_offset, but for tool #1</tspan>
+   id="tspan2954">Same as tool0_Z_offset, but for tool #1</tspan>
 </tspan><tspan
            x="31.467077"
            y="63.82091"
-           id="tspan7140">
+           id="tspan2958">
 </tspan></text>
     </g>
     <path
@@ -3568,31 +3564,31 @@
          transform="translate(-83.632756,-24.573794)"><tspan
            x="31.467077"
            y="53.237587"
-           id="tspan7142">   Used to adjust the Z-offset for the current tool,
+           id="tspan2960">   Used to adjust the Z-offset for the current tool,
 </tspan><tspan
            x="31.467077"
            y="58.088286"
-           id="tspan7144">   based on the current baby steps setting.
+           id="tspan2962">   based on the current baby steps setting.
 </tspan><tspan
            x="31.467077"
            y="62.938986"
-           id="tspan7146">- Looks up the current tool tool, it's Z offset and
+           id="tspan2964">- Looks up the current tool tool, it's Z offset and
 </tspan><tspan
            x="31.467077"
            y="67.789683"
-           id="tspan7148">   current baby steps setting.
+           id="tspan2966">   current baby steps setting.
 </tspan><tspan
            x="31.467077"
            y="72.640383"
-           id="tspan7150">- Calculates a new z-offset requiring no baby steps.
+           id="tspan2968">- Calculates a new z-offset requiring no baby steps.
 </tspan><tspan
            x="31.467077"
            y="77.491084"
-           id="tspan7152">- Creates a new sys/tool&lt;N&gt;_Z_offset.g file
+           id="tspan2970">- Creates a new sys/tool&lt;N&gt;_Z_offset.g file
 </tspan><tspan
            x="31.467077"
            y="82.341784"
-           id="tspan7154">- changes the z offset amd zeros out the babysteps.</tspan></text>
+           id="tspan2972">- changes the z offset amd zeros out the babysteps.</tspan></text>
     </g>
     <g
        id="g1293"
@@ -3626,27 +3622,27 @@
          transform="translate(-83.632756,-24.573794)"><tspan
            x="31.467077"
            y="53.237587"
-           id="tspan7156">   Used to set the Z-offset for the current tool.
+           id="tspan2974">   Used to set the Z-offset for the current tool.
 </tspan><tspan
            x="31.467077"
            y="58.088286"
-           id="tspan7158">- User makes Z moves until the nozzle measures
+           id="tspan2976">- User makes Z moves until the nozzle measures
 </tspan><tspan
            x="31.467077"
            y="62.938986"
-           id="tspan7160">   0.2mm above the build plate (using feeler gauges)
+           id="tspan2978">   0.2mm above the build plate (using feeler gauges)
 </tspan><tspan
            x="31.467077"
            y="67.789683"
-           id="tspan7162">- Calculates the Z-offset requiring to make this
+           id="tspan2980">- Calculates the Z-offset requiring to make this
 </tspan><tspan
            x="31.467077"
            y="72.640383"
-           id="tspan7164">   location 0.2mm after the offset is applied.
+           id="tspan2982">   location 0.2mm after the offset is applied.
 </tspan><tspan
            x="31.467077"
            y="77.491084"
-           id="tspan7166">- Creates a new sys/tool&lt;N&gt;_Z_offset.g file</tspan></text>
+           id="tspan2984">- Creates a new sys/tool&lt;N&gt;_Z_offset.g file</tspan></text>
     </g>
     <text
        xml:space="preserve"
@@ -3656,7 +3652,7 @@
        id="text1507"><tspan
          sodipodi:role="line"
          id="tspan1505"
-         style="stroke-width:0.264583"></tspan></text>
+         style="stroke-width:0.264583" /></text>
     <g
        id="g3013"
        transform="translate(7.0320908,-1.2726387)">
@@ -3680,23 +3676,37 @@
          transform="translate(-10.10402,0.74631781)"><tspan
            x="482.98026"
            y="20.818056"
-           id="tspan7174"><tspan
+           id="tspan2992"><tspan
              style="font-size:4.93889px"
-             id="tspan7168">These are located in root of the </tspan><tspan
+             id="tspan2986">These are located in root of the </tspan><tspan
              style="font-weight:bold;-inkscape-font-specification:'sans-serif Bold'"
-             id="tspan7170">Macros </tspan><tspan
+             id="tspan2988">Macros </tspan><tspan
              style="-inkscape-font-specification:sans-serif"
-             id="tspan7172">directory and are displayed on </tspan></tspan><tspan
+             id="tspan2990">directory </tspan></tspan><tspan
            x="482.98026"
            y="28.318055"
-           id="tspan7178"><tspan
+           id="tspan2998"><tspan
              style="-inkscape-font-specification:sans-serif"
-             id="tspan7176">the Control Screen of Panel Due.  These are the main macros the casual </tspan></tspan><tspan
+             id="tspan2994">and are displayed on </tspan><tspan
+             style="-inkscape-font-specification:sans-serif"
+             id="tspan2996">the Control </tspan></tspan><tspan
            x="482.98026"
            y="35.818055"
-           id="tspan7182"><tspan
+           id="tspan3002"><tspan
              style="-inkscape-font-specification:sans-serif"
-             id="tspan7180">user will use.</tspan></tspan></text>
+             id="tspan3000">Screen of Panel Due.  These are the </tspan></tspan><tspan
+           x="482.98026"
+           y="43.318055"
+           id="tspan3008"><tspan
+             style="-inkscape-font-specification:sans-serif"
+             id="tspan3004">main macros the casual </tspan><tspan
+             style="-inkscape-font-specification:sans-serif"
+             id="tspan3006">user will </tspan></tspan><tspan
+           x="482.98026"
+           y="50.818055"
+           id="tspan3012"><tspan
+             style="-inkscape-font-specification:sans-serif"
+             id="tspan3010">use.</tspan></tspan></text>
     </g>
     <g
        id="g3389"
@@ -3734,60 +3744,60 @@
          transform="translate(-1.4656365,-12.938112)"><tspan
            x="31.467077"
            y="53.237587"
-           id="tspan7188"><tspan
+           id="tspan3018"><tspan
              style="line-height:1.1"
-             id="tspan7184"> </tspan><tspan
+             id="tspan3014"> </tspan><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7186">   Initiated from user interface panel
+             id="tspan3016">   Initiated from user interface panel
 </tspan></tspan><tspan
            x="31.467077"
            y="57.59973"
-           id="tspan7192"><tspan
+           id="tspan3022"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7190">    macros screen
+             id="tspan3020">    macros screen
 </tspan></tspan><tspan
            x="31.467077"
            y="61.868346"
-           id="tspan7196"><tspan
+           id="tspan3026"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7194">
+             id="tspan3024">
 </tspan></tspan><tspan
            x="31.467077"
            y="66.136962"
-           id="tspan7200"><tspan
+           id="tspan3030"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7198">- Display current tool and filament type if
+             id="tspan3028">- Display current tool and filament type if
 </tspan></tspan><tspan
            x="31.467077"
            y="70.405578"
-           id="tspan7204"><tspan
+           id="tspan3034"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7202">  a tool is currently selected.
+             id="tspan3032">  a tool is currently selected.
 </tspan></tspan><tspan
            x="31.467077"
            y="74.674193"
-           id="tspan7208"><tspan
+           id="tspan3038"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7206">
+             id="tspan3036">
 </tspan></tspan><tspan
            x="31.467077"
            y="78.942809"
-           id="tspan7212"><tspan
+           id="tspan3042"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7210">- Run M702, which looks up the current
+             id="tspan3040">- Run M702, which looks up the current
 </tspan></tspan><tspan
            x="31.467077"
            y="83.211425"
-           id="tspan7216"><tspan
+           id="tspan3046"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7214">  filament &lt;name&gt; and runs filaments/</tspan></tspan><tspan
+             id="tspan3044">  filament &lt;name&gt; and runs filaments/</tspan></tspan><tspan
            x="31.467077"
            y="87.774559"
-           id="tspan7222"><tspan
+           id="tspan3052"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7218">&lt;name&gt;/unload.g</tspan><tspan
+             id="tspan3048">&lt;name&gt;/unload.g</tspan><tspan
              style="line-height:1.1"
-             id="tspan7220"> </tspan></tspan></text>
+             id="tspan3050"> </tspan></tspan></text>
       <text
          xml:space="preserve"
          style="font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
@@ -3841,64 +3851,64 @@
          transform="translate(-1.4656365,-12.938112)"><tspan
            x="31.467077"
            y="53.237587"
-           id="tspan7228"><tspan
+           id="tspan3058"><tspan
              style="line-height:1.1"
-             id="tspan7224"> </tspan><tspan
+             id="tspan3054"> </tspan><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7226">   Launched at machine startup and </tspan></tspan><tspan
+             id="tspan3056">   Launched at machine startup and </tspan></tspan><tspan
            x="31.467077"
            y="57.59973"
-           id="tspan7232"><tspan
+           id="tspan3062"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7230">available on the main control screen.
+             id="tspan3060">available on the main control screen.
 </tspan></tspan><tspan
            x="31.467077"
            y="61.868346"
-           id="tspan7236"><tspan
+           id="tspan3066"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7234">
+             id="tspan3064">
 </tspan></tspan><tspan
            x="31.467077"
            y="66.136962"
-           id="tspan7240"><tspan
+           id="tspan3070"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7238">- Asks user if they want to perform the </tspan></tspan><tspan
+             id="tspan3068">- Asks user if they want to perform the </tspan></tspan><tspan
            x="31.467077"
            y="70.405578"
-           id="tspan7244"><tspan
+           id="tspan3074"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7242">following, and calls other macors if they say </tspan></tspan><tspan
+             id="tspan3072">following, and calls other macors if they say </tspan></tspan><tspan
            x="31.467077"
            y="74.674193"
-           id="tspan7248"><tspan
+           id="tspan3078"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7246">OK:
+             id="tspan3076">OK:
 </tspan></tspan><tspan
            x="31.467077"
            y="78.942809"
-           id="tspan7252"><tspan
+           id="tspan3082"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7250">- Heat the bed
+             id="tspan3080">- Heat the bed
 </tspan></tspan><tspan
            x="31.467077"
            y="83.211425"
-           id="tspan7256"><tspan
+           id="tspan3086"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7254">- Home all axes
+             id="tspan3084">- Home all axes
 </tspan></tspan><tspan
            x="31.467077"
            y="87.48004"
-           id="tspan7260"><tspan
+           id="tspan3090"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7258">- Perform true bed leveling
+             id="tspan3088">- Perform true bed leveling
 </tspan></tspan><tspan
            x="31.467077"
            y="92.043175"
-           id="tspan7266"><tspan
+           id="tspan3096"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7262">- Creat a bed compensation mesh </tspan><tspan
+             id="tspan3092">- Creat a bed compensation mesh </tspan><tspan
              style="line-height:1.1"
-             id="tspan7264"> </tspan></tspan></text>
+             id="tspan3094"> </tspan></tspan></text>
       <text
          xml:space="preserve"
          style="font-size:10px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
@@ -3952,76 +3962,76 @@
          transform="translate(-1.4656365,-12.938112)"><tspan
            x="31.467077"
            y="53.237587"
-           id="tspan7272"><tspan
+           id="tspan3102"><tspan
              style="line-height:1.1"
-             id="tspan7268"> </tspan><tspan
+             id="tspan3098"> </tspan><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7270">   Available on the main control screen.
+             id="tspan3100">   Available on the main control screen.
 </tspan></tspan><tspan
            x="31.467077"
            y="57.59973"
-           id="tspan7276"><tspan
+           id="tspan3106"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7274">
+             id="tspan3104">
 </tspan></tspan><tspan
            x="31.467077"
            y="61.868346"
-           id="tspan7280"><tspan
+           id="tspan3110"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7278">Asks the user if they want to load:
+             id="tspan3108">Asks the user if they want to load:
 </tspan></tspan><tspan
            x="31.467077"
            y="66.136962"
-           id="tspan7284"><tspan
+           id="tspan3114"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7282">- PLA
+             id="tspan3112">- PLA
 </tspan></tspan><tspan
            x="31.467077"
            y="70.405578"
-           id="tspan7288"><tspan
+           id="tspan3118"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7286">- PETG
+             id="tspan3116">- PETG
 </tspan></tspan><tspan
            x="31.467077"
            y="74.674193"
-           id="tspan7292"><tspan
+           id="tspan3122"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7290">- TPU
+             id="tspan3120">- TPU
 </tspan></tspan><tspan
            x="31.467077"
            y="78.942809"
-           id="tspan7296"><tspan
+           id="tspan3126"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7294">
+             id="tspan3124">
 </tspan></tspan><tspan
            x="31.467077"
            y="83.211425"
-           id="tspan7300"><tspan
+           id="tspan3130"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7298">Then runs the appropriate file in the macros/</tspan></tspan><tspan
+             id="tspan3128">Then runs the appropriate file in the macros/</tspan></tspan><tspan
            x="31.467077"
            y="87.48004"
-           id="tspan7304"><tspan
+           id="tspan3134"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7302">load_unload_filament directory.
+             id="tspan3132">load_unload_filament directory.
 </tspan></tspan><tspan
            x="31.467077"
            y="91.748656"
-           id="tspan7308"><tspan
+           id="tspan3138"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7306">
+             id="tspan3136">
 </tspan></tspan><tspan
            x="31.467077"
            y="96.017272"
-           id="tspan7312"><tspan
+           id="tspan3142"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7310">
+             id="tspan3140">
 </tspan></tspan><tspan
            x="31.467077"
            y="100.28589"
-           id="tspan7316"><tspan
+           id="tspan3146"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7314">
+             id="tspan3144">
 </tspan></tspan></text>
       <text
          xml:space="preserve"
@@ -4076,46 +4086,46 @@
          transform="translate(-1.4656365,-12.938112)"><tspan
            x="31.467077"
            y="53.237587"
-           id="tspan7322"><tspan
+           id="tspan3152"><tspan
              style="line-height:1.1"
-             id="tspan7318"> </tspan><tspan
+             id="tspan3148"> </tspan><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7320">   Available on the main control screen.
+             id="tspan3150">   Available on the main control screen.
 </tspan></tspan><tspan
            x="31.467077"
            y="57.59973"
-           id="tspan7326"><tspan
+           id="tspan3156"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7324">
+             id="tspan3154">
 </tspan></tspan><tspan
            x="31.467077"
            y="61.868346"
-           id="tspan7330"><tspan
+           id="tspan3160"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7328">Runs the unload_current_filament.g macro in </tspan></tspan><tspan
+             id="tspan3158">Runs the unload_current_filament.g macro in </tspan></tspan><tspan
            x="31.467077"
            y="66.136962"
-           id="tspan7334"><tspan
+           id="tspan3164"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7332">the macros/load_unload_filaments directory.
+             id="tspan3162">the macros/load_unload_filaments directory.
 </tspan></tspan><tspan
            x="31.467077"
            y="70.405578"
-           id="tspan7338"><tspan
+           id="tspan3168"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7336">
+             id="tspan3166">
 </tspan></tspan><tspan
            x="31.467077"
            y="74.674193"
-           id="tspan7342"><tspan
+           id="tspan3172"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7340">
+             id="tspan3170">
 </tspan></tspan><tspan
            x="31.467077"
            y="78.942809"
-           id="tspan7346"><tspan
+           id="tspan3176"><tspan
              style="font-size:3.88056px;line-height:1.1"
-             id="tspan7344">
+             id="tspan3174">
 </tspan></tspan></text>
       <text
          xml:space="preserve"
